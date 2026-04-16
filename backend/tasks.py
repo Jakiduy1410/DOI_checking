@@ -4,7 +4,6 @@ import uuid
 from pathlib import Path
 from dataclasses import asdict
 
-# Import 2 service từ module core
 from core.preprocessing import get_references
 from core.masking import masking
 from core.doi_validator import process_validation

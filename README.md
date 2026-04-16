@@ -1,141 +1,132 @@
-# DOI Checker — Reference Validation System
 
-## 📖 Project Overview
-The DOI Checker is an automated pipeline designed to extract, structure, and validate academic references from documents (PDF, DOCX, or scanned images). By transforming unstructured text into standardized JSON models and validating them against the Crossref API, it acts as a reliable reference analysis tool. The system intelligently detects citation formats (e.g., PLOS, IEEE, APA), removes noise like web junk, and significantly optimizes API limits by filtering out standalone web resources.
+# DOI Checker — Hệ thống Xác thực Tài liệu Tham khảo
+
+## 📖 Tổng quan dự án
+**DOI Checker** là một luồng xử lý (pipeline) tự động được thiết kế để trích xuất, cấu trúc hóa và xác thực các tài liệu tham khảo học thuật từ các tệp tài liệu (PDF, DOCX hoặc ảnh quét). Bằng cách chuyển đổi văn bản thô thành các mô hình dữ liệu JSON chuẩn và đối soát với **Crossref API**, hệ thống đóng vai trò như một công cụ phân tích trích dẫn tin cậy. Hệ thống có khả năng nhận diện thông minh các định dạng trích dẫn (như PLOS, IEEE, APA), loại bỏ "rác" văn bản và tối ưu hóa giới hạn gọi API bằng cách lọc bỏ các tài nguyên web không cần thiết.
 
 ---
 
-## 🏗️ System Architecture & Workflow
+## 🏗️ Kiến trúc Hệ thống & Luồng công việc
 
-The system is split into two primary pipelines: **Reference Extraction** and **API Validation & Enrichment**.
+Hệ thống được chia thành hai luồng xử lý chính: **Trích xuất Tài liệu tham khảo** và **Xác thực & Làm giàu dữ liệu qua API**.
 
-### 1. Reference Extraction Pipeline (`preprocessing.py` & `masking.py`)
-This phase focuses on parsing raw files and intelligently extracting citations.
-- **Document Ingestion:** Converts PDF layouts into Markdown using `pymupdf4llm` and isolates the "References" section.
-- **Format Detection:** Analyzes the isolated block to determine the citation style (numeric brackets, bold numbers, etc.).
-- **Reference Segmentation:** Splits the text block into an array of individual reference strings, cleaning away numerical prefixes and bullets.
-- **Masking & Data Extraction:** Each string undergoes an advanced Regular Expression (Regex) extraction loop to populate a structured data model:
-  - **Noise Removal:** Cleans up access dates, trailing issue numbers, and extra URLs.
-  - **Entity Extraction:** Strips and parses the Year, DOI, Authors, and Title. Smart logic prevents venue names (like *Proceedings of...*) from being misidentified as titles.
-  - **Website Identification:** Assesses if the citation belongs to a whitelist of academic domains to flag arbitrary web resources.
+### 1. Luồng Trích xuất Tài liệu tham khảo (`preprocessing.py` & `masking.py`)
+Giai đoạn này tập trung vào việc phân tích tệp thô và trích xuất trích dẫn một cách thông minh.
+- **Nạp tài liệu (Document Ingestion):** Chuyển đổi layout PDF sang định dạng Markdown bằng `pymupdf4llm` và cô lập phần "References".
+- **Nhận diện định dạng (Format Detection):** Phân tích khối văn bản để xác định kiểu trích dẫn (đánh số trong ngoặc, số in đậm, v.v.).
+- **Phân đoạn trích dẫn (Reference Segmentation):** Chia khối văn bản thành một mảng các chuỗi trích dẫn riêng lẻ, làm sạch các tiền tố số và dấu đầu dòng.
+- **Vòng lặp Masking & Trích xuất dữ liệu:** Mỗi chuỗi sẽ đi qua một vòng lặp Regex nâng cao để đổ dữ liệu vào mô hình cấu trúc:
+    - **Loại bỏ nhiễu (Noise Removal):** Làm sạch ngày truy cập, số tạp chí thừa và các URL không liên quan.
+    - **Trích xuất thực thể (Entity Extraction):** Phân tách Năm, DOI, Tác giả và Tiêu đề. Có logic thông minh để tránh nhầm lẫn tên hội nghị/tạp chí thành tiêu đề bài báo.
+    - **Định danh Website:** Kiểm tra xem trích dẫn có thuộc danh sách các tên miền học thuật hay không để gắn cờ các tài nguyên web thông thường.
 
 ```mermaid
 flowchart TD
-    A[PDF Document] --> B[Extract Markdown<br>pymupdf & pymupdf4llm]
-    B --> C{Find 'References' Section}
-    C -- Not Found --> D[Return Empty List]
-    C -- Found --> E[Isolate Reference Block]
-    E --> F[Detect Citation Format]
-    F --> G[Split into Individual References]
-    G --> H[Clean & Strip Indices]
-    H --> I[Masking Loop]
+    A[Tài liệu PDF] --> B[Trích xuất Markdown bằng pymupdf4llm]
+    B --> C{Tìm phần 'References'}
+    C -- Không thấy --> D[Trả về danh sách rỗng]
+    C -- Tìm thấy --> E[Cô lập khối trích dẫn]
+    E --> F[Nhận diện định dạng trích dẫn]
+    F --> G[Tách thành các trích dẫn đơn lẻ]
+    G --> H[Làm sạch & Loại bỏ chỉ số]
+    H --> I[Vòng lặp Masking]
     
-    subgraph Structured Masking Process
-        I --> J[Preprocess & Remove Noise]
-        J --> K[Extract Year]
-        K --> L[Extract DOI]
-        L --> M[Extract Title & Authors]
-        M --> N{Is it a Website?}
-        N -- Yes --> O[Set is_web = True]
-        N -- No --> P[Set is_web = False]
+    subgraph Quy trình Masking cấu trúc
+        I --> J[Tiền xử lý & Loại bỏ nhiễu]
+        J --> K[Trích xuất Năm]
+        K --> L[Trích xuất DOI]
+        L --> M[Trích xuất Tiêu đề & Tác giả]
+        M --> N{Có phải Website?}
+        N -- Có --> O[Gán is_web = True]
+        N -- Không --> P[Gán is_web = False]
     end
     
-    O --> Q[Construct Reference JSON]
+    O --> Q[Khởi tạo JSON trích dẫn]
     P --> Q
 ```
 
-### 2. API Validation & Enrichment Pipeline (`doi_validator.py` & `tasks.py`)
-This pipeline acts as the enrichment engine, interacting with the external Crossref API to verify existing DOIs or discover missing ones.
-- **Validation Router:**
-  - **Direct DOI Check:** If a DOI was extracted, it fires a GET request to verify its existence, marking it as `"valid_doi"`, `"invalid_doi"`, or `"unverified"`.
-  - **Web Resource Filter:** If marked as a web resource and no DOI is present, it bypasses API checking to save quotas, marking it `"web_resource"`.
-  - **Metadata Deep Search:** For academic citations missing a DOI, it builds a search query using the parsed title. If the Crossref response year aligns with the natively extracted year, it snatches the DOI and marks it `"found_doi"`.
-- **Result Aggregation:** Safely aggregates all discoveries, updates the success metrics pool, and exports the fully enriched JSON model.
+### 2. Luồng Xác thực & Làm giàu dữ liệu API (`doi_validator.py` & `tasks.py`)
+Đóng vai trò là công cụ "làm giàu" thông tin, tương tác với API Crossref để xác minh DOI hiện có hoặc tìm kiếm các DOI còn thiếu.
+- **Bộ điều hướng xác thực (Validation Router):**
+    - **Kiểm tra DOI trực tiếp:** Nếu đã trích xuất được DOI, hệ thống sẽ gửi yêu cầu GET để kiểm tra, đánh dấu là `"valid_doi"`, `"invalid_doi"`, hoặc `"unverified"`.
+    - **Bộ lọc tài nguyên Web:** Nếu là web và không có DOI, hệ thống sẽ bỏ qua bước check API để tiết kiệm quota, đánh dấu là `"web_resource"`.
+    - **Tìm kiếm sâu bằng Metadata:** Với các trích dẫn học thuật thiếu DOI, hệ thống xây dựng câu truy vấn tìm kiếm dựa trên tiêu đề. Nếu năm xuất bản từ Crossref khớp với năm trích xuất được, hệ thống sẽ lấy DOI đó và đánh dấu `"found_doi"`.
+- **Tổng hợp kết quả:** Tập hợp tất cả các thông tin tìm được, cập nhật số liệu thống kê và xuất mô hình JSON hoàn chỉnh.
+
 ```mermaid
 flowchart TD
-    A[Parsed References JSON] --> B[Initialize Summary Counters]
-    B --> C[Iterate over References]
+    A[JSON trích dẫn đã phân tách] --> B[Khởi tạo bộ đếm tổng hợp]
+    B --> C[Duyệt qua từng trích dẫn]
     
-    C --> F{Contains DOI?}
-    F -- Yes --> G["Crossref API: /works/{doi}"]
-    G -- 200 OK --> H[Mark 'valid_doi']
-    G -- 404/Timeout --> I[Mark 'invalid_doi' / 'unverified']
+    C --> F{Có DOI không?}
+    F -- Có --> G["Crossref API: /works/{doi}"]
+    G -- 200 OK --> H[Đánh dấu 'valid_doi']
+    G -- 404/Timeout --> I[Đánh dấu 'invalid_doi' / 'unverified']
     
-    F -- No --> D{Is Web Resource?}
-    D -- Yes --> E[Mark 'web_resource']
+    F -- Không --> D{Là tài nguyên Web?}
+    D -- Có --> E[Đánh dấu 'web_resource']
     
-    D -- No --> K{Has Usable Title?}
-    K -- No --> L[Mark 'no_doi']
-    K -- Yes --> M[Crossref API: Search query]
+    D -- Không --> K{Có Tiêu đề khả dụng?}
+    K -- Không --> L[Đánh dấu 'no_doi']
+    K -- Có --> M[Crossref API: Search query]
     
-    M --> N{Found Match<br>& Year aligns?}
-    N -- Yes --> O[Mark 'found_doi'<br>& Attach new DOI]
-    N -- No --> P[Mark 'no_doi']
+    M --> N{Tìm thấy kết quả & Khớp năm?}
+    N -- Có --> O[Đánh dấu 'found_doi' & Gán DOI mới]
+    N -- Không --> P[Đánh dấu 'no_doi']
     
-    E --> Q[Update Summary State]
+    E --> Q[Cập nhật trạng thái tổng hợp]
     H --> Q
     I --> Q
     L --> Q
     O --> Q
     P --> Q
     
-    Q --> R{More References?}
-    R -- Yes --> C
-    R -- No --> S[Export Result to JSON]
+    Q --> R{Còn trích dẫn không?}
+    R -- Còn --> C
+    R -- Hết --> S[Xuất kết quả ra file JSON]
 ```
+
 ---
 
-## 📂 Directory Structure
-
-The project has recently been refactored for deeper modularity. Using a decoupled architecture improves the maintainability of complex regex operations and data structures.
+## 📂 Cấu trúc Thư mục
 
 ```text
 doi_checker/
-├── frontend/                  # React Single-Page Application
+├── frontend/                  # Ứng dụng React Single-Page
 │   ├── src/
-│   │   ├── components/        # Reusable UI (UploadZone, ProgressBar, ResultCard, etc.)
-│   │   ├── pages/             # Route endpoints (HomePage, ResultPage)
-│   │   ├── hooks/             # Custom state management (useUpload, useJob)
+│   │   ├── components/        # UI dùng chung
+│   │   ├── pages/             # Các trang chính
+│   │   ├── hooks/             # Custom hooks quản lý state
 │   │   └── utils/             # Axios API clients
 │   └── package.json
 │
-└── backend/                   # Python FastAPI Backend
-    ├── core/                  # Extraction and processing logic
-    │   ├── preprocessing.py   # PDF I/O, format detection, global block extraction
-    │   ├── masking.py         # The masking core: Regex extraction, field parsing, text cleanup
-    │   └── doi_validator.py   # Crossref REST API validation and fallback deep-searching
-    ├── api/                   # Web routes and schemas
-    │   └── routes.py          # Endpoints: /upload, /status/{job_id}, /result/{job_id}
-    ├── temporary/             # Sandbox directory for uploaded file processing
-    ├── result/                # JSON output directory for extracted datasets
-    └── tasks.py               # Main pipeline orchestration / Celery worker substitute
+└── backend/                   # Backend Python FastAPI
+    ├── core/                  # Logic xử lý chính
+    │   ├── preprocessing.py   # PDF I/O, nhận diện định dạng
+    │   ├── masking.py         # Nhân của Masking: Regex, trích xuất dữ liệu
+    │   └── doi_validator.py   # Xác thực API Crossref
+    ├── api/                   # Web routes và schemas
+    │   └── routes.py          # Các Endpoint API
+    ├── ocr/                   # Module/Thư mục xử lý ảnh quét (Image Picture OCR)
+    ├── temporary/             # Thư mục tạm xử lý file
+    ├── result/                # Thư mục chứa kết quả JSON
+    └── tasks.py               # Điều phối pipeline chính
 ```
 
 ---
 
-## 🚀 Getting Started
+## 📊 Trạng thái Dự án & Lộ trình (Roadmap)
 
-Designed to run completely locally, including asynchronous queue setups.
+**Đã hoàn thành:**
+- [x] Tái cấu trúc pipeline cốt lõi, tách biệt `preprocessing.py` và `masking.py`.
+- [x] Tích hợp xác thực API Crossref và luồng suy luận DOI thông minh.
+- [x] Khắc phục các lỗi lớn về trích xuất tiêu đề.
+- [x] Xử lý các trường hợp thiếu năm và cách phân tách tác giả trên PLOS.
+- [x] Triển khai bộ lọc tài nguyên web thông minh.
 
-### Prerequisites
-- NodeJS (18+)
-- Python (3.11+)
-- Docker (optional, but recommended for running Redis/Celery environments)
-
-
----
-
-## 📊 Project Status & Roadmap
-
-**Current Progress:**
-- [x] Refactor core pipeline to separate `preprocessing.py` and `masking.py`.
-- [x] Integrate Crossref API validation and smart DOI deduction workflows.
-- [x] Resolve major title extraction bugs (preventing venue names and URLs acting as titles).
-- [x] Handle missing year edge-cases & PLOS author demarcations.
-- [x] Introduce smart web-resource filtering to stop unnecessary Crossref calls.
-
-**To-Do / Upcoming Roadmap:**
-- [ ] **Dockerization:** Fully package the FastAPI backend and frontend into deployable Docker containers.
-- [ ] **OCR Upgrade:** Better support for natively scanned image-based PDFs utilizing Tesseract / LayoutLM.
-- [ ] **Batch Processing:** Introduce bulk document uploads and asynchronous zip-file deliveries in the frontend component.
-- [ ] **DB Integration:** Swap standard disk I/O JSON output for SQLite / MongoDB integration for historical tracking.
+**Việc cần làm / Lộ trình sắp tới:**
+- [ ] **Kết nối Full-stack:** Hoàn thiện website và FastAPI.
+- [ ] **Dockerization:** Đóng gói ứng dụng vào Docker containers.
+- [ ] **Nâng cấp OCR:** Hỗ trợ tốt hơn cho PDF dạng ảnh quét bằng Tesseract / LayoutLM.
+- [ ] **Xử lý hàng loạt (Batch Processing):** Tải lên nhiều tài liệu cùng lúc.
+- [ ] **Tích hợp Database:** Lưu lịch sử xử lý vào SQLite / MongoDB.
