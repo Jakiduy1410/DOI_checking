@@ -13,9 +13,6 @@ ENV/
 env.bak/
 venv.bak/
 
-# Project specific trash / dynamic files
-backend/temporary/
-backend/result/
 
 # Tooling and IDEs
 .vscode/
