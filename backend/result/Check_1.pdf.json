@@ -1,5 +1,5 @@
 {
-    "job_id": "job_local_c90644ed",
+    "job_id": "job_local_917250ee",
     "filename": "Check_1.pdf",
     "status": "done",
     "summary": {
@@ -7,9 +7,9 @@
         "original_has_doi": 0,
         "valid_doi": 0,
         "invalid_doi": 0,
-        "found_doi": 18,
+        "found_doi": 10,
         "unverified": 0,
-        "no_doi": 16,
+        "no_doi": 24,
         "web_resource": 1
     },
     "references": [
@@ -17,7 +17,7 @@
             "index": 1,
             "authors": "Pieter Abbeel Ajay Jain, Tianjun Zhang",
             "year": "2024",
-            "title": "EECS, University of California, Berkeley",
+            "title": "Towards robust and scalable large language models",
             "doi": "",
             "raw": "Pieter Abbeel Ajay Jain, Tianjun Zhang. 2024. Towards robust and scalable large language models. _EECS, University of California, Berkeley_ .",
             "is_web": false,
@@ -38,10 +38,10 @@
             "authors": "Erh-Chung Chen, Pin-Yu Chen, I Chung, Che-Rung Lee, et al",
             "year": "2024",
             "title": "Data-driven lipschitz continuity: A costeffective approach to improve adversarial robustness",
-            "doi": "10.1134/s1054661824701025",
+            "doi": "",
             "raw": "Erh-Chung Chen, Pin-Yu Chen, I Chung, Che-Rung Lee, et al. 2024. Data-driven lipschitz continuity: A costeffective approach to improve adversarial robustness. _arXiv preprint arXiv:2406.19622_ .",
             "is_web": false,
-            "doi_status": "found_doi"
+            "doi_status": "no_doi"
         },
         {
             "index": 4,
@@ -58,10 +58,10 @@
             "authors": "Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, et al",
             "year": "2021",
             "title": "Training verifiers to solve math word problems",
-            "doi": "10.18653/v1/2021.naacl-main.168",
+            "doi": "",
             "raw": "Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, et al. 2021. Training verifiers to solve math word problems. _arXiv preprint arXiv:2110.14168_ .",
             "is_web": false,
-            "doi_status": "found_doi"
+            "doi_status": "no_doi"
         },
         {
             "index": 6,
@@ -88,18 +88,18 @@
             "authors": "Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad Al-Dahle, Aiesha Letman, Akhil Mathur, Alan Schelten, Amy Yang, Angela Fan, et al",
             "year": "2024",
             "title": "The llama 3 herd of models",
-            "doi": "10.21203/rs.3.rs-4927672/v2",
+            "doi": "",
             "raw": "Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad Al-Dahle, Aiesha Letman, Akhil Mathur, Alan Schelten, Amy Yang, Angela Fan, et al. 2024. The llama 3 herd of models. _arXiv preprint arXiv:2407.21783_ .",
             "is_web": false,
-            "doi_status": "found_doi"
+            "doi_status": "no_doi"
         },
         {
             "index": 9,
-            "authors": "Pietro",
-            "year": "",
-            "title": "Frigo, Emanuele Vannacc, Hasan Hassan, Victor Van Der Veen, Onur Mutlu, Cristiano Giuffrida",
-            "doi": "10.1093/benz/9780199773787.article.b00189113",
-            "raw": "Pietro Frigo, Emanuele Vannacc, Hasan Hassan, Victor Van Der Veen, Onur Mutlu, Cristiano Giuffrida,",
+            "authors": "Pietro Frigo, Emanuele Vannacc, Hasan Hassan, Victor Van Der Veen, Onur Mutlu, Cristiano Giuffrida, 10422 Herbert Bos, and Kaveh Razavi",
+            "year": "2020",
+            "title": "Trrespass: Exploiting the many sides of target row refresh",
+            "doi": "10.1109/sp40000.2020.00090",
+            "raw": "Pietro Frigo, Emanuele Vannacc, Hasan Hassan, Victor Van Der Veen, Onur Mutlu, Cristiano Giuffrida, 10422 Herbert Bos, and Kaveh Razavi. 2020. Trrespass: Exploiting the many sides of target row refresh. In _2020 IEEE Symposium on Security and Privacy (SP)_ , pages 747–762. IEEE.",
             "is_web": false,
             "doi_status": "found_doi"
         },
@@ -107,9 +107,9 @@
             "index": 10,
             "authors": "Xinyang Geng and Hao Liu",
             "year": "2023",
-            "title": "URL:",
+            "title": "Openllama: An open reproduction of llama",
             "doi": "",
-            "raw": "Xinyang Geng and Hao Liu. 2023. Openllama: An open reproduction of llama. _URL: https://github. com/openlm-research/open_llama_ .",
+            "raw": "Xinyang Geng and Hao Liu. 2023. Openllama: An open reproduction of llama. _URL: https://github.com/openlm-research/open_llama_ .",
             "is_web": true,
             "doi_status": "web_resource"
         },
@@ -198,18 +198,18 @@
             "authors": "Salah Lhoussaine, Georgios Tziantzioulis, Michael B. Sullivan, Vilas Sridharan, Nathan DeBardeleben, Christian Engelmann, and Simranjit Singh",
             "year": "2024",
             "title": "A first look at bfloat16 soft-error resilience in large language models",
-            "doi": "10.1215/2834703x-11205168",
+            "doi": "",
             "raw": "Salah Lhoussaine, Georgios Tziantzioulis, Michael B. Sullivan, Vilas Sridharan, Nathan DeBardeleben, Christian Engelmann, and Simranjit Singh. 2024. A first look at bfloat16 soft-error resilience in large language models. _Preprint_ , arXiv:2412.07192.",
             "is_web": false,
-            "doi_status": "found_doi"
+            "doi_status": "no_doi"
         },
         {
             "index": 20,
             "authors": "Jingtao Li, Adnan Siraj Rakin, Yan Xiong, Liangliang Chang, Zhezhi He, Deliang Fan, and Chaitali Chakrabarti",
             "year": "2020",
-            "title": "Defending bit-flip attack through",
+            "title": "Defending bit-flip attack through dnn weight reconstruction",
             "doi": "10.1109/dac18072.2020.9218665",
-            "raw": "Jingtao Li, Adnan Siraj Rakin, Yan Xiong, Liangliang Chang, Zhezhi He, Deliang Fan, and Chaitali Chakrabarti. 2020. Defending bit-flip attack through",
+            "raw": "Jingtao Li, Adnan Siraj Rakin, Yan Xiong, Liangliang Chang, Zhezhi He, Deliang Fan, and Chaitali Chakrabarti. 2020. Defending bit-flip attack through dnn weight reconstruction. In _2020 57th ACM/IEEE Design Automation Conference (DAC)_ , pages 1–6. IEEE.",
             "is_web": false,
             "doi_status": "found_doi"
         },
@@ -238,10 +238,10 @@
             "authors": "Ziyao Liu, Jinyuan Jia, Jiachen T. Wang, Wenbo Guo, Zhaofeng He, and Xinyang Zhang",
             "year": "2024",
             "title": "Bit-sponge: A bit-level attack and defense for large language models",
-            "doi": "10.52202/079017-2122",
+            "doi": "",
             "raw": "Ziyao Liu, Jinyuan Jia, Jiachen T. Wang, Wenbo Guo, Zhaofeng He, and Xinyang Zhang. 2024. Bit-sponge: A bit-level attack and defense for large language models. _Preprint_ , arXiv:2411.13757.",
             "is_web": false,
-            "doi_status": "found_doi"
+            "doi_status": "no_doi"
         },
         {
             "index": 24,
@@ -258,10 +258,10 @@
             "authors": "Shubhendu S Mukherjee, Christopher Weaver, Joel Emer, Steven K Reinhardt, and Todd Austin",
             "year": "2003",
             "title": "A systematic methodology to compute the architectural vulnerability factors for a high-performance microprocessor",
-            "doi": "10.1109/mm.2003.1261389",
+            "doi": "",
             "raw": "Shubhendu S Mukherjee, Christopher Weaver, Joel Emer, Steven K Reinhardt, and Todd Austin. 2003. A systematic methodology to compute the architectural vulnerability factors for a high-performance microprocessor. In _Proceedings. 36th Annual IEEE/ACM International Symposium on Microarchitecture, 2003. MICRO-36._ , pages 29–40. IEEE.",
             "is_web": false,
-            "doi_status": "found_doi"
+            "doi_status": "no_doi"
         },
         {
             "index": 26,
@@ -277,7 +277,7 @@
             "index": 27,
             "authors": "Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et al",
             "year": "2019",
-            "title": "OpenAI blog",
+            "title": "Language models are unsupervised multitask learners",
             "doi": "",
             "raw": "Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et al. 2019. Language models are unsupervised multitask learners. _OpenAI blog_ , 1(8):9.",
             "is_web": false,
@@ -308,10 +308,10 @@
             "authors": "Gemma Team, Morgane Riviere, Shreya Pathak, Pier Giuseppe Sessa, Cassidy Hardin, Surya Bhupatiraju, Léonard Hussenot, Thomas Mesnard, Bobak Shahriari, Alexandre Ramé, et al",
             "year": "2024",
             "title": "Gemma 2: Improving open language models at a practical size",
-            "doi": "10.18653/v1/2024.blackboxnlp-1.19",
+            "doi": "",
             "raw": "Gemma Team, Morgane Riviere, Shreya Pathak, Pier Giuseppe Sessa, Cassidy Hardin, Surya Bhupatiraju, Léonard Hussenot, Thomas Mesnard, Bobak Shahriari, Alexandre Ramé, et al. 2024. Gemma 2: Improving open language models at a practical size. _arXiv preprint arXiv:2408.00118_ .",
             "is_web": false,
-            "doi_status": "found_doi"
+            "doi_status": "no_doi"
         },
         {
             "index": 31,
@@ -319,7 +319,7 @@
             "year": "2023",
             "title": "Llama: Open and efficient foundation language models",
             "doi": "",
-            "raw": "Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, et al. 2023. Llama: Open and efficient foundation language models. _arXiv preprint arXiv:2302.13971_ .",
+            "raw": "Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, et al. 2023. Llama: Open and efficient foundation language models. _arXiv preprint arXiv:2302.13971_ . 10423",
             "is_web": false,
             "doi_status": "no_doi"
         },
@@ -357,11 +357,11 @@
             "index": 35,
             "authors": "Yuan Xiao, Xiaokuan Zhang, Yinqian Zhang, and Radu Teodorescu",
             "year": "2016",
-            "title": "Cross-VM",
-            "doi": "10.1109/tmscs.2016.2550438",
-            "raw": "Yuan Xiao, Xiaokuan Zhang, Yinqian Zhang, and Radu Teodorescu. 2016. One bit flips, one cloud flops: _{_ Cross-VM _}_ row hammer attacks and privilege escalation. In _25th USENIX security symposium (USENIX Security 16)_ , pages 19–35.",
+            "title": "One bit flips, one cloud flops: _{",
+            "doi": "",
+            "raw": "Yuan Xiao, Xiaokuan Zhang, Yinqian Zhang, and Radu Teodorescu. 2016. One bit flips, one cloud flops: _{_ Cross-VM _}_ row hammer attacks and privilege escalation. In _25th USENIX security symposium (USENIX Security 16)_ , pages 19–35. 10424",
             "is_web": false,
-            "doi_status": "found_doi"
+            "doi_status": "no_doi"
         }
     ]
 }

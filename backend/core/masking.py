@@ -128,7 +128,17 @@ def extract_title_authors(text: str, fmt: str) -> tuple[str, str]:
                 title_part = re.sub(r'\s+[Ii]n\s*:?\s*$', '', title_part).strip(' .,')
                 if len(title_part) >= 5:
                     return (authors, clean_title(title_part))
-            # Italic KHÔNG phải venue -> dùng italic làm title như cũ
+            
+            # Nếu KHÔNG phải venue từ khóa, nhưng phần text TRƯỚC italic đủ dài (>15 ký tự), 
+            # thì text đó chính là title, còn italic là tên tạp chí (APA style)
+            before_italic = after[:it.start()].rstrip(' .,;')
+            before_italic = re.sub(r'^["\u201c](.*?)["\u201d]$', r'\1', before_italic.strip()).strip()
+            if len(before_italic) >= 15:
+                # Xóa "In" hoặc "In:" ở cuối nếu có
+                before_italic = re.sub(r'\s+[Ii]n\s*:?\s*$', '', before_italic).strip(' .,')
+                return (authors, clean_title(before_italic))
+                
+            # Italic KHÔNG phải venue và không có text phía trước -> dùng italic làm title như cũ
             return (authors, clean_title(italic_text))
         dot = re.split('\\.\\s+', after, maxsplit=1)
         return (authors, clean_title(dot[0].strip()))

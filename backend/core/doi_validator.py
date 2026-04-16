@@ -1,6 +1,7 @@
 import json
 import requests
 from urllib.parse import quote
+from difflib import SequenceMatcher
 
 def check_or_find_doi(ref: dict) -> tuple[str, str]:
     doi = ref.get('doi', '')
@@ -43,6 +44,15 @@ def check_or_find_doi(ref: dict) -> tuple[str, str]:
                     item_year = str(item.get('issued', {}).get('date-parts', [[None]])[0][0])
                 except (IndexError, TypeError, AttributeError):
                     item_year = ''
+                
+                if title:
+                    api_titles = item.get('title', [])
+                    api_title = api_titles[0] if api_titles else ''
+                    
+                    score = SequenceMatcher(None, title.lower(), api_title.lower()).ratio()
+                    if score < 0.85:
+                        continue
+
                 if not ref_year or ref_year == item_year:
                     return ('found_doi', item.get('DOI', ''))
         return ('no_doi', '')

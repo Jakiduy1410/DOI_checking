@@ -1,5 +1,5 @@
 {
-    "job_id": "job_local_d079a646",
+    "job_id": "job_local_91b2f379",
     "filename": "Check_3.pdf",
     "status": "done",
     "summary": {
@@ -7,9 +7,9 @@
         "original_has_doi": 4,
         "valid_doi": 4,
         "invalid_doi": 0,
-        "found_doi": 13,
+        "found_doi": 12,
         "unverified": 0,
-        "no_doi": 3,
+        "no_doi": 4,
         "web_resource": 55
     },
     "references": [
@@ -19,8 +19,8 @@
             "year": "",
             "title": "PyTorch",
             "doi": "",
-            "raw": "“PyTorch,”",
-            "is_web": false,
+            "raw": "“PyTorch,” https://github.com/pytorch/pytorch.",
+            "is_web": true,
             "doi_status": "web_resource"
         },
         {
@@ -158,10 +158,10 @@
             "authors": "D. K. Pal and M. Savvides",
             "year": "2019",
             "title": "Learning non-parametric invariances from data with permanent random connectomes",
-            "doi": "10.1609/aaai.v33i01.33014667",
+            "doi": "",
             "raw": "D. K. Pal and M. Savvides, “Learning non-parametric invariances from data with permanent random connectomes,” CoRR, vol. abs/1911.05266, 2019. [Online]. Available: http://arxiv.org/abs/1911.05266",
             "is_web": false,
-            "doi_status": "found_doi"
+            "doi_status": "no_doi"
         },
         {
             "index": 16,
@@ -439,8 +439,8 @@
             "year": "",
             "title": "contiguous non-contiguous tensors",
             "doi": "",
-            "raw": "“contiguous non-contiguous tensors,”",
-            "is_web": false,
+            "raw": "“contiguous non-contiguous tensors,” - https://github.com/pytorch/pytorch/issues/94303.",
+            "is_web": true,
             "doi_status": "web_resource"
         },
         {
@@ -739,7 +739,7 @@
             "year": "",
             "title": "CUDA C++ Programming Guide",
             "doi": "",
-            "raw": "“CUDA C++ Programming Guide,” https://docs.nvidia.com/cuda/cudac-programming-guide/index.html.",
+            "raw": "“CUDA C++ Programming Guide,” https://docs.nvidia.com/cuda/cudac-programming-guide/index.html. - “",
             "is_web": true,
             "doi_status": "web_resource"
         },
