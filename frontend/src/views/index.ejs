@@ -1,0 +1,148 @@
+<html lang="vi"><head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOI Checker — Trích xuất &amp; Kiểm tra DOI</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&amp;family=JetBrains+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+<body>
+
+<canvas id="bg-canvas" width="151" height="800"></canvas>
+
+<div class="container">
+  <!-- HEADER -->
+  <header>
+    <div class="logo-wrap">
+      <div class="logo-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="1.8">
+          <path d="M12 2L2 7l10 5 10-5-10-5z"></path>
+          <path d="M2 17l10 5 10-5"></path>
+          <path d="M2 12l10 5 10-5"></path>
+        </svg>
+      </div>
+    </div>
+    <h1>DOI Checker</h1>
+    <p class="subtitle">Trích xuất &amp; xác thực DOI từ bài báo khoa học · PDF · DOCX · TXT</p>
+  </header>
+
+  <!-- STATS -->
+  <div class="stats-strip">
+    <div class="stat-item">
+      <span class="stat-number" id="stat-files">0</span>
+      <div class="stat-label">Files đã xử lý</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" id="stat-dois">0</span>
+      <div class="stat-label">DOI tìm thấy</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" id="stat-valid">0</span>
+      <div class="stat-label">DOI hợp lệ</div>
+    </div>
+    <div class="stat-item">
+      <span class="stat-number" id="stat-invalid">0</span>
+      <div class="stat-label">DOI không hợp lệ</div>
+    </div>
+  </div>
+
+  <!-- UPLOAD SECTION -->
+  <div class="upload-section">
+    <div class="section-label">Tải lên tài liệu</div>
+
+    <div class="drop-zone" id="dropZone">
+      <div class="upload-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+          <polyline points="17 8 12 3 7 8"></polyline>
+          <line x1="12" y1="3" x2="12" y2="15"></line>
+        </svg>
+      </div>
+      <div class="drop-title">Kéo &amp; thả file vào đây</div>
+      <div class="drop-sub">hoặc click để chọn file · hỗ trợ nhiều file cùng lúc</div>
+      <div class="file-types">
+        <span class="file-badge">PDF</span>
+        <span class="file-badge">DOCX</span>
+        <span class="file-badge">DOC</span>
+        <span class="file-badge">TXT</span>
+      </div>
+      <input type="file" id="fileInput" multiple="" accept=".pdf,.docx,.doc,.txt">
+    </div>
+
+    <div class="file-list" id="fileList"></div>
+
+    <div class="actions">
+      <button class="btn btn-primary" id="processBtn" disabled="">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polygon points="5 3 19 12 5 21 5 3"></polygon>
+        </svg>
+        Bắt đầu kiểm tra
+      </button>
+      <button class="btn btn-secondary" id="clearAllBtn">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <polyline points="3 6 5 6 21 6"></polyline>
+          <path d="M19 6l-1 14H6L5 6"></path>
+          <path d="M10 11v6M14 11v6"></path>
+          <path d="M9 6V4h6v2"></path>
+        </svg>
+        Xóa tất cả
+      </button>
+    </div>
+
+    <div class="progress-wrap" id="progressWrap">
+      <div class="progress-info">
+        <span id="progressText">Đang xử lý...</span>
+        <span id="progressPct" style="font-family:var(--font-mono);font-size:0.75rem;">0%</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-fill" id="progressFill" style="width:0%"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- RESULTS -->
+  <div class="divider" id="divider" style="display:none">
+    <div class="divider-line"></div>
+    <div class="divider-text">Kết quả phân tích</div>
+    <div class="divider-line"></div>
+  </div>
+
+  <div id="results-section" style="display:none">
+    <div class="results-header">
+      <div class="results-title">Kết quả trích xuất DOI</div>
+      <button class="results-export-btn" onclick="exportResults()">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:14px;height:14px">
+          <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"></path>
+          <polyline points="7 10 12 15 17 10"></polyline>
+          <line x1="12" y1="15" x2="12" y2="3"></line>
+        </svg>
+        Xuất JSON
+      </button>
+    </div>
+    <div id="resultsContainer"></div>
+  </div>
+</div>
+<div class="particles">
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<script src="js/script.js"></script>
+
+
+</body></html>
