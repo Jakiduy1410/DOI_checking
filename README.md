@@ -1,5 +1,22 @@
-
 # DOI Checker — Hệ thống Xác thực Tài liệu Tham khảo
+
+## 🚀 Hướng dẫn khởi chạy nhanh
+
+Hệ thống đã được tích hợp Full-stack. Bạn chỉ cần chạy backend là toàn bộ ứng dụng (bao gồm giao diện web) sẽ sẵn sàng.
+
+1. **Chuẩn bị môi trường**:
+   ```bash
+   cd backend
+   # Cài đặt các thư viện cần thiết (FastAPI, uvicorn, pymupdf4llm, mammoth, requests, v.v.)
+   pip install -r requirements.txt 
+   ```
+2. **Khởi chạy Server**:
+   ```bash
+   python main.py
+   ```
+3. **Truy cập**: Mở trình duyệt và truy cập `http://localhost:8000`
+
+---
 
 ## 📖 Tổng quan dự án
 **DOI Checker** là một luồng xử lý (pipeline) tự động được thiết kế để trích xuất, cấu trúc hóa và xác thực các tài liệu tham khảo học thuật từ các tệp tài liệu (PDF, DOCX hoặc ảnh quét). Bằng cách chuyển đổi văn bản thô thành các mô hình dữ liệu JSON chuẩn và đối soát với **Crossref API**, hệ thống đóng vai trò như một công cụ phân tích trích dẫn tin cậy. Hệ thống có khả năng nhận diện thông minh các định dạng trích dẫn (như PLOS, IEEE, APA), loại bỏ "rác" văn bản và tối ưu hóa giới hạn gọi API bằng cách lọc bỏ các tài nguyên web không cần thiết.
@@ -86,31 +103,39 @@ flowchart TD
     R -- Hết --> S[Xuất kết quả ra file JSON]
 ```
 
+### 3. Cơ chế Tích hợp Full-stack & API mới
+
+Dự án hiện tại sử dụng một kiến trúc thống nhất để tối ưu hóa hiệu suất xử lý:
+- **Unified Server (`main.py`)**: Đóng vai trò vừa là API Server vừa là Static File Server. Nó phục vụ trực tiếp các file HTML/CSS/JS của Frontend và định tuyến các yêu cầu API đến module xử lý.
+- **Batch Processing Pipeline (`route.py`)**: 
+    - Khi người dùng tải lên nhiều file, hệ thống sẽ **lưu tạm toàn bộ** vào thư mục `temporary/`.
+    - Sau đó, hệ thống chỉ gọi `pipeline()` **duy nhất một lần** để xử lý tất cả các file cùng lúc.
+    - Kết quả JSON được thu thập từ thư mục `result/` và trả về một lượt cho Frontend, giúp giảm thiểu overhead và tận dụng tối đa luồng xử lý của `tasks.py`.
+
 ---
 
 ## 📂 Cấu trúc Thư mục
 
 ```text
 doi_checker/
-├── frontend/                  # Ứng dụng React Single-Page
-│   ├── src/
-│   │   ├── components/        # UI dùng chung
-│   │   ├── pages/             # Các trang chính
-│   │   ├── hooks/             # Custom hooks quản lý state
-│   │   └── utils/             # Axios API clients
-│   └── package.json
+├── frontend/                  # Mã nguồn giao diện (HTML/CSS/JS)
+│   └── src/
+│       ├── public/            # Assets tĩnh (CSS/JS/Images)
+│       └── views/             # Các file HTML mẫu
 │
-└── backend/                   # Backend Python FastAPI
-    ├── core/                  # Logic xử lý chính
-    │   ├── preprocessing.py   # PDF I/O, nhận diện định dạng
-    │   ├── masking.py         # Nhân của Masking: Regex, trích xuất dữ liệu
-    │   └── doi_validator.py   # Xác thực API Crossref
-    ├── api/                   # Web routes và schemas
-    │   └── routes.py          # Các Endpoint API
-    ├── ocr/                   # Module/Thư mục xử lý ảnh quét (Image Picture OCR)
-    ├── temporary/             # Thư mục tạm xử lý file
-    ├── result/                # Thư mục chứa kết quả JSON
-    └── tasks.py               # Điều phối pipeline chính
+└── backend/                   # Backend Python FastAPI (Unified Server)
+    ├── main.py                # Điểm khởi chạy chính (Entry point)
+    ├── tasks.py               # Phối hợp Pipeline xử lý toàn bộ thư mục temporary
+    ├── api/                   # Định nghĩa Route API
+    │   └── route.py           # Xử lý Upload và Mapping kết quả
+    ├── core/                  # Logic lõi xử lý trích xuất & xác thực
+    │   ├── preprocessing.py   # Chuyển đổi tài liệu & Tách reference
+    │   ├── masking.py         # Regex Masking & Cấu trúc hóa
+    │   ├── doi_validator.py   # Xác thực qua Crossref API
+    │   └── document_converter.py # Chuyển đổi PDF/DOCX sang Markdown
+    ├── temporary/             # Nơi lưu file vừa upload
+    ├── result/                # Nơi chứa kết quả JSON sau khi xử lý
+    └── testing/               # Các script và file dùng để kiểm thử
 ```
 
 ---
@@ -123,10 +148,11 @@ doi_checker/
 - [x] Khắc phục các lỗi lớn về trích xuất tiêu đề.
 - [x] Xử lý các trường hợp thiếu năm và cách phân tách tác giả trên PLOS.
 - [x] Triển khai bộ lọc tài nguyên web thông minh.
+- [x] **Kết nối Full-stack:** Đồng bộ Frontend và FastAPI server.
+- [x] **Xử lý hàng loạt (Batch Processing):** Tối ưu hóa việc gọi pipeline khi upload nhiều file cùng lúc.
 
 **Việc cần làm / Lộ trình sắp tới:**
-- [ ] **Kết nối Full-stack:** Hoàn thiện website và FastAPI.
 - [ ] **Dockerization:** Đóng gói ứng dụng vào Docker containers.
 - [ ] **Nâng cấp OCR:** Hỗ trợ tốt hơn cho PDF dạng ảnh quét bằng Tesseract / LayoutLM.
-- [ ] **Xử lý hàng loạt (Batch Processing):** Tải lên nhiều tài liệu cùng lúc.
 - [ ] **Tích hợp Database:** Lưu lịch sử xử lý vào SQLite / MongoDB.
+- [ ] **Cải thiện UI/UX:** Thêm thanh tiến trình xử lý thời gian thực.
