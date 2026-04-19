@@ -9,7 +9,7 @@ from core.masking import masking
 from core.doi_validator import process_validation
 from core.document_converter import convert_to_md
 
-def main():
+def pipeline():
     base_dir = Path(__file__).parent if '__file__' in globals() else Path.cwd()
     temp_dir = base_dir / 'temporary'
     result_dir = base_dir / 'result'
@@ -73,5 +73,5 @@ def main():
     print(f"\n{'='*60}")
     print("LUỒNG KIỂM THỬ ĐÃ CHẠY XONG!")
 
-if __name__ == '__main__':
-    main()
+# if __name__ == '__main__':
+#     main()

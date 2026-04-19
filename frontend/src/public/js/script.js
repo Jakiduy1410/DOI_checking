@@ -128,6 +128,12 @@ function clearAll() {
 }
 
 // ============ PROCESSING ============
+
+// ============ PROCESSING ============
+// [THÊM MỚI]: Gắn sự kiện click cho 2 nút bấm để nó hết bị "liệt"
+processBtn.addEventListener('click', processFiles);
+document.getElementById('clearAllBtn').addEventListener('click', clearAll);
+
 async function processFiles() {
   if (files.length === 0) return;
 
@@ -183,7 +189,11 @@ async function processFile(file) {
   const formData = new FormData();
   formData.append('files', file);
 
-  const resp = await fetch('/api/process', { method: 'POST', body: formData });
+  // [SỬA DÒNG NÀY]: Trỏ thẳng URL sang cổng 8000 của FastAPI thay vì để /api/process trống không
+  // Vì ở chung nhà 8000 rồi nên gọi thẳng tên thế này thôi
+  // Thay vì '/api/process', gọi đích danh thế này:
+  const resp = await fetch('http://localhost:8000/api/process', { method: 'POST', body: formData });
+  
   if (!resp.ok) throw new Error(`Server error: ${resp.status}`);
   const data = await resp.json();
   return data.results[0];
