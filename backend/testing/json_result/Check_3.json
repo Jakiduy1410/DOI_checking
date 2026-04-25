@@ -1,0 +1,65 @@
+[
+    {
+        "authors": "",
+        "year": "",
+        "title": "A Study of Data-Path Bugs in PyTorch with a Focus on Memory Management",
+        "doi": "",
+        "raw": "A Study of Data-Path Bugs in PyTorch with a Focus on Memory Management",
+        "is_web": false,
+        "index": 1
+    },
+    {
+        "authors": "Rubayet",
+        "year": "",
+        "title": "Rahman Rongon Washington State University Vancouver, Washington r.rongon@",
+        "doi": "",
+        "raw": "Rubayet Rahman Rongon Washington State University Vancouver, Washington r.rongon@wsu.edu",
+        "is_web": false,
+        "index": 2
+    },
+    {
+        "authors": "Chen",
+        "year": "",
+        "title": "Cao",
+        "doi": "",
+        "raw": "Chen Cao",
+        "is_web": false,
+        "index": 3
+    },
+    {
+        "authors": "Pennsylvania",
+        "year": "",
+        "title": "State University Behrend",
+        "doi": "",
+        "raw": "Pennsylvania State University Behrend",
+        "is_web": false,
+        "index": 4
+    },
+    {
+        "authors": "Erie",
+        "year": "",
+        "title": "Pennsylvania ccao@",
+        "doi": "",
+        "raw": "Erie, Pennsylvania ccao@psu.edu",
+        "is_web": false,
+        "index": 5
+    },
+    {
+        "authors": "Xuechen",
+        "year": "",
+        "title": "Zhang Washington State University Vancouver, Washington xuechen.zhang@",
+        "doi": "",
+        "raw": "Xuechen Zhang Washington State University Vancouver, Washington xuechen.zhang@wsu.edu",
+        "is_web": false,
+        "index": 6
+    },
+    {
+        "authors": "Abstract—This paper presents a comprehensive and quanti- tative study of bugs related to Data Path in PyTorch with a focus on tensor management in memory. The bugs were reported from",
+        "year": "2017",
+        "title": "to",
+        "doi": "",
+        "raw": "Abstract—This paper presents a comprehensive and quanti- tative study of bugs related to Data Path in PyTorch with a focus on tensor management in memory. The bugs were reported from 2017 to 2024. Analyzing 3,089 closed issues, we identified 11 distinct bug types affecting the data storage, allocation, and loading, including memory bugs, indexing errors, and tensor contiguity violations. Our analysis reveals that data-path bugs have more occurrences than bugs related to computation in PyTorch in recent years. Among the memory bugs, non-contiguity bugs account for 30.2% of the total number of bugs and they have the most significant impact, leading to both crashes and silent correctness failures. One of the common solutions to addressing non-contiguity bugs is transforming from non- contiguous data to contiguous data in memory before machine- learning computation. To assess the impact of memory layout transformation, we conducted experiments involving tensor aug- mentation and non-contiguous tensor conversion. Our findings demonstrate that maintaining tensor contiguity throughout the augmentation process can improve performance by up to 73.9%, while the time required for non-contiguous tensor conversion varies significantly based on the number and order of dimensions. Our research provides valuable insights for developers and researchers working with PyTorch, helping them to identify and address potential bugs in data paths and tensor memory management.",
+        "is_web": false,
+        "index": 7
+    }
+]

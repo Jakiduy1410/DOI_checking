@@ -1,0 +1,20 @@
+[
+    {
+        "authors": "",
+        "year": "",
+        "title": "![](data:image/jpeg;base64...)Journal of Statistical Software",
+        "doi": "",
+        "raw": "![](data:image/jpeg;base64...)Journal of Statistical Software",
+        "is_web": false,
+        "index": 1
+    },
+    {
+        "authors": "April",
+        "year": "2020",
+        "title": "Volume 93, Issue 5",
+        "doi": "doi:10.18637/jss.v093.i05",
+        "raw": "April 2020, Volume 93, Issue 5. doi: 10.18637/jss.v093.i05",
+        "is_web": false,
+        "index": 2
+    }
+]

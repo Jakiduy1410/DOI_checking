@@ -128,8 +128,6 @@ function clearAll() {
 }
 
 // ============ PROCESSING ============
-
-// ============ PROCESSING ============
 // [THÊM MỚI]: Gắn sự kiện click cho 2 nút bấm để nó hết bị "liệt"
 processBtn.addEventListener('click', processFiles);
 document.getElementById('clearAllBtn').addEventListener('click', clearAll);
@@ -142,31 +140,51 @@ async function processFiles() {
   allResults = [];
 
   const total = files.length;
-  let done = 0;
+  
+  // Hiển thị trạng thái đang xử lý cho tất cả các file
+  files.forEach((_, i) => setStatus(i, 'processing', 'Đang gửi dữ liệu...'));
+  setProgress(0.2, `Đang tải lên ${total} file...`);
 
-  for (let i = 0; i < files.length; i++) {
-    setStatus(i, 'processing', 'Đang xử lý...');
-    setProgress(done/total, `Đang xử lý file ${i+1}/${total}: ${files[i].name}`);
+  try {
+    const formData = new FormData();
+    // Gom tất cả các file vào một key 'files' (Backend đang đợi list[UploadFile])
+    files.forEach(file => {
+      formData.append('files', file);
+    });
 
-    try {
-      const result = await processFile(files[i]);
-      allResults.push(result);
+    setProgress(0.5, `Hệ thống đang trích xuất & xác thực DOI...`);
+    
+    const resp = await fetch('http://localhost:8000/api/process', { 
+      method: 'POST', 
+      body: formData 
+    });
+    
+    if (!resp.ok) throw new Error(`Server error: ${resp.status}`);
+    
+    const data = await resp.json();
+    allResults = data.results;
+
+    // Cập nhật trạng thái UI cho từng file dựa trên kết quả trả về
+    allResults.forEach((result, i) => {
       setStatus(i, result.status === 'error' ? 'error' : 'done',
         result.status === 'error' ? 'Lỗi' : `${result.totalFound} DOI`);
-    } catch(e) {
-      allResults.push({ filename: files[i].name, status:'error', error:e.message, dois:[], totalFound:0, validCount:0, invalidCount:0 });
-      setStatus(i, 'error', 'Lỗi');
-    }
+    });
 
-    done++;
-    setProgress(done/total, done < total ? `Đang xử lý file ${i+2}/${total}` : 'Hoàn thành!');
+    setProgress(1, 'Hoàn thành!');
+    renderResults();
+    updateStatsSummary();
+    showToast(`Đã xử lý xong toàn bộ ${total} file`, 'success');
+
+  } catch(e) {
+    console.error(e);
+    files.forEach((_, i) => setStatus(i, 'error', 'Lỗi hệ thống'));
+    showToast(`Có lỗi xảy ra: ${e.message}`, 'error');
+  } finally {
+    processBtn.disabled = false;
   }
-
-  renderResults();
-  updateStatsSummary();
-  processBtn.disabled = false;
-  showToast(`Đã xử lý ${total} file thành công`, 'success');
 }
+
+// Hàm processFile cũ không còn dùng nữa vì đã gộp vào processFiles
 
 function setStatus(i, type, text) {
   const el = document.getElementById(`status-${i}`);
@@ -185,19 +203,6 @@ function setProgress(pct, text) {
   textEl.textContent = text;
 }
 
-async function processFile(file) {
-  const formData = new FormData();
-  formData.append('files', file);
-
-  // [SỬA DÒNG NÀY]: Trỏ thẳng URL sang cổng 8000 của FastAPI thay vì để /api/process trống không
-  // Vì ở chung nhà 8000 rồi nên gọi thẳng tên thế này thôi
-  // Thay vì '/api/process', gọi đích danh thế này:
-  const resp = await fetch('http://localhost:8000/api/process', { method: 'POST', body: formData });
-  
-  if (!resp.ok) throw new Error(`Server error: ${resp.status}`);
-  const data = await resp.json();
-  return data.results[0];
-}
 
 // ============ RENDER RESULTS ============
 function renderResults() {
@@ -254,34 +259,43 @@ function renderResults() {
 function doiCardHtml(d, ri, di) {
   const isValid = d.valid;
   const id = `doi-${ri}-${di}`;
-  const detailsHtml = isValid ? `
-    <div class="detail-grid">
+  
+  // SỬA Ở ĐÂY: Tạo một cái băng rôn báo lỗi nếu nó không hợp lệ
+  const errorBanner = !isValid ? `<div class="error-msg" style="margin-bottom: 1rem; padding: 0.5rem; background: #ffebee; color: #c62828; border-radius: 4px;">⚠ ${d.error || 'DOI không hợp lệ'}</div>` : '';
+
+  // SỬA Ở ĐÂY: Dùng chung 1 layout chi tiết (detail-grid) cho cả 2 trường hợp
+  const detailsHtml = `
+    ${errorBanner}
+    <div class="detail-grid" style="${!isValid ? 'opacity: 0.8;' : ''}">
       <div class="detail-item" style="grid-column:1/-1">
         <label>Tiêu đề</label>
-        <span>${d.title || 'N/A'}</span>
+        <span>${d.title}</span>
       </div>
       <div class="detail-item">
         <label>Tác giả</label>
-        <span>${d.authors || 'N/A'}</span>
+        <span>${d.authors}</span>
       </div>
       <div class="detail-item">
         <label>Tạp chí / Nhà xuất bản</label>
-        <span>${d.journal || 'N/A'}</span>
+        <span>${d.journal}</span>
       </div>
       <div class="detail-item">
         <label>Năm xuất bản</label>
-        <span>${d.year || 'N/A'}</span>
+        <span>${d.year}</span>
       </div>
       <div class="detail-item">
         <label>Loại tài liệu</label>
-        <span>${d.type || 'N/A'}</span>
+        <span>${d.type}</span>
       </div>
+
       <div class="detail-item" style="grid-column:1/-1">
         <label>Link DOI</label>
-        <a class="detail-link" href="${d.url}" target="_blank" rel="noopener">${d.url}</a>
+        <a class="detail-link" href="${d.doi !== 'No DOI' ? 'https://doi.org/' + d.doi : '#'}" target="_blank" rel="noopener">
+          ${d.doi !== 'No DOI' ? 'https://doi.org/' + d.doi : 'Không có DOI gốc'}
+        </a>
       </div>
     </div>
-  ` : `<div class="error-msg">⚠ ${d.error || 'Không thể xác thực DOI này'}</div>`;
+  `;
 
   return `
     <div class="doi-card ${isValid ? 'valid' : 'invalid'}" id="${id}">

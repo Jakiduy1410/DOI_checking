@@ -48,36 +48,48 @@ def extract_references(md_text):
     clean_refs = ref_section[:earliest_truncation_index].strip()
     return clean_refs
 
-def process_all_docx(frontend_dir, output_dir):
+def process_all_docs(input_dir, tmp_dir, output_dir):
+    os.makedirs(tmp_dir, exist_ok=True)
     os.makedirs(output_dir, exist_ok=True)
-    docx_files = glob.glob(os.path.join(frontend_dir, "*.docx"))
+    
+    # Process both docx and pdf files
+    doc_files = []
+    doc_files.extend(glob.glob(os.path.join(input_dir, "*.docx")))
     
     md_converter = MarkItDown()
     
-    for docx_path in docx_files:
-        filename = os.path.basename(docx_path)
-        output_filename = filename.replace('.docx', '.md')
-        output_path = os.path.join(output_dir, output_filename)
+    for doc_path in doc_files:
+        filename = os.path.basename(doc_path)
+        base_name, ext = os.path.splitext(filename)
+        md_filename = base_name + '.md'
+        tmp_md_path = os.path.join(tmp_dir, md_filename)
+        output_path = os.path.join(output_dir, base_name + '_refs.md')
         
         print(f"Processing: {filename}...")
         try:
             # Convert
-            result = md_converter.convert(docx_path)
+            result = md_converter.convert(doc_path)
             raw_md = result.text_content
             
-            # Extract references
+            # Save raw MD to tmp_res
+            # with open(tmp_md_path, 'w', encoding='utf-8') as f:
+            #     f.write(raw_md)
+            # print(f"  -> Saved raw markdown to {tmp_md_path}")
+            
+            # Extract references section
             extracted_refs = extract_references(raw_md)
             
             # Save to output folder
             with open(output_path, 'w', encoding='utf-8') as f:
                 f.write(extracted_refs)
-            print(f"  -> Saved extracted references to {output_filename}")
+            print(f"  -> Saved extracted references to {output_path}")
             
         except Exception as e:
             print(f"  -> Error processing {filename}: {e}")
 
 if __name__ == "__main__":
-    FRONTEND_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "..", "frontend"))
-    OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "extracted_references")
+    INPUT_DIR = os.path.join(os.path.dirname(__file__), "formatted_references")
+    TMP_DIR = os.path.join(os.path.dirname(__file__), "tmp_result")
+    OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "tmp_result")
     
-    process_all_docx(FRONTEND_DIR, OUTPUT_DIR)
+    process_all_docs(INPUT_DIR, TMP_DIR, OUTPUT_DIR)

@@ -20,6 +20,8 @@ app.get('/check', (req, res) => {
   res.render('index');
 });
 
-app.listen(PORT, () => {
-  console.log(`Server chạy tại http://localhost:${PORT}/check`);
-});
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`Server chạy tại:`);
+  console.log(`- Local: http://localhost:${PORT}/check`);
+  console.log(`- Network: http://YOUR_IP:${PORT}/check`);
+});

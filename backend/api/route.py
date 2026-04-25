@@ -42,7 +42,19 @@ async def process_upload(files: list[UploadFile] = File(...)):
     results = []
     for file in files:
         try:
-            json_filename = f"{file.filename}.json"
+            if file.filename.lower().endswith('.doc'):
+                results.append({
+                    "filename": file.filename,
+                    "status": "error",
+                    "error": "doc file sẽ trả kết quả là ko đúng định dạng vui lòng đổi file thành docx hoặc pdf",
+                    "dois": [],
+                    "totalFound": 0
+                })
+                continue
+                
+            path_obj = Path(file.filename)
+            file_ext = path_obj.suffix[1:].lower()
+            json_filename = f"{path_obj.stem}_{file_ext}.json"
             json_path = RESULT_DIR / json_filename
             
             print(f"[DEBUG] Đang tìm kết quả: {json_filename}")
@@ -66,17 +78,28 @@ async def process_upload(files: list[UploadFile] = File(...)):
                     status = ref.get("doi_status")
                     is_valid = status in ["valid_doi", "found_doi"]
                     
+                    error_msg = None
+                    if status == "invalid_doi":
+                        error_msg = "DOI này không tồn tại hoặc không hợp lệ"
+                    elif status == "no_doi":
+                        error_msg = "Không tìm thấy DOI phù hợp trên Crossref"
+                    elif status == "web_resource":
+                        error_msg = "Tài nguyên Web (Bỏ qua kiểm tra DOI)"
+                    elif status == "unverified":
+                        error_msg = "Lỗi kết nối API (Chưa xác thực được)"
+
                     mapped_result["dois"].append({
-                        "doi": ref.get("doi") or "N/A",
+                        "doi": ref.get("doi") or "No DOI",
                         "valid": is_valid,
-                        "title": ref.get("title"),
-                        "authors": ref.get("authors"),
-                        "journal": ref.get("venue"),
-                        "year": ref.get("year"),
+                        "title": ref.get("title") or "Không rõ tiêu đề",
+                        "authors": ref.get("authors") or "Không rõ tác giả",
+                        "journal": ref.get("venue") or "N/A",
+                        "year": ref.get("year") or "N/A",
                         "url": f"https://doi.org/{ref.get('doi')}" if ref.get("doi") else "#",
                         "type": "Article",
-                        "error": "Không tìm thấy DOI hợp lệ" if status == "invalid_doi" else None
+                        "error": error_msg
                     })
+
                 results.append(mapped_result)
             else:
                 print(f"[ERROR] Không tìm thấy JSON cho {file.filename} -> {json_path}")
