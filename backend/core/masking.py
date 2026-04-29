@@ -10,7 +10,7 @@ class Reference:
     raw: str = ''
     is_web: bool = False
 
-DOI_PATTERN = re.compile('(?:https?:\\/\\/.{0,5}doi\\.org\\/|doi(?![a-z]):?\\s*)(10\\.\\d{4,9}\\s*\\/\\s*\\S+(?:\\s+(?![A-Z][a-z])\\S+)*)', re.IGNORECASE)
+DOI_PATTERN = re.compile(r'(?:https?://(?:[a-zA-Z0-9-]+\.)?doi\.org/|doi:?\s*)(10\.\d{4,9}\s*/\s*\S+(?:\s+(?![A-Z][a-z])\S+)*)', re.IGNORECASE)
 
 ACADEMIC_DOMAINS = {'doi.org', 'arxiv.org', 'biorxiv.org', 'medrxiv.org', 'nature.com', 'springer.com', 'sciencedirect.com', 'wiley.com', 'ieee.org', 'acm.org', 'nih.gov', 'ncbi.nlm.nih.gov', 'pubmed.ncbi.nlm.nih.gov', 'plos.org', 'jstor.org', 'tandfonline.com', 'sagepub.com', 'cambridge.org', 'oxford.org', 'oup.com', 'elsevier.com', 'researchgate.net', 'semanticscholar.org', 'scopus.com', 'webofscience.com', 'ssrn.com', 'aclweb.org', 'frontiersin.org', 'mdpi.com', 'biomedcentral.com', 'hindawi.com', 'ams.org', 'aps.org', 'iop.org', 'rsc.org', 'pnas.org', 'science.org', 'cell.com', 'thelancet.com', 'bmj.com'}
 
@@ -39,7 +39,8 @@ WEB_JUNK_PATTERN = re.compile(
 
 def preprocess_ref(text: str, fmt: str) -> str:
     if fmt == 'plos':
-        text = re.sub('Available:\\s*https?://\\S+', '', text)
+        # [FIX] Tránh xóa nhầm DOI URL khi ở format PLOS
+        text = re.sub(r'Available:\s*https?://(?!(?:dx\.)?doi\.org/)\S+', '', text)
         text = re.sub('Accessed\\s*\\d*\\s*\\w+\\s+\\d{4}\\.?', '', text)
     text = re.sub('`(doi:[^`]+)`', lambda x: x.group(1).replace(' ', ''), text)
     text = re.sub('`(https?://[^`]+)`', lambda x: x.group(1).replace(' ', ''), text)
@@ -57,12 +58,14 @@ def extract_year(text: str) -> tuple[str, str]:
 def extract_doi(text: str) -> tuple[str, str]:
     m = DOI_PATTERN.search(text)
     if m:
-        raw_doi = m.group(0)
-        clean_doi = raw_doi.replace(' ', '').replace('\n', '').rstrip('.,')
+        full_match = m.group(0) # [Sửa ở đây]: Lưu lại toàn bộ chuỗi match để lát xóa sạch khỏi text
+        raw_doi = m.group(1)    # Group(1) chỉ lấy phần mã 10.xxxx...
+        # [FIX] Xóa thêm dấu ngoặc dính ở cuối DOI
+        clean_doi = raw_doi.replace(' ', '').replace('\n', '').rstrip('.,)]')
         clean_doi = re.split('PMID:|PMCID:', clean_doi, flags=re.IGNORECASE)[0]
-        return (clean_doi, text.replace(raw_doi, '', 1))
+        return (clean_doi, text.replace(full_match, '', 1))
     return ('', text)
-
+    
 def clean_title(title: str) -> str:
     # [FIX-1] Cắt title trước khi gặp venue/journal/preprint
     vm = VENUE_PATTERN.search(title)

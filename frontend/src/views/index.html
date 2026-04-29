@@ -1,15 +1,16 @@
-<html lang="vi"><head>
+<!DOCTYPE html>
+<html lang="vi">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>DOI Checker — Trích xuất &amp; Kiểm tra DOI</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&amp;family=JetBrains+Mono:wght@400;500&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet">
-<link rel="stylesheet" href="css/style.css">
-
+<link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,400;0,600;1,300&family=JetBrains+Mono:wght@400;500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
-<canvas id="bg-canvas" width="151" height="800"></canvas>
+<canvas id="bg-canvas"></canvas>
 
 <div class="container">
   <!-- HEADER -->
@@ -35,7 +36,7 @@
     </div>
     <div class="stat-item">
       <span class="stat-number" id="stat-dois">0</span>
-      <div class="stat-label">DOI tìm thấy</div>
+      <div class="stat-label">REFFERENCES</div>
     </div>
     <div class="stat-item">
       <span class="stat-number" id="stat-valid">0</span>
@@ -67,19 +68,19 @@
         <span class="file-badge">DOC</span>
         <span class="file-badge">TXT</span>
       </div>
-      <input type="file" id="fileInput" multiple="" accept=".pdf,.docx,.doc,.txt">
+      <input type="file" id="fileInput" multiple accept=".pdf,.docx,.doc,.txt">
     </div>
 
     <div class="file-list" id="fileList"></div>
 
     <div class="actions">
-      <button class="btn btn-primary" id="processBtn" disabled="">
+      <button class="btn btn-primary" id="processBtn" disabled onclick="processFiles()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polygon points="5 3 19 12 5 21 5 3"></polygon>
         </svg>
         Bắt đầu kiểm tra
       </button>
-      <button class="btn btn-secondary" id="clearAllBtn">
+      <button class="btn btn-secondary" onclick="clearAll()">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
           <polyline points="3 6 5 6 21 6"></polyline>
           <path d="M19 6l-1 14H6L5 6"></path>
@@ -142,7 +143,7 @@
     <span></span>
 </div>
 
-<script src="js/script.js"></script>
 
-
-</body></html>
+<script src="/js/script.js"></script>
+</body>
+</html>

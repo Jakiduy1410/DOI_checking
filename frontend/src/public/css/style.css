@@ -493,9 +493,9 @@
     position: absolute;
     width: 6px;
     height: 6px;
-    background: cyan;
+    background: rgb(255, 254, 255);
     border-radius: 50%;
-    box-shadow: 0 0 10px cyan;
+    box-shadow: 0 0 10px rgb(147, 235, 240);
 }
 
 /* mỗi hạt 1 kiểu bay khác nhau */

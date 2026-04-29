@@ -1,4 +1,5 @@
 import json
+import re
 import requests
 from urllib.parse import quote
 from difflib import SequenceMatcher
@@ -7,7 +8,7 @@ def check_or_find_doi(ref: dict) -> tuple[str, str]:
     doi = ref.get('doi', '')
     headers = {'User-Agent': 'DOIChecker/1.0 (mailto:jakiduy1410@gmail.com)'}
     if doi:
-        clean_doi = doi.replace('doi:', '').strip()
+        clean_doi = re.sub(r'^(?:https?://(?:dx\.)?doi\.org/|doi:\s*)', '', doi, flags=re.IGNORECASE).strip()
         url = f'https://api.crossref.org/works/{quote(clean_doi)}'
         try:
             resp = requests.get(url, headers=headers, timeout=10)
@@ -70,4 +71,4 @@ def process_validation(job_id: str, filename: str, refs_data: list) -> dict:
         ref_with_status = {'index': index, **ref, 'doi': final_doi, 'doi_status': status}
         final_references.append(ref_with_status)
     return {'job_id': job_id, 'filename': filename, 'status': 'done', 'summary': summary, 'references': final_references}
-
+
