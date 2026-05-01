@@ -630,3 +630,7 @@
     50% { transform: translate(-50px,-200px); }
     100% { transform: translate(200px,100px); }
 }
+/* ── File tab sidebar ── */
+.file-tab { cursor: pointer; transition: background 0.15s; }
+.file-tab:hover { background: rgba(255,255,255,0.04); }
+.file-tab.active > div { background: rgba(45,212,191,0.08); border-left: 2px solid #2dd4bf; }
