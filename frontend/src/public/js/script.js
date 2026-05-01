@@ -1,4 +1,3 @@
-
 // ============ CANVAS PARTICLES ============
 const canvas = document.getElementById('bg-canvas');
 const ctx = canvas.getContext('2d');
@@ -36,6 +35,7 @@ drawParticles();
 // ============ FILE HANDLING ============
 let files = [];
 let allResults = [];
+let activeTab = 0;
 
 const dropZone   = document.getElementById('dropZone');
 const fileInput  = document.getElementById('fileInput');
@@ -91,7 +91,7 @@ function renderFileList() {
 function removeFile(i) { files.splice(i, 1); renderFileList(); }
 
 function clearAll() {
-  files = []; allResults = [];
+  files = []; allResults = []; activeTab = 0;
   renderFileList();
   document.getElementById('results-section').style.display = 'none';
   document.getElementById('divider').style.display = 'none';
@@ -123,6 +123,7 @@ async function processFiles() {
     done++;
     setProgress(done/total, done<total ? `Đang xử lý file ${i+2}/${total}` : 'Hoàn thành!');
   }
+  activeTab = 0;
   renderResults();
   updateStatsSummary();
   processBtn.disabled = false;
@@ -151,31 +152,41 @@ async function processFile(file) {
   return data.results[0];
 }
 
-// ============ SUY RA DOI_STATUS TỪ BACKEND ============
-// Backend trả về: valid (bool) + error (string)
-// Ta suy ra doi_status để hiển thị đúng badge màu
+// ============ SUY RA DOI_STATUS ============
 function inferStatus(d) {
   if (d.valid) return 'valid_doi';
   if (!d.error) return 'valid_doi';
   const err = d.error.toLowerCase();
-  if (err.includes('web') || err.includes('bỏ qua'))          return 'web_resource';
-  if (err.includes('kết nối') || err.includes('xác thực'))    return 'unverified';
+  if (err.includes('web') || err.includes('bỏ qua'))                return 'web_resource';
+  if (err.includes('kết nối') || err.includes('xác thực'))          return 'unverified';
   if (err.includes('không tồn tại') || err.includes('không hợp lệ')) return 'invalid_doi';
-  if (err.includes('không tìm thấy'))                         return 'no_doi';
+  if (err.includes('không tìm thấy'))                               return 'no_doi';
   return 'no_doi';
 }
 
-// ============ STATUS CONFIG ============
 const STATUS_CFG = {
-  valid_doi:    { label:'HỢP LỆ',          color:'#2dd4bf', bg:'rgba(45,212,191,0.12)',  icon:'✅' },
-  found_doi:    { label:'TÌM THẤY',        color:'#60a5fa', bg:'rgba(96,165,250,0.12)',  icon:'🔍' },
-  invalid_doi:  { label:'SAI / GIẢ',       color:'#f87171', bg:'rgba(248,113,113,0.12)', icon:'❌' },
-  no_doi:       { label:'KHÔNG CÓ DOI',    color:'#fc0303', bg:'rgba(156,163,175,0.10)', icon:'—'  },
-  web_resource: { label:'WEB',             color:'#a78bfa', bg:'rgba(167,139,250,0.12)', icon:'🌐' },
-  unverified:   { label:'CHƯA XÁC THỰC',  color:'#fbbf24', bg:'rgba(251,191,36,0.12)',  icon:'❓' },
+  valid_doi:    { label:'HỢP LỆ',         color:'#2dd4bf', bg:'rgba(45,212,191,0.12)',  icon:'✅' },
+  found_doi:    { label:'TÌM THẤY',       color:'#60a5fa', bg:'rgba(96,165,250,0.12)',  icon:'🔍' },
+  invalid_doi:  { label:'SAI / GIẢ',      color:'#f87171', bg:'rgba(248,113,113,0.12)', icon:'❌' },
+  no_doi:       { label:'KHÔNG CÓ DOI',   color:'#fc0303', bg:'rgba(156,163,175,0.10)', icon:'—'  },
+  web_resource: { label:'WEB',            color:'#a78bfa', bg:'rgba(167,139,250,0.12)', icon:'🌐' },
+  unverified:   { label:'CHƯA XÁC THỰC', color:'#fbbf24', bg:'rgba(251,191,36,0.12)',  icon:'❓' },
 };
 
-// ============ RENDER RESULTS ============
+// ============ SWITCH TAB ============
+function switchTab(idx) {
+  activeTab = idx;
+
+  // Cập nhật tab active
+  document.querySelectorAll('.file-tab').forEach((el, i) => {
+    el.classList.toggle('active', i === idx);
+  });
+
+  // Render nội dung bên phải
+  renderTabContent(allResults[idx], idx);
+}
+
+// ============ RENDER RESULTS — layout 2 cột ============
 function renderResults() {
   const container = document.getElementById('resultsContainer');
   container.innerHTML = '';
@@ -186,47 +197,115 @@ function renderResults() {
         <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg></div>
       <div class="empty-title">Chưa có kết quả</div>
       <div class="empty-sub">Tải lên file và nhấn "Bắt đầu kiểm tra"</div></div>`;
-  } else {
-    allResults.forEach((r, ri) => {
-      const card = document.createElement('div');
-      card.className = 'file-result';
-      card.style.animationDelay = (ri*0.1)+'s';
-      const ext  = (r.filename||'').split('.').pop().toLowerCase();
-      const dois = r.dois || [];
+    return;
+  }
 
-      // Tính lại breakdown từ mảng dois
-      const counts = { valid_doi:0, found_doi:0, invalid_doi:0, no_doi:0, web_resource:0, unverified:0 };
-      dois.forEach(d => { const s = inferStatus(d); if (counts[s]!==undefined) counts[s]++; });
+  // ── Wrapper 2 cột ──
+  const wrapper = document.createElement('div');
+  wrapper.style.cssText = 'display:flex;gap:1.25rem;align-items:flex-start;margin-top:0.5rem';
 
-      card.innerHTML = `
-        <div class="file-result-header">
-          <div class="file-result-icon"><div class="file-ext ext-${ext}">${ext.toUpperCase()}</div></div>
-          <div class="file-result-meta">
-            <div class="file-result-name">${r.filename}</div>
-            <div class="file-result-sub">${r.status==='error' ? '⚠ '+r.error : `${r.totalFound||0} tài liệu tham khảo`}</div>
-          </div>
-          <div class="file-result-badges">
-            <span class="badge badge-total">${r.totalFound||0} refs</span>
-            ${counts.valid_doi    ? `<span class="badge badge-valid">✅ ${counts.valid_doi} hợp lệ</span>`:''}
-            ${counts.found_doi    ? `<span class="badge" style="background:rgba(96,165,250,0.15);color:#60a5fa;border-color:rgba(96,165,250,0.25)">🔍 ${counts.found_doi} tìm thấy</span>`:''}
-            ${counts.invalid_doi  ? `<span class="badge badge-invalid">❌ ${counts.invalid_doi} sai/giả</span>`:''}
-            ${counts.no_doi       ? `<span class="badge" style="background:rgba(156,163,175,0.1);color:#9ca3af;border-color:rgba(156,163,175,0.2)">— ${counts.no_doi} không DOI</span>`:''}
-            ${counts.web_resource ? `<span class="badge" style="background:rgba(167,139,250,0.12);color:#a78bfa;border-color:rgba(167,139,250,0.25)">🌐 ${counts.web_resource} web</span>`:''}
-            ${counts.unverified   ? `<span class="badge" style="background:rgba(251,191,36,0.12);color:#fbbf24;border-color:rgba(251,191,36,0.25)">❓ ${counts.unverified} chưa xác thực</span>`:''}
+  // ── Cột trái: danh sách file ──
+  const sidebar = document.createElement('div');
+  sidebar.id = 'file-tab-list';
+  sidebar.style.cssText = `
+    width: 240px;
+    flex-shrink: 0;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    position: sticky;
+    top: 1rem;
+  `;
+
+  const sidebarHeader = document.createElement('div');
+  sidebarHeader.style.cssText = 'padding:0.75rem 1rem;font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid rgba(255,255,255,0.06)';
+  sidebarHeader.textContent = `${allResults.length} file`;
+  sidebar.appendChild(sidebarHeader);
+
+  allResults.forEach((r, i) => {
+    const ext    = (r.filename||'').split('.').pop().toLowerCase();
+    const dois   = r.dois || [];
+    const counts = getCounts(dois);
+    const tab    = document.createElement('div');
+    tab.className = 'file-tab' + (i === activeTab ? ' active' : '');
+    tab.onclick   = () => switchTab(i);
+    tab.innerHTML = `
+      <div style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem 1rem;cursor:pointer;transition:background 0.15s;border-bottom:1px solid rgba(255,255,255,0.04)">
+        <div class="file-ext ext-${ext}" style="font-size:0.55rem;padding:2px 5px;min-width:auto">${ext.toUpperCase()}</div>
+        <div style="flex:1;min-width:0">
+          <div style="font-size:0.78rem;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${r.filename}</div>
+          <div style="font-size:0.68rem;color:var(--text-muted);margin-top:2px">
+            ${r.status==='error' ? '⚠ Lỗi' : `${r.totalFound||0} refs · ✅${counts.valid_doi+counts.found_doi} ❌${counts.invalid_doi}`}
           </div>
         </div>
-        ${summaryBarHtml(counts, dois.length)}
-        <div class="doi-list" style="padding:0">
-          ${dois.length ? dois.map((d,di) => refRowHtml(d, ri, di)).join('') :
-            '<div style="padding:1.5rem;text-align:center;color:var(--text-muted);font-size:0.85rem">Không tìm thấy tài liệu tham khảo</div>'}
-        </div>`;
-      container.appendChild(card);
-    });
-  }
+      </div>`;
+    sidebar.appendChild(tab);
+  });
+
+  // ── Cột phải: nội dung chi tiết ──
+  const content = document.createElement('div');
+  content.id    = 'tab-content';
+  content.style.cssText = 'flex:1;min-width:0;';
+
+  wrapper.appendChild(sidebar);
+  wrapper.appendChild(content);
+  container.appendChild(wrapper);
+
+  // Render tab đầu tiên
+  renderTabContent(allResults[activeTab], activeTab);
 
   document.getElementById('results-section').style.display = 'block';
   document.getElementById('divider').style.display = 'flex';
   document.getElementById('results-section').scrollIntoView({ behavior:'smooth', block:'start' });
+}
+
+// ── Render nội dung 1 tab ────────────────────────────────────
+function renderTabContent(r, ri) {
+  const content = document.getElementById('tab-content');
+  if (!content || !r) return;
+
+  const ext    = (r.filename||'').split('.').pop().toLowerCase();
+  const dois   = r.dois || [];
+  const counts = getCounts(dois);
+
+  content.innerHTML = `
+    <div class="file-result" style="margin:0">
+      <div class="file-result-header" style="flex-wrap:wrap;gap:0.75rem">
+        <div class="file-result-icon"><div class="file-ext ext-${ext}">${ext.toUpperCase()}</div></div>
+        <div class="file-result-meta" style="flex:1;min-width:120px">
+          <div class="file-result-name">${r.filename}</div>
+          <div class="file-result-sub">${r.status==='error' ? '⚠ '+r.error : `${r.totalFound||0} tài liệu tham khảo`}</div>
+        </div>
+        <div class="file-result-badges" style="flex-wrap:wrap;gap:0.4rem;align-items:center">
+          <span class="badge badge-total">${r.totalFound||0} refs</span>
+          ${counts.valid_doi    ? `<span class="badge badge-valid">✅ ${counts.valid_doi} hợp lệ</span>`:''}
+          ${counts.found_doi    ? `<span class="badge" style="background:rgba(96,165,250,0.15);color:#60a5fa;border-color:rgba(96,165,250,0.25)">🔍 ${counts.found_doi} tìm thấy</span>`:''}
+          ${counts.invalid_doi  ? `<span class="badge badge-invalid">❌ ${counts.invalid_doi} sai/giả</span>`:''}
+          ${counts.no_doi ? `<span class="badge" style="background:rgba(252,3,3,0.1);color:#fc0303;border-color:rgba(252,3,3,0.2)">— ${counts.no_doi} không DOI</span>`:''}
+          ${counts.web_resource ? `<span class="badge" style="background:rgba(167,139,250,0.12);color:#a78bfa;border-color:rgba(167,139,250,0.25)">🌐 ${counts.web_resource} web</span>`:''}
+          ${counts.unverified   ? `<span class="badge" style="background:rgba(251,191,36,0.12);color:#fbbf24;border-color:rgba(251,191,36,0.25)">❓ ${counts.unverified} chưa xác thực</span>`:''}
+          <button class="results-export-btn" onclick="exportSingle(${ri})" style="margin-left:0.5rem">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="width:12px;height:12px">
+              <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/>
+            </svg>
+            Xuất JSON
+          </button>
+        </div>
+      </div>
+      ${summaryBarHtml(counts, dois.length)}
+      <div class="doi-list" style="padding:0">
+        ${dois.length ? dois.map((d,di) => refRowHtml(d, ri, di)).join('') :
+          '<div style="padding:1.5rem;text-align:center;color:var(--text-muted);font-size:0.85rem">Không tìm thấy tài liệu tham khảo</div>'}
+      </div>
+    </div>`;
+}
+
+// ── Helper đếm từng loại ─────────────────────────────────────
+function getCounts(dois) {
+  const counts = { valid_doi:0, found_doi:0, invalid_doi:0, no_doi:0, web_resource:0, unverified:0 };
+  dois.forEach(d => { const s = inferStatus(d); if (counts[s]!==undefined) counts[s]++; });
+  return counts;
 }
 
 // ── Thanh màu tóm tắt ────────────────────────────────────────
@@ -253,10 +332,10 @@ function refRowHtml(d, ri, di) {
   const cfg    = STATUS_CFG[status] || STATUS_CFG['no_doi'];
 
   const doiStr = (d.doi && d.doi !== 'No DOI') ? d.doi : '';
-  const doiLink = doiStr
-    ? `<a href="https://doi.org/${doiStr}" target="_blank" rel="noopener"
-         style="color:${cfg.color};font-family:var(--font-mono);font-size:0.78rem;word-break:break-all">
-         https://doi.org/${doiStr}</a>`
+  const doiUrl = doiStr.startsWith('http') ? doiStr : (doiStr ? `https://doi.org/${doiStr}` : '');
+  const doiLink = doiUrl
+    ? `<a href="${doiUrl}" target="_blank" rel="noopener"
+         style="color:${cfg.color};font-family:var(--font-mono);font-size:0.78rem;word-break:break-all">${doiUrl}</a>`
     : `<span style="color:var(--text-muted);font-size:0.8rem;font-style:italic">Không có DOI</span>`;
 
   return `
@@ -265,17 +344,11 @@ function refRowHtml(d, ri, di) {
            style="display:flex;align-items:flex-start;gap:0.75rem;padding:0.85rem 1.25rem;cursor:pointer;transition:background 0.2s"
            onmouseover="this.style.background='rgba(255,255,255,0.02)'"
            onmouseout="this.style.background=''">
-
-        <!-- Số thứ tự -->
         <div style="min-width:28px;height:28px;border-radius:6px;background:rgba(255,255,255,0.05);display:flex;align-items:center;justify-content:center;font-size:0.72rem;font-family:var(--font-mono);color:var(--text-muted);flex-shrink:0">${di+1}</div>
-
-        <!-- Tiêu đề + tác giả -->
         <div style="flex:1;min-width:0">
           <div style="font-size:0.88rem;color:var(--text-primary);margin-bottom:0.2rem;line-height:1.4">${d.title||'<em style="color:var(--text-muted)">Không rõ tiêu đề</em>'}</div>
           <div style="font-size:0.76rem;color:var(--text-muted)">${d.authors||''}${d.year && d.year!=='N/A' ? ' · '+d.year : ''}</div>
         </div>
-
-        <!-- Badge -->
         <div style="flex-shrink:0;display:flex;align-items:center;gap:0.4rem">
           <span style="font-size:0.62rem;font-weight:700;padding:3px 8px;border-radius:4px;background:${cfg.bg};color:${cfg.color};border:1px solid ${cfg.color}33;letter-spacing:.04em;white-space:nowrap">
             ${cfg.icon} ${cfg.label}
@@ -285,8 +358,6 @@ function refRowHtml(d, ri, di) {
           </svg>
         </div>
       </div>
-
-      <!-- Chi tiết (ẩn/hiện) -->
       <div id="${id}" style="display:none;padding:0.75rem 1.25rem 1rem 3.2rem;background:rgba(0,0,0,0.15)">
         <div style="display:grid;grid-template-columns:1fr 1fr;gap:0.5rem 1rem">
           <div>
@@ -334,9 +405,9 @@ function updateStatsSummary() {
   let totalFiles=0, totalDOIs=0, totalValid=0, totalInvalid=0;
   allResults.forEach(r => {
     totalFiles++;
-    totalDOIs   += r.totalFound   || 0;
-    totalValid  += r.validCount   || 0;
-    totalInvalid+= r.invalidCount || 0;
+    totalDOIs    += r.totalFound   || 0;
+    totalValid   += r.validCount   || 0;
+    totalInvalid += r.invalidCount || 0;
   });
   updateStats(totalFiles, totalDOIs, totalValid, totalInvalid);
 }
@@ -361,21 +432,25 @@ function animateNumber(id, target) {
 }
 
 // ============ EXPORT ============
+function exportSingle(ri) {
+  const r = allResults[ri];
+  if (!r) return;
+  const name = (r.filename || 'result').replace(/\.[^.]+$/, '');
+  const blob = new Blob([JSON.stringify(r, null, 2)], { type:'application/json' });
+  const a = document.createElement('a');
+  a.href = URL.createObjectURL(blob);
+  a.download = `${name}_doi-result.json`;
+  a.click();
+  showToast(`Đã xuất ${name}.json`, 'success');
+}
+
 function exportResults() {
   if (!allResults.length) return;
-  allResults.forEach(r => {
-    const name = (r.filename || 'result').replace(/\.[^.]+$/, '');
-    const blob = new Blob([JSON.stringify(r, null, 2)], { type:'application/json' });
-    const a = document.createElement('a');
-    a.href = URL.createObjectURL(blob);
-    a.download = `${name}_doi-result.json`;
-    a.click();
-  });
-  showToast(`Đã xuất ${allResults.length} file JSON`, 'success');
+  allResults.forEach((r, i) => exportSingle(i));
 }
 
 // ============ TOAST ============
-function showToast(msg, type='success') {
+function showToast(msg, type='success') { 
   const t = document.createElement('div');
   t.className = `toast ${type}`;
   t.innerHTML = `<div class="toast-dot"></div><span>${msg}</span>`;
