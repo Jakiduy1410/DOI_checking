@@ -4,6 +4,7 @@ from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
 from api.route import router as api_router
 from pathlib import Path
+from core.grobid_launcher import init_grobid
 
 app = FastAPI(title="DOI Checker API")
 
@@ -30,8 +31,7 @@ async def get_index():
     if index_file.exists():
         return FileResponse(index_file)
 
-    return 
-    {
+    return {
         "error": "Vẫn chưa thấy index.html đâu Bibi ơi!",
         "check_tai_day": str(index_file)
     }
@@ -41,4 +41,6 @@ app.mount("/", StaticFiles(directory=str(STATIC_DIR), html=True), name="frontend
 
 if __name__ == "__main__":
     import uvicorn
+    # Tự động khởi chạy Grobid từ Docker
+    init_grobid()
     uvicorn.run(app, host="127.0.0.1", port=8000)

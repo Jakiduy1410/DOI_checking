@@ -6,6 +6,7 @@ class Reference:
     authors: str = ''
     year: str = ''
     title: str = ''
+    journal: str = ''
     doi: str = ''
     raw: str = ''
     is_web: bool = False

@@ -1,191 +1,263 @@
 [
     {
+        "index": 1,
+        "authors": "C Glenday",
+        "year": "2012",
+        "title": "Glenday, Craig Douglas, (born 31 May 1973), Editor-in-Chief, Guinness World Records, since 2002",
+        "journal": "Glenday, Craig Douglas, (born 31 May 1973), Editor-in-Chief, Guinness World Records, since 2002",
+        "doi": "10.1093/ww/9780199540884.013.u276139",
+        "raw": "Glenday C (2012) Guinness world records 2012. New York: Bantam Books. xliv, 596 p."
+    },
+    {
+        "index": 2,
+        "authors": "Matthew Czarny, Ruth Faden, Marie Nolan, Edwin Bodensiek, Jeremy Sugarman",
+        "year": "2008-12-15",
+        "title": "Response to Open Peer Commentaries on “Medical and Nursing Students' Television Viewing Habits: Potential Implications for Bioethics”",
+        "journal": "The American Journal of Bioethics",
+        "doi": "10.1080/15265160802595074",
+        "raw": "Czarny MJ, Faden RR, Nolan MT, Bodensiek E, Sugarman J (2008) Medical and nursing students' tele- vision viewing habits. Potential implications for bioethics. The American journal of bioethics AJOB 8 (12): 1-8. https://doi.org/10.1080/15265160802595074 PMID: 19085461"
+    },
+    {
+        "index": 3,
+        "authors": "Jeffrey Spike",
+        "year": "2008-12-18",
+        "title": "Television Viewing and Ethical Reasoning: Why Watching<i>Scrubs</i>Does a Better Job Than Most Bioethics Classes",
+        "journal": "The American Journal of Bioethics",
+        "doi": "10.1080/15265160802495630",
+        "raw": "Spike J (2008) Television viewing and ethical reasoning. Why watching Scrubs does a better job than most bioethics classes. The American journal of bioethics AJOB 8 (12): 11-13. https://doi.org/10.1080/ 15265160802495630 PMID: 19085466"
+    },
+    {
+        "index": 4,
+        "authors": "A Pavlov, G Dahlquist",
+        "year": "2010",
+        "title": "Learning through drama",
+        "journal": "Drama 7-11",
+        "doi": "10.4324/9780203138380-2",
+        "raw": "Pavlov A, Dahlquist GE (2010) Teaching communication and professionalism using a popular medical drama. Family medicine 42 (1): 25-27. PMID: 20063219"
+    },
+    {
+        "index": 5,
+        "authors": "C Hirt, K Wong, S Erichsen, J White",
+        "year": "2013",
+        "title": "Medical dramas on television: A brief guide for educators",
+        "journal": "Medical Teacher",
+        "doi": "10.3109/0142159x.2012.737960",
+        "raw": "Hirt C, Wong K, Erichsen S, White JS (2013) Medical dramas on television. A brief guide for educators. Medical teacher 35 (3): 237-242. https://doi.org/10.3109/0142159X.2012.737960 PMID: 23228106"
+    },
+    {
+        "index": 6,
+        "authors": "D Mcneilly, S Wengel",
+        "year": "2001-12-01",
+        "title": "The \"ER\" Seminar: Teaching Psychotherapeutic Techniques to Medical Students",
+        "journal": "Academic Psychiatry",
+        "doi": "10.1176/appi.ap.25.4.193",
+        "raw": "McNeilly DP, Wengel SP (2001) The \"ER\" Seminar. Teaching Psychotherapeutic Techniques to Medi- cal Students. Academic psychiatry the journal of the American Association of Directors of Psychiatric Residency Training and the Association for Academic Psychiatry 25 (4): 193-200."
+    },
+    {
+        "index": 7,
         "authors": "",
+        "year": "2007",
+        "title": "Annenberg Adolescent Mental Health Initiative",
+        "journal": "Annenberg Colloquium with Hollywood",
+        "doi": "10.1037/e503722012-001",
+        "raw": "USC Annenberg, The Norman Lear Center, editor (2007) Annenberg Colloquium with Hollywood, Health & Society. 16 p."
+    },
+    {
+        "index": 8,
+        "authors": "M Kaplan",
+        "year": "2010",
+        "title": "Hollywood, Health & Society",
+        "journal": "MINT und Chancengleichheit in fiktionalen Fernsehformaten",
+        "doi": "",
+        "raw": "Kaplan M (2010) Hollywood, Health & Society. In: Bundesministerium fu ¨r Bildung und Forschung (BMBF), editor. MINT und Chancengleichheit in fiktionalen Fernsehformaten. pp. 69-71."
+    },
+    {
+        "index": 9,
+        "authors": "Roslyn Weaver, Ian Wilson",
+        "year": "2011-07-29",
+        "title": "Australian medical students' perceptions of professionalism and ethics in medical television programs",
+        "journal": "BMC Medical Education",
+        "doi": "10.1186/1472-6920-11-50",
+        "raw": "Weaver R, Wilson I (2011) Australian medical students' perceptions of professionalism and ethics in medical television programs. BMC medical education 11: 50. https://doi.org/10.1186/1472-6920-11-50 PMID: 21798068"
+    },
+    {
+        "index": 10,
+        "authors": "Roslyn Weaver, Ian Wilson, Vicki Langendyk",
+        "year": "1997",
+        "title": "Medical professionalism on television: Student perceptions and pedagogical implications",
+        "journal": "Health: An Interdisciplinary Journal for the Social Study of Health, Illness and Medicine",
+        "doi": "10.1177/1363459314524804",
+        "raw": "Weaver R, Wilson I, Langendyk V (2014) Medical professionalism on television. Student perceptions and pedagogical implications. Health (London, England 1997) 18 (6): 597-612."
+    },
+    {
+        "index": 11,
+        "authors": "Matthew Czarny, Ruth Faden, Jeremy Sugarman",
+        "year": "2010-03-25",
+        "title": "Bioethics and professionalism in popular television medical dramas",
+        "journal": "Journal of Medical Ethics",
+        "doi": "10.1136/jme.2009.033621",
+        "raw": "Czarny MJ, Faden RR, Sugarman J (2010) Bioethics and professionalism in popular television medical dramas. Journal of medical ethics 36 (4): 203-206. https://doi.org/10.1136/jme.2009.033621 PMID: 20338929"
+    },
+    {
+        "index": 12,
+        "authors": "K Lingenfelter",
         "year": "",
-        "title": "![](data:image/jpeg;base64...)",
+        "title": "Science Meets Fiction",
+        "journal": "Science Meets Fiction",
         "doi": "",
-        "raw": "![](data:image/jpeg;base64...)",
-        "is_web": false,
-        "index": 1
+        "raw": "Lingenfelter K Science Meets Fiction \"House MD\". Berlin."
     },
     {
-        "authors": "",
-        "year": "",
-        "title": "RESEARCH ARTICLE",
-        "doi": "",
-        "raw": "RESEARCH ARTICLE",
-        "is_web": false,
-        "index": 2
+        "index": 13,
+        "authors": "Hasan Haboubi, Holly Morgan, Omar Aldalati",
+        "year": "2015-12",
+        "title": "Hospital doctors' Opinions regarding educational Utility, public Sentiment and career Effects of Medical television Dramas: the HOUSE MD study",
+        "journal": "Medical Journal of Australia",
+        "doi": "10.5694/mja15.01068",
+        "raw": "Haboubi HN, Morgan H, Aldalati O (2015) Hospital doctors' Opinions regarding educational Utility, pub- lic Sentiment and career Effects of Medical television Dramas. The House MD study. The Medical jour- nal of Australia 203 (11): 462-466. PMID: 26654621"
     },
     {
-        "authors": "Teaching medicine with the help of",
-        "year": "",
-        "title": "Dr. House",
-        "doi": "",
-        "raw": "Teaching medicine with the help of “Dr. House”",
-        "is_web": false,
-        "index": 3
+        "index": 14,
+        "authors": "Matthias Hofer, Kathrin Klein, Bastian Malzkorn, Alice Martin, Christian Weigel, Ole Martin",
+        "year": "2017-08",
+        "title": "Bericht aus der Praxis/Practice Report: How to successfully establish PAL in medical education. 10 tips to succeed in PAL-based courses in undergraduate medical education (UGME)",
+        "journal": "Zeitschrift für Evidenz, Fortbildung und Qualität im Gesundheitswesen",
+        "doi": "10.1016/j.zefq.2017.05.029",
+        "raw": "Hofer M, Klein K, Malzkorn B, Martin A, Weigel C, Martin O (2017) Bericht aus der Praxis/Practice Report. How to successfully establish PAL in medical education. 10 tips to succeed in PAL-based courses in undergraduate medical education (UGME). Zeitschrift fur Evidenz, Fortbildung und Qualitat im Gesundheitswesen 125: 80-84. https://doi.org/10.1016/j.zefq.2017.05.029 PMID: 28760684"
     },
     {
-        "authors": "Andreas",
-        "year": "",
-        "title": "Jerrentrup1☯, Tobias Mueller1☯, Ulrich Glowalla2, Meike Herder2,3, Nadine Henrichs2,4, Andreas Neubauer5, Juergen R. Schaefer1* 1 Center for Unknown and Rare Diseases, UKGM GmbH, University Clinic Marburg, Philipps-University, Marburg, Germany, 2 Instruction and Interactive Media Research Group, Department of Psychology and Sport Science, Justus Liebig University, Giessen, Germany, 3 Department of Psychosomatic Medicine and Psychotherapy, Klinikum Leer gGmbH, Leer, Germany, 4 Department of Therapeutic Pedagogy and Special Education, Justus Liebig University, Giessen, Germany, 5 Internal Medicine–Hematology, Oncology and Immunology, UKGM GmbH, University Clinic Marburg, Philipps-University, Marburg, Germany",
+        "index": 15,
+        "authors": "P Gray",
+        "year": "2013",
+        "title": "Free to learn. Why unleashing the instinct to play will make our children happier, more self-reliant, and better students for life",
+        "journal": "Free to learn. Why unleashing the instinct to play will make our children happier, more self-reliant, and better students for life",
         "doi": "",
-        "raw": "Andreas Jerrentrup1☯, Tobias Mueller1☯, Ulrich Glowalla2, Meike Herder2,3, Nadine Henrichs2,4, Andreas Neubauer5, Juergen R. Schaefer1* 1 Center for Unknown and Rare Diseases, UKGM GmbH, University Clinic Marburg, Philipps-University, Marburg, Germany, 2 Instruction and Interactive Media Research Group, Department of Psychology and Sport Science, Justus Liebig University, Giessen, Germany, 3 Department of Psychosomatic Medicine and Psychotherapy, Klinikum Leer gGmbH, Leer, Germany, 4 Department of Therapeutic Pedagogy and Special Education, Justus Liebig University, Giessen, Germany, 5 Internal Medicine–Hematology, Oncology and Immunology, UKGM GmbH, University Clinic Marburg, Philipps-University, Marburg, Germany",
-        "is_web": false,
-        "index": 4
+        "raw": "Gray P (2013) Free to learn. Why unleashing the instinct to play will make our children happier, more self-reliant, and better students for life. New York: Basic Books. 289 p."
     },
     {
-        "authors": "",
-        "year": "",
-        "title": "![](data:image/png;base64...)![](data:image/png;base64...)![](data:image/png;base64...)![](data:image/png;base64...)",
-        "doi": "",
-        "raw": "![](data:image/png;base64...)![](data:image/png;base64...)![](data:image/png;base64...)![](data:image/png;base64...)",
-        "is_web": false,
-        "index": 5
+        "index": 16,
+        "authors": "Nale Lehmann-Willenbrock, Joseph Allen",
+        "year": "2014-11",
+        "title": "How fun are your meetings? Investigating the relationship between humor patterns in team interactions and team performance.",
+        "journal": "Journal of Applied Psychology",
+        "doi": "10.1037/a0038083",
+        "raw": "Lehmann-Willenbrock N, Allen JA (2014) How fun are your meetings? Investigating the relationship between humor patterns in team interactions and team performance. The Journal of applied psychology 99 (6): 1278-1287. https://doi.org/10.1037/a0038083 PMID: 25314363"
     },
     {
-        "authors": "",
-        "year": "",
-        "title": "☯ These authors contributed equally to this work",
-        "doi": "",
-        "raw": "☯ These authors contributed equally to this work.",
-        "is_web": false,
-        "index": 6
+        "index": 17,
+        "authors": "Arwid Lund",
+        "year": "2017-04-03",
+        "title": "Wikipedia",
+        "journal": "Wikipedia, Work and Capitalism",
+        "doi": "10.1007/978-3-319-50690-6_3",
+        "raw": "Unknown (2017) List of House episodes-Wikipedia. Available: https://en.wikipedia.org/w/index.php? oldid=702970276. Accessed 3 April 2017."
     },
     {
-        "authors": "",
-        "year": "",
-        "title": "* juergen.schaefer@uni-marburg.de",
-        "doi": "",
-        "raw": "* juergen.schaefer@uni-marburg.de",
-        "is_web": false,
-        "index": 7
+        "index": 18,
+        "authors": "Kirsten Dahms, Yulia Sharkova, Peter Heitland, Sabine Pankuweit, Juergen Schaefer",
+        "year": "2014-02",
+        "title": "Cobalt intoxication diagnosed with the help of Dr House",
+        "journal": "The Lancet",
+        "doi": "10.1016/s0140-6736(14)60037-4",
+        "raw": "Dahms K, Sharkova Y, Heitland P, Pankuweit S, Schaefer JR (2014) Cobalt intoxication diagnosed with the help of Dr House. The Lancet 383 (9916): 574."
     },
     {
-        "authors": "",
-        "year": "",
-        "title": "Abstract",
-        "doi": "",
-        "raw": "Abstract",
-        "is_web": false,
-        "index": 8
+        "index": 19,
+        "authors": "J Wise",
+        "year": "2014-02-06",
+        "title": "TV show House helped doctors spot cobalt poisoning",
+        "journal": "BMJ",
+        "doi": "10.1136/bmj.g1424",
+        "raw": "Wise J (2014) TV show House helped doctors spot cobalt poisoning. BMJ (Clinical research ed.) 348: g1424."
     },
     {
-        "authors": "",
-        "year": "",
-        "title": "![](data:image/png;base64...) OPEN ACCESS",
-        "doi": "",
-        "raw": "![](data:image/png;base64...) OPEN ACCESS",
-        "is_web": false,
-        "index": 9
+        "index": 20,
+        "authors": "Kirsten Dahms, Yulia Sharkova, Peter Heitland, Sabine Pankuweit, Juergen Schaefer",
+        "year": "2017-04-03",
+        "title": "Cobalt intoxication diagnosed with the help of Dr House",
+        "journal": "The Lancet",
+        "doi": "10.1016/s0140-6736(14)60037-4",
+        "raw": "Altmetric Cobalt intoxication diagnosed with the help of Dr House. Available: https://sciencedirect. altmetric.com/details/2104541. Accessed 3 April 2017."
     },
     {
-        "authors": "Citation: Jerrentrup A, Mueller T, Glowalla U, Herder M, Henrichs N, Neubauer A, et al.  Teaching medicine with the help of",
-        "year": "2018",
-        "title": "Dr. House",
-        "doi": "https://doi.org/10.1371/journal.pone.0193972",
-        "raw": "Citation: Jerrentrup A, Mueller T, Glowalla U, Herder M, Henrichs N, Neubauer A, et al. (2018) Teaching medicine with the help of “Dr. House”. PLoS ONE 13(3): e0193972. https://doi.org/10.1371/journal.pone.0193972",
-        "is_web": false,
-        "index": 10
+        "index": 21,
+        "authors": "J Schafer",
+        "year": "2014",
+        "title": "Scott, Laurence Prestwich, (10 June 1909–2 Sept. 1983), Chairman of the Manchester Guardian & Evening News Ltd, 1949–73",
+        "journal": "Scott, Laurence Prestwich, (10 June 1909–2 Sept. 1983), Chairman of the Manchester Guardian & Evening News Ltd, 1949–73",
+        "doi": "10.1093/ww/9780199540884.013.u168929",
+        "raw": "Schafer JR (2014) Evening News with Scott Pelley."
     },
     {
-        "authors": "",
-        "year": "",
-        "title": "Editor: Thanh G Phan, Monash University, AUSTRALIA",
+        "index": 22,
+        "authors": "G Kolata, As",
+        "year": "2017-04-03",
+        "title": "Seen on TV, a Medical Mystery Involving Hip Implants Is Solved",
+        "journal": "Seen on TV, a Medical Mystery Involving Hip Implants Is Solved",
         "doi": "",
-        "raw": "Editor: Thanh G Phan, Monash University, AUSTRALIA",
-        "is_web": false,
-        "index": 11
+        "raw": "Kolata G As Seen on TV, a Medical Mystery Involving Hip Implants Is Solved. Available: https://www. nytimes.com/2014/02/07/health/house-plays-a-role-in-solving-a-medical-mystery.html?_r=0. Accessed 3 April 2017."
     },
     {
-        "authors": "Received: August 28",
-        "year": "2017",
-        "title": "",
+        "index": 23,
+        "authors": "C Cooper",
+        "year": "2014-04-03",
+        "title": "Paging Dr Haus: German doctor cures mystery illness after recalling a",
+        "journal": "Paging Dr Haus: German doctor cures mystery illness after recalling a",
         "doi": "",
-        "raw": "Received: August 28, 2017",
-        "is_web": false,
-        "index": 12
+        "raw": "Cooper C (2014) Paging Dr Haus: German doctor cures mystery illness after recalling a. Available: http://www.independent.co.uk/news/world/europe/paging-dr-haus-german-doctor-cures-mystery- illness-after-recalling-a-similar-diagnosis-from-hugh-9113085.html. Accessed 3 April 2017."
     },
     {
-        "authors": "Accepted: February 22",
-        "year": "2018",
-        "title": "",
-        "doi": "",
-        "raw": "Accepted: February 22, 2018",
-        "is_web": false,
-        "index": 13
+        "index": 24,
+        "authors": "Giorgia Guglielmi",
+        "year": "2017-04-03",
+        "title": "Missing mechanism helps solve fragile X protein mystery",
+        "journal": "Spectrum",
+        "doi": "10.53053/mfho5715",
+        "raw": "Alter C TV's 'House' Helps Solve Real-Life Medical Mystery. Available: http://time.com/5375/tvs-house- helps-solve-real-life-medical-mystery/. Accessed 3 April 2017."
     },
     {
-        "authors": "Published: March 13",
-        "year": "2018",
-        "title": "",
-        "doi": "",
-        "raw": "Published: March 13, 2018",
-        "is_web": false,
-        "index": 14
+        "index": 25,
+        "authors": "Marcus Law, Wilson Kwong, Farah Friesen, Paula Veinot, Stella Ng",
+        "year": "2015-09-17",
+        "title": "The current landscape of television and movies in medical education",
+        "journal": "Perspectives on Medical Education",
+        "doi": "10.1007/s40037-015-0205-9",
+        "raw": "Law M, Kwong W, Friesen F, Veinot P, Ng SL (2015) The current landscape of television and movies in medical education. Perspectives on medical education 4 (5): 218-224. https://doi.org/10.1007/s40037- 015-0205-9 PMID: 26381289"
     },
     {
-        "authors": "Copyright: ©",
-        "year": "2018",
-        "title": "Jerrentrup et al",
-        "doi": "",
-        "raw": "Copyright: © 2018 Jerrentrup et al. This is an open access article distributed under the terms of the Creative Commons Attribution License, which permits unrestricted use, distribution, and reproduction in any medium, provided the original author and source are credited.",
-        "is_web": false,
-        "index": 15
+        "index": 26,
+        "authors": "Allison Shevell, Aliki Thomas, Abraham Fuks",
+        "year": "2015",
+        "title": "Teaching professionalism to first year medical students using video clips",
+        "journal": "Medical Teacher",
+        "doi": "10.3109/0142159x.2014.970620",
+        "raw": "Shevell AH, Thomas A, Fuks A (2015) Teaching professionalism to first year medical students using video clips. Medical teacher 37 (10): 935-942. https://doi.org/10.3109/0142159X.2014.970620 PMID: 25313932"
     },
     {
-        "authors": "Data",
-        "year": "",
-        "title": "Availability Statement: All relevant data are within the paper and its Supporting Information files",
-        "doi": "",
-        "raw": "Data Availability Statement: All relevant data are within the paper and its Supporting Information files.",
-        "is_web": false,
-        "index": 16
+        "index": 27,
+        "authors": "Mark Wicclair",
+        "year": "2008-12-18",
+        "title": "The Pedagogical Value of<i>House, M.D.</i>—Can a Fictional Unethical Physician Be Used to Teach Ethics?",
+        "journal": "The American Journal of Bioethics",
+        "doi": "10.1080/15265160802478503",
+        "raw": "Wicclair MR (2008) The pedagogical value of House, M.D.-can a fictional unethical physician be used to teach ethics. The American journal of bioethics AJOB 8 (12): 16-17. https://doi.org/10.1080/ 15265160802478503 PMID: 19085469"
     },
     {
-        "authors": "Funding: JRS is supported by the",
-        "year": "",
-        "title": "Dr. Reinfried Pohl Foundation",
-        "doi": "",
-        "raw": "Funding: JRS is supported by the “Dr. Reinfried Pohl Foundation”, Marburg, Germany. The funders had no role in study design, data collection and analysis, decision to publish, or preparation of the",
-        "is_web": false,
-        "index": 17
+        "index": 28,
+        "authors": "Roger Wong, Sadra Saber, Irene Ma, J Roberts",
+        "year": "2009-02-03",
+        "title": "Using television shows to teach communication skills in internal medicine residency",
+        "journal": "BMC Medical Education",
+        "doi": "10.1186/1472-6920-9-9",
+        "raw": "Wong RY, Saber SS, Ma I, Roberts JM (2009) Using television shows to teach communication skills in internal medicine residency. BMC medical education 9: 9. https://doi.org/10.1186/1472-6920-9-9 PMID: 19187563"
     },
     {
-        "authors": "TV series such as",
-        "year": "2008",
-        "title": "House MD",
-        "doi": "",
-        "raw": "TV series such as “House MD”, “Grey´s Anatomy” or “Emergency Room” are well per-ceived by medical students. Seminars featuring medical TV series such as “House MD” might serve as door-opener to attract medical students to learn more about rare dis-eases. The TV series “House MD” is troublesome for the main character Dr. House is an excellent diagnostician but at the same time a rather misanthropic person. Therefore, lecturing medicine with the help of “House MD” requires constant evaluation. From 2008 to 2016 we are using the well-known TV series “House MD” continuously to attract medi-cal students and teach them about rare diseases as well as diagnostic strategies. We collected from 213 students a detailed questionnaire assessing their learning experi-ence. 76.6% of our students (n = 157) reported to watching medical dramas on a regular basis. The Dr. House seminar was compared to traditional seminars and our students reported an improved learning effect (69.9%), better concentration (89.7%), higher motivation to participate (88.7%), and more fun (86.7%) (all p<0.001). The students see Dr. House’s behavior quite critically. Likert assessment on a 5-point scale identified strong disagreement with Dr. House´s interpersonal skills in dealing with his colleagues (median = 1) and patients (median = 1). At the same time, the students strongly agreed with his outstanding diagnostic (median = 5) and therapeutic capabilities (median = 4). Medical students visiting a Dr. House teaching seminar are highly motivated to learn more about rare diseases. They were positively influenced by TV series such as Dr.",
-        "is_web": false,
-        "index": 18
-    },
-    {
-        "authors": "House to improve their diagnostic and clinical skills. At the same time, they are critical enough not to see Dr. House as a role model for their own personality. Well performed medical TV shows such as Dr. House can successfully be used in an educational setting to motivate medical students to come into seminars to learn more about rare diseases. manuscript. JRS is partly employed by the University Clinic Giessen and Marburg GmbH (UKGM) in Marburg. The UKGM did not have any role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript. AJ is employed by the University Clinic Giessen and Marburg GmbH (UKGM) in Marburg. The UKGM did not have any role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript. TM is employed by the Rhoen Klinikum AG (RKA) in Bad Neustadt and the University Clinic Giessen and Marburg GmbH (UKGM) in Marburg. The RKA and the UKGM did not have any role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript. AN is supported by an unrestricted grant by the German Jose´ Carreras foundation (AH06-01). In addition AN is employed by the University Clinic Giessen and Marburg GmbH (UKGM) in Marburg. The German Jose´ Carreras foundation and the UKGM did not have any role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. UG is supported by the Federal Ministry of Education and Research on",
-        "year": "",
-        "title": "Knowledge-based Multimedia Medical Education",
-        "doi": "",
-        "raw": "House to improve their diagnostic and clinical skills. At the same time, they are critical enough not to see Dr. House as a role model for their own personality. Well performed medical TV shows such as Dr. House can successfully be used in an educational setting to motivate medical students to come into seminars to learn more about rare diseases. manuscript. JRS is partly employed by the University Clinic Giessen and Marburg GmbH (UKGM) in Marburg. The UKGM did not have any role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript. AJ is employed by the University Clinic Giessen and Marburg GmbH (UKGM) in Marburg. The UKGM did not have any role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript. TM is employed by the Rhoen Klinikum AG (RKA) in Bad Neustadt and the University Clinic Giessen and Marburg GmbH (UKGM) in Marburg. The RKA and the UKGM did not have any role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript. AN is supported by an unrestricted grant by the German Jose´ Carreras foundation (AH06-01). In addition AN is employed by the University Clinic Giessen and Marburg GmbH (UKGM) in Marburg. The German Jose´ Carreras foundation and the UKGM did not have any role in study design, data collection and analysis, decision to publish, or preparation of the manuscript. UG is supported by the Federal Ministry of Education and Research on “Knowledge-based Multimedia Medical Education” (Grant: 08NM061A). The funder provided support in the form of salaries for authors [MH] during the time course of our study, but did not have any role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript. MH is currently employed at the Klinikum Leer gGmbH. The Klinikum Leer gGmbH did not have any role in the study design, data collection and analysis, decision to publish, or preparation of the manuscript.",
-        "is_web": false,
-        "index": 19
-    },
-    {
-        "authors": "",
-        "year": "",
-        "title": "Competing interests: I have read the journal’s policy and the authors of this manuscript have the following competing interests, which do not alter our adherence to PLOS ONE policies on sharing data and materials: JRS serves as scientific advisor for MSD, Sanofi-Genzyme and Amgen and received lecture fees by MSD, Sanofi-Genzyme, Synlab Academy, Novartis and Berlin-Chemie. This does not alter our adherence to PLOS ONE policies on sharing data and materials. AJ received lecture fees by Novartis, Boehringer-Ingelheim, Teva, GSK, Mundipharma, Olympus and Gambro Hospital",
-        "doi": "",
-        "raw": "Competing interests: I have read the journal’s policy and the authors of this manuscript have the following competing interests, which do not alter our adherence to PLOS ONE policies on sharing data and materials: JRS serves as scientific advisor for MSD, Sanofi-Genzyme and Amgen and received lecture fees by MSD, Sanofi-Genzyme, Synlab Academy, Novartis and Berlin-Chemie. This does not alter our adherence to PLOS ONE policies on sharing data and materials. AJ received lecture fees by Novartis, Boehringer-Ingelheim, Teva, GSK, Mundipharma, Olympus and Gambro Hospital.",
-        "is_web": false,
-        "index": 20
-    },
-    {
-        "authors": "",
-        "year": "",
-        "title": "This does not alter our adherence to PLOS ONE policies on sharing data and materials",
-        "doi": "",
-        "raw": "This does not alter our adherence to PLOS ONE policies on sharing data and materials.",
-        "is_web": false,
-        "index": 21
+        "index": 29,
+        "authors": "Thalia Arawi",
+        "year": "2010-01",
+        "title": "Using medical drama to teach biomedical ethics to medical students",
+        "journal": "Medical Teacher",
+        "doi": "10.3109/01421591003697457",
+        "raw": "Arawi T (2010) Using medical drama to teach biomedical ethics to medical students. Medical teacher 32 (5): e205-10. https://doi.org/10.3109/01421591003697457 PMID: 20423246"
     }
 ]

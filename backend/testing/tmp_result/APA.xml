@@ -1,0 +1,1210 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct status="extracted" xml:id="b0">
+	<analytic>
+		<title level="a" type="main">Multi-Way Functional Principal Components Analysis</title>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">I</forename><surname>Allen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">IEEE 5th International Workshop on Computational Advances in Multi-Sensor Adaptive Processing</title>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<biblScope unit="page" from="220" to="223" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Allen GI (2013). &quot;Multi-Way Functional Principal Components Analysis.&quot; In IEEE 5th International Workshop on Computational Advances in Multi-Sensor Adaptive Processing, pp. 220-223.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">The Quarks of Object-Oriented Development</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Armstrong</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/1113034.1113040</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Communications of the ACM</title>
+		<imprint>
+			<biblScope unit="volume">49</biblScope>
+			<biblScope unit="issue">2</biblScope>
+			<biblScope unit="page" from="123" to="128" />
+			<date type="published" when="2006">2006</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Armstrong DJ (2006). &quot;The Quarks of Object-Oriented Development.&quot; Communications of the ACM, 49(2), 123-128. doi:10.1145/1113034.1113040.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">gridExtra: Miscellaneous Functions for grid Graphics</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Auguie</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=gridExtra" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version 2</title>
+		<imprint>
+			<date type="published" when="2017">2017</date>
+			<biblScope unit="volume">3</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Auguie B (2017). gridExtra: Miscellaneous Functions for grid Graphics. R package ver- sion 2.3, URL https://CRAN.R-project.org/package=gridExtra.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Augmented Implicitly Restarted Lanczos Bidiagonalization Methods</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Baglama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Reichel</surname></persName>
+		</author>
+		<idno type="DOI">10.1137/04060593x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">SIAM Journal on Scientific Computing</title>
+		<imprint>
+			<biblScope unit="volume">27</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="19" to="42" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Baglama J, Reichel L (2005). &quot;Augmented Implicitly Restarted Lanczos Bidiagonalization Methods.&quot; SIAM Journal on Scientific Computing, 27(1), 19-42. doi:10.1137/04060593x.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">irlba: Fast Truncated SVD, PCA and Symmetric Eigendecomposition for Large Dense and Sparse Matrices</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Baglama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Reichel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Lewis</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=irlba" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Baglama J, Reichel L, Lewis BW (2019). irlba: Fast Truncated SVD, PCA and Symmetric Eigendecomposition for Large Dense and Sparse Matrices. R package version 2.3.3, URL https://CRAN.R-project.org/package=irlba.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">Matrix: Sparse and Dense Matrix Classes and Methods</title>
+		<author>
+			<persName><forename type="first">D</forename><surname>Bates</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Maechler</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=Matrix" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="2" to="18" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Bates D, Maechler M (2019). Matrix: Sparse and Dense Matrix Classes and Methods. R pack- age version 1.2-18, URL https://CRAN.R-project.org/package=Matrix.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b6">
+	<monogr>
+		<title level="m" type="main">Object-Oriented Analysis and Design with Applications</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Booch</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">A</forename><surname>Maksimchuk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Engle</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">J</forename><surname>Young</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Conallen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">A</forename><surname>Houston</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2007">2007</date>
+			<publisher>Addison-Wesley</publisher>
+			<pubPlace>Upper Saddle River</pubPlace>
+		</imprint>
+	</monogr>
+	<note>3rd edition</note>
+	<note type="raw_reference">Booch G, Maksimchuk RA, Engle MW, Young BJ, Conallen J, Houston KA (2007). Object- Oriented Analysis and Design with Applications. 3rd edition. Addison-Wesley, Upper Saddle River.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">funFEM: Clustering in the Discriminative Functional Subspace</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bouveyron</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=funFEM" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version 1</title>
+		<imprint>
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Bouveyron C (2015). funFEM: Clustering in the Discriminative Functional Subspace. R pack- age version 1.1, URL https://CRAN.R-project.org/package=funFEM.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">FDboost: Boosting Functional Regression Models</title>
+		<author>
+			<persName><forename type="first">S</forename><surname>Brockhaus</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ruegamer</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=FDboost" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version 0</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="page" from="3" to="5" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Brockhaus S, Ruegamer D (2018). FDboost: Boosting Functional Regression Models. R pack- age version 0.3-2, URL https://CRAN.R-project.org/package=FDboost.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">sparseFLMM: Functional Linear Mixed Models for Irregularly or Sparsely Sampled Data</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cederbaum</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=sparseFLMM" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">0</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Cederbaum J (2019). sparseFLMM: Functional Linear Mixed Models for Irregularly or Sparsely Sampled Data. R package version 0.3.0, URL https://CRAN.R-project.org/ package=sparseFLMM.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Software for Data Analysis: Programming with R</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Chambers</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/978-0-387-75936-4</idno>
+		<imprint>
+			<date type="published" when="2008">2008</date>
+			<publisher>Springer-Verlag</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Chambers JM (2008). Software for Data Analysis: Programming with R. Springer-Verlag, New York. doi:10.1007/978-0-387-75936-4.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b11">
+	<analytic>
+		<title level="a" type="main">fdapace: Functional Data Analysis and Empirical Dynamics</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Carroll</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Dai</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Fan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">Z</forename><surname>Hadjipantelis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Han</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Ji</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Wang</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=fdapace" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">0</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Chen Y, Carroll C, Dai X, Fan J, Hadjipantelis PZ, Han K, Ji H, Müller HG, Wang JL (2020). fdapace: Functional Data Analysis and Empirical Dynamics. R package version 0.5.2, URL https://CRAN.R-project.org/package=fdapace.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Multilevel Functional Principal Component Analysis</title>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">Z</forename><surname>Di</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">M</forename><surname>Crainiceanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">S</forename><surname>Caffo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">N</forename><forename type="middle">M</forename><surname>Punjabi</surname></persName>
+		</author>
+		<idno type="DOI">10.1214/08-aoas206</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Annals of Applied Statistics</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="458" to="488" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Di CZ, Crainiceanu CM, Caffo BS, Punjabi NM (2009). &quot;Multilevel Functional Principal Component Analysis.&quot; The Annals of Applied Statistics, 3(1), 458-488. doi:10.1214/ 08-aoas206.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Statistical Computing in Functional Data Analysis: The R Package fda.usc</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Febrero-Bande</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Oviedo De La Fuente</surname></persName>
+		</author>
+		<idno type="DOI">10.18637/jss.v051.i04</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Statistical Software</title>
+		<imprint>
+			<biblScope unit="volume">51</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="1" to="28" />
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Febrero-Bande M, Oviedo de la Fuente M (2012). &quot;Statistical Computing in Functional Data Analysis: The R Package fda.usc.&quot; Journal of Statistical Software, 51(4), 1-28. doi: 10.18637/jss.v051.i04.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">The Design and Implementation of FFTW3</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Frigo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">G</forename><surname>Johnson</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/jproc.2004.840301</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the IEEE</title>
+		<meeting>the IEEE</meeting>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<biblScope unit="volume">93</biblScope>
+			<biblScope unit="page" from="216" to="231" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Frigo M, Johnson SG (2005). &quot;The Design and Implementation of FFTW3.&quot; Proceedings of the IEEE, 93(2), 216-231. doi:10.1109/jproc.2004.840301.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Corrected Confidence Bands for Functional Data Using Principal Components</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Goldsmith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Greven</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Crainiceanu</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1541-0420.2012.01808.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Biometrics</title>
+		<imprint>
+			<biblScope unit="volume">69</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="41" to="51" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Goldsmith J, Greven S, Crainiceanu C (2013). &quot;Corrected Confidence Bands for Func- tional Data Using Principal Components.&quot; Biometrics, 69(1), 41-51. doi:10.1111/j. 1541-0420.2012.01808.x.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b16">
+	<analytic>
+		<title level="a" type="main">refund: Regression with Functional Data</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Goldsmith</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Scheipl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wrobel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Di</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Gellar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Harezlak</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">W</forename><surname>Mclean</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Swihart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Xiao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Crainiceanu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><forename type="middle">T</forename><surname>Reiss</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=refund" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">0</biblScope>
+			<biblScope unit="page" from="1" to="21" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Goldsmith J, Scheipl F, Huang L, Wrobel J, Di C, Gellar J, Harezlak J, McLean MW, Swihart B, Xiao L, Crainiceanu C, Reiss PT (2019). refund: Regression with Functional Data. R package version 0.1-21, URL https://CRAN.R-project.org/package=refund.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b17">
+	<analytic>
+		<title level="a" type="main">RFgroove: Importance Measure and Selection for Groups of Variables with Random Forests</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Gregorutti</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=RFgroove" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Gregorutti B (2016). RFgroove: Importance Measure and Selection for Groups of Vari- ables with Random Forests. R package version 1.1, URL https://CRAN.R-project.org/ package=RFgroove.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">Multivariate Functional Principal Component Analysis for Data Observed on Different (Dimensional) Domains</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Happ</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Greven</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/01621459.2016.1273115</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Statistical Association</title>
+		<imprint>
+			<biblScope unit="volume">113</biblScope>
+			<biblScope unit="issue">522</biblScope>
+			<biblScope unit="page" from="649" to="659" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Happ C, Greven S (2018). &quot;Multivariate Functional Principal Component Analysis for Data Observed on Different (Dimensional) Domains.&quot; Journal of the American Statistical Asso- ciation, 113(522), 649-659. doi:10.1080/01621459.2016.1273115.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b19">
+	<analytic>
+		<title level="a" type="main">funData: An S4 Class for Functional Data</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Happ-Kurz</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=funData" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="3" to="5" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Happ-Kurz C (2020a). funData: An S4 Class for Functional Data. R package version 1.3-5, URL https://CRAN.R-project.org/package=funData.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b20">
+	<analytic>
+		<title level="a" type="main">MFPCA: Multivariate Functional Principal Component Analysis for Data Observed on Different Dimensional Domains</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Happ-Kurz</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=MFPCA" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="3" to="5" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Happ-Kurz C (2020b). MFPCA: Multivariate Functional Principal Component Analysis for Data Observed on Different Dimensional Domains. R package version 1.3-5, URL https: //CRAN.R-project.org/package=MFPCA.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b21">
+	<analytic>
+		<title level="a" type="main">The Analysis of Two-Way Functional Data Using Two-Way Regularized Singular Value Decompositions</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">Z</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Buja</surname></persName>
+		</author>
+		<idno type="DOI">10.1198/jasa.2009.tm08024</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Statistical Association</title>
+		<imprint>
+			<biblScope unit="volume">104</biblScope>
+			<biblScope unit="issue">488</biblScope>
+			<biblScope unit="page" from="1609" to="1620" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Huang JZ, Shen H, Buja A (2009). &quot;The Analysis of Two-Way Functional Data Using Two- Way Regularized Singular Value Decompositions.&quot; Journal of the American Statistical Association, 104(488), 1609-1620. doi:10.1198/jasa.2009.tm08024.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b22">
+	<analytic>
+		<title level="a" type="main">refund.wave: Wavelet-Domain Regression with Functional Data</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Reiss</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Zhao</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=refund.wave" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">0</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Huo L, Reiss P, Zhao Y (2014). refund.wave: Wavelet-Domain Regression with Functional Data. R package version 0.1, URL https://CRAN.R-project.org/package=refund.wave.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b23">
+	<monogr>
+		<title level="m" type="main">CRAN Task View: Time Series Analysis</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Hyndman</surname></persName>
+		</author>
+		<idno>2020-04-14</idno>
+		<ptr target="https://CRAN.R-project.org/view=TimeSeries" />
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hyndman RJ (2020). CRAN Task View: Time Series Analysis. Version 2020-04-14, URL https://CRAN.R-project.org/view=TimeSeries.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b24">
+	<analytic>
+		<title level="a" type="main">fdaPDE: Functional Data Analysis and Partial Differential Equations; Statistical Analysis of Functional and Spatial Data, Based on Regression with Partial Differential Regularizations</title>
+		<author>
+			<persName><forename type="first">E</forename><surname>Lila</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><forename type="middle">M</forename><surname>Sangalli</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ramsay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Formaggia</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=fdaPDE" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="0" to="6" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lila E, Sangalli LM, Ramsay J, Formaggia L (2020). fdaPDE: Functional Data Analysis and Partial Differential Equations; Statistical Analysis of Functional and Spatial Data, Based on Regression with Partial Differential Regularizations. R package version 1.0-6, URL https://CRAN.R-project.org/package=fdaPDE.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Uncorrelated Multilinear Principal Component Analysis (UMPCA)</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lu</surname></persName>
+		</author>
+		<ptr target="https://de.mathworks.com/matlabcentral/fileexchange/35432" />
+	</analytic>
+	<monogr>
+		<title level="m">MATLAB Central File Exchange</title>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lu H (2012). Uncorrelated Multilinear Principal Component Analysis (UMPCA). MATLAB Central File Exchange. Version 1.0, URL https://de.mathworks.com/matlabcentral/ fileexchange/35432.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b26">
+	<analytic>
+		<title level="a" type="main">Uncorrelated Multilinear Principal Component Analysis for Unsupervised Multilinear Subspace Learning</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Lu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">N</forename><surname>Plataniotis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">N</forename><surname>Venetsanopoulos</surname></persName>
+		</author>
+		<idno type="DOI">10.1109/tnn.2009.2031144</idno>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Neural Networks</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="1820" to="1836" />
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lu H, Plataniotis KN, Venetsanopoulos AN (2009). &quot;Uncorrelated Multilinear Principal Component Analysis for Unsupervised Multilinear Subspace Learning.&quot; IEEE Transactions on Neural Networks, 20(11), 1820-1836. doi:10.1109/tnn.2009.2031144.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b27">
+	<monogr>
+		<title level="m" type="main">Object Oriented Software Construction</title>
+		<author>
+			<persName><forename type="first">B</forename><surname>Meyer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="1988">1988</date>
+			<publisher>Prentice Hall</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Meyer B (1988). Object Oriented Software Construction. Prentice Hall, New York.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b28">
+	<analytic>
+		<title level="a" type="main">fpca: Restricted MLE for Functional Principal Components Analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Peng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Paul</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=fpca" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="volume">0</biblScope>
+			<biblScope unit="page" from="2" to="3" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Peng J, Paul D (2011). fpca: Restricted MLE for Functional Principal Components Analysis. R package version 0.2-1, URL https://CRAN.R-project.org/package=fpca.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b29">
+	<monogr>
+		<title level="m" type="main">Functional Data Analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Ramsay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><forename type="middle">W</forename><surname>Silverman</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/b98888</idno>
+		<imprint>
+			<date type="published" when="2005">2005</date>
+			<publisher>Springer-Verlag</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note>2nd edition</note>
+	<note type="raw_reference">Ramsay JO, Silverman BW (2005). Functional Data Analysis. 2nd edition. Springer-Verlag, New York. doi:10.1007/b98888.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b30">
+	<analytic>
+		<title level="a" type="main">fda: Functional Data Analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">O</forename><surname>Ramsay</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wickham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Graves</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Hooker</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=fda" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version 2</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Ramsay JO, Wickham H, Graves S, Hooker G (2020). fda: Functional Data Analysis. R pack- age version 2.4.8.1, URL https://CRAN.R-project.org/package=fda.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b31">
+	<analytic>
+		<title level="a" type="main">R: A Language and Environment for Statistical Computing</title>
+		<author>
+			<persName><forename type="first">Team</forename><surname>Core</surname></persName>
+		</author>
+		<ptr target="https://www" />
+	</analytic>
+	<monogr>
+		<title level="m">R Foundation for Statistical Computing</title>
+		<meeting><address><addrLine>Vienna, Austria</addrLine></address></meeting>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">R Core Team (2019). R: A Language and Environment for Statistical Computing. R Founda- tion for Statistical Computing, Vienna, Austria. URL https://www.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b32">
+	<monogr>
+		<ptr target="org/" />
+		<title level="m">R-project</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">R-project.org/.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b33">
+	<analytic>
+		<title level="a" type="main">tidyfun: Tools for Tidy Functional Data</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Scheipl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Goldsmith</surname></persName>
+		</author>
+		<ptr target="https://github.com/fabian-s/tidyfun" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version 0</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">0</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Scheipl F, Goldsmith J (2018). tidyfun: Tools for Tidy Functional Data. R package ver- sion 0.0.7, URL https://github.com/fabian-s/tidyfun.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b34">
+	<analytic>
+		<title level="a" type="main">Identifiability in Penalized Function-on-Function Regression Models</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Scheipl</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Greven</surname></persName>
+		</author>
+		<idno type="DOI">10.1214/16-ejs1123</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Electronic Journal of Statistics</title>
+		<imprint>
+			<biblScope unit="volume">10</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="495" to="526" />
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Scheipl F, Greven S (2016). &quot;Identifiability in Penalized Function-on-Function Regression Models.&quot; Electronic Journal of Statistics, 10(1), 495-526. doi:10.1214/16-ejs1123.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b35">
+	<analytic>
+		<title level="a" type="main">funHDDC: Univariate and Multivariate Model-Based Clustering in Group-Specific Functional Subspaces</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Schmutz</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jacques</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Bouveyron</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=funHDDC" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">2</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Schmutz A, Jacques J, Bouveyron C (2019). funHDDC: Univariate and Multivariate Model- Based Clustering in Group-Specific Functional Subspaces. R package version 2.3.0, URL https://CRAN.R-project.org/package=funHDDC.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b36">
+	<analytic>
+		<title level="a" type="main">rainbow: Rainbow Plots, Bagplots and Boxplots for Functional Data</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">L</forename><surname>Shang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">J</forename><surname>Hyndman</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=rainbow" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">3</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Shang HL, Hyndman RJ (2019). rainbow: Rainbow Plots, Bagplots and Boxplots for Functional Data. R package version 3.6, URL https://CRAN.R-project.org/package= rainbow.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b37">
+	<analytic>
+		<title level="a" type="main">Funclustering: A Package for Functional Data Clustering</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Soueidatt</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=Funclustering" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Soueidatt M (2014). Funclustering: A Package for Functional Data Clustering. R package version 1.0.1, URL https://CRAN.R-project.org/package=Funclustering.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b38">
+	<analytic>
+		<title level="a" type="main">roahd: Robust Analysis of High Dimensional Data</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Tarabelloni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Arribas-Gil</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Ieva</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">M</forename><surname>Paganoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Romo</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=roahd" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Tarabelloni N, Arribas-Gil A, Ieva F, Paganoni AM, Romo J (2018). roahd: Robust Analysis of High Dimensional Data. R package version 1.4.1, URL https://CRAN.R-project.org/ package=roahd.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b39">
+	<analytic>
+		<title level="a" type="main">fdasrvf: Elastic Functional Data Analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Tucker</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=fdasrvf" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Tucker JD (2019). fdasrvf: Elastic Functional Data Analysis. R package version 1.9.2, URL https://CRAN.R-project.org/package=fdasrvf.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b40">
+	<analytic>
+		<title level="a" type="main">Object Oriented Data Analysis: Sets of Trees</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>Marron</surname></persName>
+		</author>
+		<idno type="DOI">10.1214/009053607000000217</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Annals of Statistics</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="1849" to="1873" />
+			<date type="published" when="2007">2007</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wang H, Marron JS (2007). &quot;Object Oriented Data Analysis: Sets of Trees.&quot; The Annals of Statistics, 35(5), 1849-1873. doi:10.1214/009053607000000217.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b41">
+	<analytic>
+		<title level="a" type="main">Functional Data Analysis</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Chiou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Müller</surname></persName>
+		</author>
+		<idno type="DOI">10.1146/annurev-statistics-041715-033624</idno>
+	</analytic>
+	<monogr>
+		<title level="m">Annual Review of Statistics and Its Application</title>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="page" from="257" to="295" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wang JL, Chiou JM, Müller HG (2016). &quot;Functional Data Analysis.&quot; An- nual Review of Statistics and Its Application, 3(1), 257-295. doi:10.1146/ annurev-statistics-041715-033624.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b42">
+	<monogr>
+		<title level="m" type="main">ggplot2: Elegant Graphics for Data Analysis</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wickham</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2009">2009</date>
+			<publisher>Springer-Verlag</publisher>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wickham H (2009). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag, New York.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b43">
+	<analytic>
+		<title level="a" type="main">testthat: Get Started with Testing</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wickham</surname></persName>
+		</author>
+		<idno type="DOI">10.32614/rj-2011-002</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The R Journal</title>
+		<imprint>
+			<biblScope unit="volume">3</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="5" to="10" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wickham H (2011). &quot;testthat: Get Started with Testing.&quot; The R Journal, 3(1), 5-10. doi: 10.32614/rj-2011-002.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b44">
+	<analytic>
+		<title level="a" type="main">ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics</title>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wickham</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Chang</forename><forename type="middle">W</forename><surname>Henry</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Pedersen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">L</forename><surname>Takahashi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wilke</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Woo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Yutani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=ggplot2" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">3</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wickham H, Chang W, Henry L, Pedersen TL, Takahashi K, Wilke C, Woo K, Yutani H (2019). ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. R package version 3.2.1, URL https://CRAN.R-project.org/package=ggplot2.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b45">
+	<analytic>
+		<title level="a" type="main">Fast Stable Restricted Maximum Likelihood and Marginal Likelihood Estimation of Semiparametric Generalized Linear Models</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Wood</surname></persName>
+		</author>
+		<idno type="DOI">10.1111/j.1467-9868.2010.00749.x</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the Royal Statistical Society B</title>
+		<imprint>
+			<biblScope unit="volume">73</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="3" to="36" />
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wood SN (2011). &quot;Fast Stable Restricted Maximum Likelihood and Marginal Likelihood Estimation of Semiparametric Generalized Linear Models.&quot; Journal of the Royal Statistical Society B, 73(1), 3-36. doi:10.1111/j.1467-9868.2010.00749.x.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b46">
+	<monogr>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">N</forename><surname>Wood</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=mgcv" />
+		<title level="m">mgcv: Mixed GAM Computation Vehicle with GCV/AIC/REML Smoothness Estimation</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+			<biblScope unit="volume">1</biblScope>
+			<biblScope unit="page" from="8" to="31" />
+		</imprint>
+	</monogr>
+	<note>R package version</note>
+	<note type="raw_reference">Wood SN (2019). mgcv: Mixed GAM Computation Vehicle with GCV/AIC/REML Smooth- ness Estimation. R package version 1.8-31, URL https://CRAN.R-project.org/package= mgcv.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b47">
+	<analytic>
+		<title level="a" type="main">Functional Data Analysis for Sparse Longitudinal Data</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Yao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">G</forename><surname>Müller</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">L</forename><surname>Wang</surname></persName>
+		</author>
+		<idno type="DOI">10.1198/016214504000001745</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of the American Statistical Association</title>
+		<imprint>
+			<biblScope unit="volume">100</biblScope>
+			<biblScope unit="issue">470</biblScope>
+			<biblScope unit="page" from="577" to="590" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Yao F, Müller HG, Wang JL (2005). &quot;Functional Data Analysis for Sparse Longitudinal Data.&quot; Journal of the American Statistical Association, 100(470), 577-590. doi:10.1198/ 016214504000001745.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b48">
+	<analytic>
+		<title level="a" type="main">funcy: Functional Clustering Algorithms</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yassouridis</surname></persName>
+		</author>
+		<ptr target="https://CRAN.R-project.org/package=funcy" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2018">2018</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Yassouridis C (2018). funcy: Functional Clustering Algorithms. R package version 1.0.0, URL https://CRAN.R-project.org/package=funcy.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b49">
+	<analytic>
+		<title level="a" type="main">Generalization, Combination and Extension of Functional Clustering Algorithms: The R Package funcy</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Yassouridis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><surname>Ernst</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Leisch</surname></persName>
+		</author>
+		<idno type="DOI">10.18637/jss.v085.i09</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Statistical Software</title>
+		<imprint>
+			<biblScope unit="volume">85</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<biblScope unit="page" from="1" to="25" />
+			<date type="published" when="2018">2018</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Yassouridis C, Ernst D, Leisch F (2018). &quot;Generalization, Combination and Extension of Functional Clustering Algorithms: The R Package funcy.&quot; Journal of Statistical Software, 85(9), 1-25. doi:10.18637/jss.v085.i09.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b50">
+	<analytic>
+		<title level="a" type="main">zoo: S3 Infrastructure for Regular and Irregular Time Series</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zeileis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Grothendieck</surname></persName>
+		</author>
+		<idno type="DOI">10.18637/jss.v014.i06</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Statistical Software</title>
+		<imprint>
+			<biblScope unit="volume">14</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1" to="27" />
+			<date type="published" when="2005">2005</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Zeileis A, Grothendieck G (2005). &quot;zoo: S3 Infrastructure for Regular and Irregular Time Series.&quot; Journal of Statistical Software, 14(6), 1-27. doi:10.18637/jss.v014.i06.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b51">
+	<analytic>
+		<title level="a" type="main">zoo: S3 Infrastructure for Regular and Irregular Time Series (Z&apos;s Ordered Observations)</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Zeileis</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Grothendieck</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Ryan</surname></persName>
+		</author>
+		<ptr target="https://CRAN" />
+	</analytic>
+	<monogr>
+		<title level="m">R package version</title>
+		<imprint>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="volume">1</biblScope>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Zeileis A, Grothendieck G, Ryan JA (2020). zoo: S3 Infrastructure for Regular and Irregular Time Series (Z&apos;s Ordered Observations). R package version 1.8-7, URL https://CRAN.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b52">
+	<monogr>
+		<title level="m" type="main">DCT2D/DCT3D: This option calculates a representation of functional data on two-or threedimensional domains in a tensor cosine basis. For speeding up the calculations, the implementation is based on the fftw3 C-library (Frigo and Johnson 2005, developer version). If the fftw3-dev library is not available during the installation of the MFPCA package</title>
+		<author>
+			<orgName type="collaboration">R-project</orgName>
+		</author>
+		<idno type="DOI">10.18637/jss.v093.i05Accepted:2018-12-03</idno>
+		<ptr target="http://www.foastat.org" />
+		<imprint>
+			<date type="published" when="2017-09-28">April 2020. 2017-09-28</date>
+			<biblScope unit="volume">93</biblScope>
+		</imprint>
+	</monogr>
+	<note>org/package=zoo the DCT2D and DCT3D options are disabled and throw an error. After installing fftw3-dev on the system, MFPCA has to be re-installed to activate DCT2D/DCT3D. The uniExpansions entry for a cosine representation of 2D/3D elements is: R&gt; list(type = &quot;DCT2D&quot;, qThresh, parallel) R&gt; list(type = &quot;DCT3D&quot;, qThresh, parallel) The discrete cosine transformation is a real-valued variant of the fast Fourier transform (FFT) and usually results in a huge number of non-zero coefficients that mostly model &quot;noise&quot; and can thus be set to zero without affecting the representation of the data. The user has to supply a threshold between 0 and 1 (qThresh) that defines the proportion of coefficients to be thresholded. Setting, e.g., qThresh = 0.9 will set 90% of the coefficients to zero, leaving only the 10% of the coefficients with the highest absolute values. The coefficients are stored in a &apos;sparseMatrix&apos; (package Matrix) object to reduce the memory load for the following computations. The calculations can be run in parallel for the different observations by setting the parameter parallel to TRUE (defaults to FALSE), if a parallel backend has been registered before. Affiliation: Clara Happ-Kurz Department of Statistics LMU Munich E-mail: clara.happ@stat.uni-muenchen</note>
+	<note type="raw_reference">R-project.org/package=zoo. DCT2D/DCT3D: This option calculates a representation of functional data on two-or three- dimensional domains in a tensor cosine basis. For speeding up the calculations, the imple- mentation is based on the fftw3 C-library (Frigo and Johnson 2005, developer version). If the fftw3-dev library is not available during the installation of the MFPCA package, the DCT2D and DCT3D options are disabled and throw an error. After installing fftw3-dev on the sys- tem, MFPCA has to be re-installed to activate DCT2D/DCT3D. The uniExpansions entry for a cosine representation of 2D/3D elements is: R&gt; list(type = &quot;DCT2D&quot;, qThresh, parallel) R&gt; list(type = &quot;DCT3D&quot;, qThresh, parallel) The discrete cosine transformation is a real-valued variant of the fast Fourier transform (FFT) and usually results in a huge number of non-zero coefficients that mostly model &quot;noise&quot; and can thus be set to zero without affecting the representation of the data. The user has to supply a threshold between 0 and 1 (qThresh) that defines the proportion of coefficients to be thresholded. Setting, e.g., qThresh = 0.9 will set 90% of the coefficients to zero, leaving only the 10% of the coefficients with the highest absolute values. The coefficients are stored in a &apos;sparseMatrix&apos; (package Matrix) object to reduce the memory load for the following computations. The calculations can be run in parallel for the different observations by setting the parameter parallel to TRUE (defaults to FALSE), if a parallel backend has been registered before. Affiliation: Clara Happ-Kurz Department of Statistics LMU Munich E-mail: clara.happ@stat.uni-muenchen.de Journal of Statistical Software http://www.jstatsoft.org/ published by the Foundation for Open Access Statistics http://www.foastat.org/ April 2020, Volume 93, Issue 5 Submitted: 2017-09-28 doi:10.18637/jss.v093.i05 Accepted: 2018-12-03</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

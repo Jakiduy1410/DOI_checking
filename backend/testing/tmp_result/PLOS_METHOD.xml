@@ -1,0 +1,641 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct status="extracted" xml:id="b0">
+	<monogr>
+		<title level="m" type="main">Guinness world records 2012</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Glenday</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2012">2012</date>
+			<publisher>Bantam Books</publisher>
+			<biblScope unit="page">596</biblScope>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Glenday C (2012) Guinness world records 2012. New York: Bantam Books. xliv, 596 p.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">Medical and nursing students&apos; television viewing habits. Potential implications for bioethics</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Czarny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Faden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">T</forename><surname>Nolan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Bodensiek</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sugarman</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/15265160802595074</idno>
+		<ptr target="https://doi.org/10.1080/15265160802595074PMID:19085461" />
+	</analytic>
+	<monogr>
+		<title level="j">The American journal of bioethics AJOB</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="1" to="8" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Czarny MJ, Faden RR, Nolan MT, Bodensiek E, Sugarman J (2008) Medical and nursing students&apos; tele- vision viewing habits. Potential implications for bioethics. The American journal of bioethics AJOB 8 (12): 1-8. https://doi.org/10.1080/15265160802595074 PMID: 19085461</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b2">
+	<analytic>
+		<title level="a" type="main">Television viewing and ethical reasoning. Why watching Scrubs does a better job than most bioethics classes</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Spike</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/15265160802495630</idno>
+		<ptr target="https://doi.org/10.1080/15265160802495630PMID:19085466" />
+	</analytic>
+	<monogr>
+		<title level="j">The American journal of bioethics AJOB</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="11" to="13" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Spike J (2008) Television viewing and ethical reasoning. Why watching Scrubs does a better job than most bioethics classes. The American journal of bioethics AJOB 8 (12): 11-13. https://doi.org/10.1080/ 15265160802495630 PMID: 19085466</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">Teaching communication and professionalism using a popular medical drama</title>
+		<author>
+			<persName><forename type="first">A</forename><surname>Pavlov</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><forename type="middle">E</forename><surname>Dahlquist</surname></persName>
+		</author>
+		<idno type="PMID">20063219</idno>
+	</analytic>
+	<monogr>
+		<title level="j">Family medicine</title>
+		<imprint>
+			<biblScope unit="volume">42</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page" from="25" to="27" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Pavlov A, Dahlquist GE (2010) Teaching communication and professionalism using a popular medical drama. Family medicine 42 (1): 25-27. PMID: 20063219</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">Medical dramas on television. A brief guide for educators</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Hirt</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Erichsen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">S</forename><surname>White</surname></persName>
+		</author>
+		<idno type="DOI">10.3109/0142159X.2012.737960</idno>
+		<ptr target="https://doi.org/10.3109/0142159X.2012.737960PMID:23228106" />
+	</analytic>
+	<monogr>
+		<title level="j">Medical teacher</title>
+		<imprint>
+			<biblScope unit="volume">35</biblScope>
+			<biblScope unit="issue">3</biblScope>
+			<biblScope unit="page" from="237" to="242" />
+			<date type="published" when="2013">2013</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hirt C, Wong K, Erichsen S, White JS (2013) Medical dramas on television. A brief guide for educators. Medical teacher 35 (3): 237-242. https://doi.org/10.3109/0142159X.2012.737960 PMID: 23228106</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">The &quot;ER&quot; Seminar. Teaching Psychotherapeutic Techniques to Medical Students</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">P</forename><surname>Mcneilly</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">P</forename><surname>Wengel</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Academic psychiatry the journal of the American Association of Directors of Psychiatric Residency Training and the Association for Academic Psychiatry</title>
+		<imprint>
+			<biblScope unit="volume">25</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="193" to="200" />
+			<date type="published" when="2001">2001</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">McNeilly DP, Wengel SP (2001) The &quot;ER&quot; Seminar. Teaching Psychotherapeutic Techniques to Medi- cal Students. Academic psychiatry the journal of the American Association of Directors of Psychiatric Residency Training and the Association for Academic Psychiatry 25 (4): 193-200.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b6">
+	<monogr>
+		<title level="m">Annenberg Colloquium with Hollywood</title>
+		<imprint>
+			<publisher>Health &amp; Society</publisher>
+			<date type="published" when="2007">2007</date>
+			<biblScope unit="page">16</biblScope>
+		</imprint>
+		<respStmt>
+			<orgName>USC Annenberg</orgName>
+		</respStmt>
+	</monogr>
+	<note>The Norman Lear Center</note>
+	<note type="raw_reference">USC Annenberg, The Norman Lear Center, editor (2007) Annenberg Colloquium with Hollywood, Health &amp; Society. 16 p.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">Hollywood, Health &amp; Society</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Kaplan</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">MINT und Chancengleichheit in fiktionalen Fernsehformaten</title>
+		<imprint>
+			<date type="published" when="2010">2010</date>
+			<biblScope unit="page" from="69" to="71" />
+		</imprint>
+	</monogr>
+	<note>Bundesministerium fu ¨r Bildung und Forschung (BMBF)</note>
+	<note type="raw_reference">Kaplan M (2010) Hollywood, Health &amp; Society. In: Bundesministerium fu ¨r Bildung und Forschung (BMBF), editor. MINT und Chancengleichheit in fiktionalen Fernsehformaten. pp. 69-71.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Australian medical students&apos; perceptions of professionalism and ethics in medical television programs</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Weaver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Wilson</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/1472-6920-11-50</idno>
+		<ptr target="https://doi.org/10.1186/1472-6920-11-50PMID:21798068" />
+	</analytic>
+	<monogr>
+		<title level="j">BMC medical education</title>
+		<imprint>
+			<biblScope unit="volume">11</biblScope>
+			<biblScope unit="page">50</biblScope>
+			<date type="published" when="2011">2011</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Weaver R, Wilson I (2011) Australian medical students&apos; perceptions of professionalism and ethics in medical television programs. BMC medical education 11: 50. https://doi.org/10.1186/1472-6920-11-50 PMID: 21798068</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Medical professionalism on television. Student perceptions and pedagogical implications</title>
+		<author>
+			<persName><forename type="first">R</forename><surname>Weaver</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Wilson</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Langendyk</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">Health</title>
+		<imprint>
+			<biblScope unit="volume">18</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="597" to="612" />
+			<date type="published" when="1997">2014. 1997</date>
+			<pubPlace>London, England</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Weaver R, Wilson I, Langendyk V (2014) Medical professionalism on television. Student perceptions and pedagogical implications. Health (London, England 1997) 18 (6): 597-612.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b10">
+	<analytic>
+		<title level="a" type="main">Bioethics and professionalism in popular television medical dramas</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">J</forename><surname>Czarny</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">R</forename><surname>Faden</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Sugarman</surname></persName>
+		</author>
+		<idno type="DOI">10.1136/jme.2009.033621</idno>
+		<ptr target="https://doi.org/10.1136/jme.2009.033621PMID:20338929" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of medical ethics</title>
+		<imprint>
+			<biblScope unit="volume">36</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="203" to="206" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Czarny MJ, Faden RR, Sugarman J (2010) Bioethics and professionalism in popular television medical dramas. Journal of medical ethics 36 (4): 203-206. https://doi.org/10.1136/jme.2009.033621 PMID: 20338929</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b11">
+	<monogr>
+		<title level="m" type="main">Science Meets Fiction</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Lingenfelter</surname></persName>
+		</author>
+		<imprint>
+			<pubPlace>Berlin</pubPlace>
+		</imprint>
+	</monogr>
+	<note>House MD</note>
+	<note type="raw_reference">Lingenfelter K Science Meets Fiction &quot;House MD&quot;. Berlin.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Hospital doctors&apos; Opinions regarding educational Utility, public Sentiment and career Effects of Medical television Dramas. The House MD study</title>
+		<author>
+			<persName><forename type="first">H</forename><forename type="middle">N</forename><surname>Haboubi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Morgan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Aldalati</surname></persName>
+		</author>
+		<idno type="PMID">26654621</idno>
+	</analytic>
+	<monogr>
+		<title level="j">The Medical journal of Australia</title>
+		<imprint>
+			<biblScope unit="volume">203</biblScope>
+			<biblScope unit="issue">11</biblScope>
+			<biblScope unit="page" from="462" to="466" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Haboubi HN, Morgan H, Aldalati O (2015) Hospital doctors&apos; Opinions regarding educational Utility, pub- lic Sentiment and career Effects of Medical television Dramas. The House MD study. The Medical jour- nal of Australia 203 (11): 462-466. PMID: 26654621</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Bericht aus der Praxis/Practice Report. How to successfully establish PAL in medical education. 10 tips to succeed in PAL-based courses in undergraduate medical education (UGME)</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Hofer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Klein</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Malzkorn</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Martin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Weigel</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">O</forename><surname>Martin</surname></persName>
+		</author>
+		<idno type="DOI">10.1016/j.zefq.2017.05.029</idno>
+		<ptr target="https://doi.org/10.1016/j.zefq.2017.05.029PMID:28760684" />
+	</analytic>
+	<monogr>
+		<title level="j">Zeitschrift fur Evidenz, Fortbildung und Qualitat im Gesundheitswesen</title>
+		<imprint>
+			<biblScope unit="volume">125</biblScope>
+			<biblScope unit="page" from="80" to="84" />
+			<date type="published" when="2017">2017</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Hofer M, Klein K, Malzkorn B, Martin A, Weigel C, Martin O (2017) Bericht aus der Praxis/Practice Report. How to successfully establish PAL in medical education. 10 tips to succeed in PAL-based courses in undergraduate medical education (UGME). Zeitschrift fur Evidenz, Fortbildung und Qualitat im Gesundheitswesen 125: 80-84. https://doi.org/10.1016/j.zefq.2017.05.029 PMID: 28760684</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b14">
+	<monogr>
+		<title level="m" type="main">Free to learn. Why unleashing the instinct to play will make our children happier, more self-reliant, and better students for life</title>
+		<author>
+			<persName><forename type="first">P</forename><surname>Gray</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2013">2013</date>
+			<publisher>Basic Books</publisher>
+			<biblScope unit="page">289</biblScope>
+			<pubPlace>New York</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Gray P (2013) Free to learn. Why unleashing the instinct to play will make our children happier, more self-reliant, and better students for life. New York: Basic Books. 289 p.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">How fun are your meetings? Investigating the relationship between humor patterns in team interactions and team performance</title>
+		<author>
+			<persName><forename type="first">N</forename><surname>Lehmann-Willenbrock</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">A</forename><surname>Allen</surname></persName>
+		</author>
+		<idno type="DOI">10.1037/a0038083</idno>
+		<ptr target="https://doi.org/10.1037/a0038083PMID:25314363" />
+	</analytic>
+	<monogr>
+		<title level="j">The Journal of applied psychology</title>
+		<imprint>
+			<biblScope unit="volume">99</biblScope>
+			<biblScope unit="issue">6</biblScope>
+			<biblScope unit="page" from="1278" to="1287" />
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Lehmann-Willenbrock N, Allen JA (2014) How fun are your meetings? Investigating the relationship between humor patterns in team interactions and team performance. The Journal of applied psychology 99 (6): 1278-1287. https://doi.org/10.1037/a0038083 PMID: 25314363</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b16">
+	<monogr>
+		<ptr target="https://en.wikipedia.org/w/index.php?oldid=702970276" />
+		<title level="m">List of House episodes-Wikipedia</title>
+		<imprint>
+			<publisher>Unknown</publisher>
+			<date type="published" when="2017-04-03">2017. 3 April 2017</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Unknown (2017) List of House episodes-Wikipedia. Available: https://en.wikipedia.org/w/index.php? oldid=702970276. Accessed 3 April 2017.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b17">
+	<analytic>
+		<title level="a" type="main">Cobalt intoxication diagnosed with the help of Dr House</title>
+		<author>
+			<persName><forename type="first">K</forename><surname>Dahms</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sharkova</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Heitland</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Pankuweit</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Schaefer</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">The Lancet</title>
+		<imprint>
+			<biblScope unit="volume">383</biblScope>
+			<biblScope unit="page">574</biblScope>
+			<date type="published" when="2014">2014. 9916</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Dahms K, Sharkova Y, Heitland P, Pankuweit S, Schaefer JR (2014) Cobalt intoxication diagnosed with the help of Dr House. The Lancet 383 (9916): 574.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b18">
+	<analytic>
+		<title level="a" type="main">TV show House helped doctors spot cobalt poisoning</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Wise</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">BMJ (Clinical research</title>
+		<imprint>
+			<biblScope unit="volume">348</biblScope>
+			<biblScope unit="page">1424</biblScope>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wise J (2014) TV show House helped doctors spot cobalt poisoning. BMJ (Clinical research ed.) 348: g1424.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b19">
+	<monogr>
+		<ptr target="https://sciencedirect.altmetric.com/details/2104541" />
+		<title level="m">Altmetric Cobalt intoxication diagnosed with the help of Dr House</title>
+		<imprint>
+			<date type="published" when="2017-04-03">3 April 2017</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Altmetric Cobalt intoxication diagnosed with the help of Dr House. Available: https://sciencedirect. altmetric.com/details/2104541. Accessed 3 April 2017.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b20">
+	<monogr>
+		<title level="m" type="main">Evening News with Scott Pelley</title>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">R</forename><surname>Schafer</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2014">2014</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Schafer JR (2014) Evening News with Scott Pelley.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b21">
+	<monogr>
+		<title level="m" type="main">Seen on TV, a Medical Mystery Involving Hip Implants Is Solved</title>
+		<author>
+			<persName><forename type="first">G</forename><surname>Kolata</surname></persName>
+		</author>
+		<author>
+			<persName><surname>As</surname></persName>
+		</author>
+		<ptr target="https://www.nytimes.com/2014/02/07/health/house-plays-a-role-in-solving-a-medical-mystery.html?_r=0" />
+		<imprint>
+			<date type="published" when="2017-04-03">3 April 2017</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Kolata G As Seen on TV, a Medical Mystery Involving Hip Implants Is Solved. Available: https://www. nytimes.com/2014/02/07/health/house-plays-a-role-in-solving-a-medical-mystery.html?_r=0. Accessed 3 April 2017.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b22">
+	<monogr>
+		<title level="m" type="main">Paging Dr Haus: German doctor cures mystery illness after recalling a</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Cooper</surname></persName>
+		</author>
+		<ptr target="http://www.independent.co.uk/news/world/europe/paging-dr-haus-german-doctor-cures-mystery-illness-after-recalling-a-similar-diagnosis-from-hugh-9113085.html" />
+		<imprint>
+			<date type="published" when="2014-04-03">2014. 3 April 2017</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Cooper C (2014) Paging Dr Haus: German doctor cures mystery illness after recalling a. Available: http://www.independent.co.uk/news/world/europe/paging-dr-haus-german-doctor-cures-mystery- illness-after-recalling-a-similar-diagnosis-from-hugh-9113085.html. Accessed 3 April 2017.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b23">
+	<monogr>
+		<ptr target="http://time.com/5375/tvs-house-helps-solve-real-life-medical-mystery/" />
+		<title level="m">Alter C TV&apos;s &apos;House&apos; Helps Solve Real-Life Medical Mystery</title>
+		<imprint>
+			<date type="published" when="2017-04-03">3 April 2017</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Alter C TV&apos;s &apos;House&apos; Helps Solve Real-Life Medical Mystery. Available: http://time.com/5375/tvs-house- helps-solve-real-life-medical-mystery/. Accessed 3 April 2017.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b24">
+	<analytic>
+		<title level="a" type="main">The current landscape of television and movies in medical education</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Law</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">W</forename><surname>Kwong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Friesen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Veinot</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">L</forename><surname>Ng</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s40037-015-0205-9</idno>
+		<ptr target="https://doi.org/10.1007/s40037-015-0205-9PMID:26381289" />
+	</analytic>
+	<monogr>
+		<title level="j">Perspectives on medical education</title>
+		<imprint>
+			<biblScope unit="volume">4</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="218" to="224" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Law M, Kwong W, Friesen F, Veinot P, Ng SL (2015) The current landscape of television and movies in medical education. Perspectives on medical education 4 (5): 218-224. https://doi.org/10.1007/s40037- 015-0205-9 PMID: 26381289</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b25">
+	<analytic>
+		<title level="a" type="main">Teaching professionalism to first year medical students using video clips</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Shevell</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Thomas</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Fuks</surname></persName>
+		</author>
+		<idno type="DOI">10.3109/0142159X.2014.970620</idno>
+		<ptr target="https://doi.org/10.3109/0142159X.2014.970620PMID:25313932" />
+	</analytic>
+	<monogr>
+		<title level="j">Medical teacher</title>
+		<imprint>
+			<biblScope unit="volume">37</biblScope>
+			<biblScope unit="issue">10</biblScope>
+			<biblScope unit="page" from="935" to="942" />
+			<date type="published" when="2015">2015</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Shevell AH, Thomas A, Fuks A (2015) Teaching professionalism to first year medical students using video clips. Medical teacher 37 (10): 935-942. https://doi.org/10.3109/0142159X.2014.970620 PMID: 25313932</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b26">
+	<analytic>
+		<title level="a" type="main">The pedagogical value of House, M.D.-can a fictional unethical physician be used to teach ethics</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">R</forename><surname>Wicclair</surname></persName>
+		</author>
+		<idno type="DOI">10.1080/15265160802478503</idno>
+		<ptr target="https://doi.org/10.1080/15265160802478503PMID:19085469" />
+	</analytic>
+	<monogr>
+		<title level="j">The American journal of bioethics AJOB</title>
+		<imprint>
+			<biblScope unit="volume">8</biblScope>
+			<biblScope unit="issue">12</biblScope>
+			<biblScope unit="page" from="16" to="17" />
+			<date type="published" when="2008">2008</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wicclair MR (2008) The pedagogical value of House, M.D.-can a fictional unethical physician be used to teach ethics. The American journal of bioethics AJOB 8 (12): 16-17. https://doi.org/10.1080/ 15265160802478503 PMID: 19085469</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b27">
+	<analytic>
+		<title level="a" type="main">Using television shows to teach communication skills in internal medicine residency</title>
+		<author>
+			<persName><forename type="first">R</forename><forename type="middle">Y</forename><surname>Wong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">S</forename><surname>Saber</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">I</forename><surname>Ma</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">M</forename><surname>Roberts</surname></persName>
+		</author>
+		<idno type="DOI">10.1186/1472-6920-9-9</idno>
+		<ptr target="https://doi.org/10.1186/1472-6920-9-9PMID:19187563" />
+	</analytic>
+	<monogr>
+		<title level="j">BMC medical education</title>
+		<imprint>
+			<biblScope unit="volume">9</biblScope>
+			<biblScope unit="issue">9</biblScope>
+			<date type="published" when="2009">2009</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Wong RY, Saber SS, Ma I, Roberts JM (2009) Using television shows to teach communication skills in internal medicine residency. BMC medical education 9: 9. https://doi.org/10.1186/1472-6920-9-9 PMID: 19187563</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b28">
+	<analytic>
+		<title level="a" type="main">Using medical drama to teach biomedical ethics to medical students</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Arawi</surname></persName>
+		</author>
+		<idno type="DOI">10.3109/01421591003697457</idno>
+		<ptr target="https://doi.org/10.3109/01421591003697457PMID:20423246" />
+	</analytic>
+	<monogr>
+		<title level="j">Medical teacher</title>
+		<imprint>
+			<biblScope unit="volume">32</biblScope>
+			<biblScope unit="issue">5</biblScope>
+			<biblScope unit="page" from="205" to="210" />
+			<date type="published" when="2010">2010</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Arawi T (2010) Using medical drama to teach biomedical ethics to medical students. Medical teacher 32 (5): e205-10. https://doi.org/10.3109/01421591003697457 PMID: 20423246</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

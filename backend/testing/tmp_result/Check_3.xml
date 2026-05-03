@@ -1,0 +1,1094 @@
+<TEI xmlns="http://www.tei-c.org/ns/1.0" xmlns:xlink="http://www.w3.org/1999/xlink" 
+ xmlns:mml="http://www.w3.org/1998/Math/MathML">
+	<teiHeader/>
+	<text>
+		<front/>
+		<body/>
+		<back>
+			<div>
+				<listBibl>
+<biblStruct status="extracted" xml:id="b0">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch" />
+		<title level="m">PyTorch</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;PyTorch,&quot; https://github.com/pytorch/pytorch.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b1">
+	<analytic>
+		<title level="a" type="main">An empirical study on bugs inside pytorch: A replication study</title>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">C</forename><surname>Ho</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">V</forename><surname>Majdinasab</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Islam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">E</forename><surname>Costa</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">E</forename><surname>Shihab</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Khomh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Nadi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Raza</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2023 IEEE International Conference on Software Maintenance and Evolution (ICSME)</title>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="220" to="231" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">S. C. Yin Ho, V. Majdinasab, M. Islam, D. E. Costa, E. Shihab, F. Khomh, S. Nadi, and M. Raza, &quot;An empirical study on bugs inside pytorch: A replication study,&quot; in 2023 IEEE International Conference on Software Maintenance and Evolution (ICSME), 2023, pp. 220-231.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b2">
+	<monogr>
+		<title level="m" type="main">Toward understanding deep learning framework bugs</title>
+		<author>
+			<persName><forename type="first">J</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Shen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Jiang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Li</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">J. Chen, Y. Liang, Q. Shen, J. Jiang, and S. Li, &quot;Toward understanding deep learning framework bugs,&quot; 2023.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b3">
+	<analytic>
+		<title level="a" type="main">An empirical study on performance bugs in deep learning frameworks</title>
+		<author>
+			<persName><forename type="first">T</forename><surname>Makkouk</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">J</forename><surname>Kim</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T.-H</forename><forename type="middle">P</forename><surname>Chen</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2022 IEEE International Conference on Software Maintenance and Evolution (ICSME)</title>
+		<imprint>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="35" to="46" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">T. Makkouk, D. J. Kim, and T.-H. P. Chen, &quot;An empirical study on per- formance bugs in deep learning frameworks,&quot; in 2022 IEEE International Conference on Software Maintenance and Evolution (ICSME), 2022, pp. 35-46.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b4">
+	<analytic>
+		<title level="a" type="main">The symptoms, causes, and repairs of bugs inside a deep learning library</title>
+		<author>
+			<persName><forename type="first">L</forename><surname>Jia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Zhong</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Wang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Lu</surname></persName>
+		</author>
+		<ptr target="https://www.sciencedirect.com/science/article/pii/S0164121221000327" />
+	</analytic>
+	<monogr>
+		<title level="j">Journal of Systems and Software</title>
+		<imprint>
+			<biblScope unit="volume">177</biblScope>
+			<biblScope unit="page">110935</biblScope>
+			<date type="published" when="2021">2021</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">L. Jia, H. Zhong, X. Wang, L. Huang, and X. Lu, &quot;The symptoms, causes, and repairs of bugs inside a deep learning library,&quot; Journal of Systems and Software, vol. 177, p. 110935, 2021. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0164121221000327</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b5">
+	<analytic>
+		<title level="a" type="main">A comprehensive empirical study on bug characteristics of deep learning frameworks</title>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Yang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><surname>He</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Xia</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Feng</surname></persName>
+		</author>
+		<ptr target="https://www.sciencedirect.com/science/article/pii/S0950584922001306" />
+	</analytic>
+	<monogr>
+		<title level="j">Information and Software Technology</title>
+		<imprint>
+			<biblScope unit="volume">151</biblScope>
+			<biblScope unit="page">107004</biblScope>
+			<date type="published" when="2022">2022</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Y. Yang, T. He, Z. Xia, and Y. Feng, &quot;A comprehensive empirical study on bug characteristics of deep learning frameworks,&quot; Information and Software Technology, vol. 151, p. 107004, 2022. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0950584922001306</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b6">
+	<analytic>
+		<title level="a" type="main">Bug characterization in machine learning-based systems</title>
+		<author>
+			<persName><forename type="first">M</forename><forename type="middle">M</forename><surname>Morovati</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nikanjam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tambon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Khomh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><forename type="middle">M J</forename><surname>Jiang</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10664-023-10400-0</idno>
+		<ptr target="https://doi.org/10.1007/s10664-023-10400-0" />
+	</analytic>
+	<monogr>
+		<title level="j">Empirical Software Engineering</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<biblScope unit="page">14</biblScope>
+			<date type="published" when="2023-12">Dec 2023</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">M. M. Morovati, A. Nikanjam, F. Tambon, F. Khomh, and Z. M. J. Jiang, &quot;Bug characterization in machine learning-based systems,&quot; Empirical Software Engineering, vol. 29, no. 1, p. 14, Dec 2023. [Online]. Available: https://doi.org/10.1007/s10664-023-10400-0</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b7">
+	<analytic>
+		<title level="a" type="main">An empirical study of fault triggers in deep learning frameworks</title>
+		<author>
+			<persName><forename type="first">X</forename><surname>Du</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Sui</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Ai</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="j">IEEE Transactions on Dependable and Secure Computing</title>
+		<imprint>
+			<biblScope unit="volume">20</biblScope>
+			<biblScope unit="issue">4</biblScope>
+			<biblScope unit="page" from="2696" to="2712" />
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">X. Du, Y. Sui, Z. Liu, and J. Ai, &quot;An empirical study of fault triggers in deep learning frameworks,&quot; IEEE Transactions on Dependable and Secure Computing, vol. 20, no. 4, pp. 2696-2712, 2023.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b8">
+	<analytic>
+		<title level="a" type="main">Silent bugs in deep learning frameworks: an empirical study of keras and tensorflow</title>
+		<author>
+			<persName><forename type="first">F</forename><surname>Tambon</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Nikanjam</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">L</forename><surname>An</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">F</forename><surname>Khomh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Antoniol</surname></persName>
+		</author>
+		<idno type="DOI">10.1007/s10664-023-10389-6</idno>
+		<ptr target="https://doi.org/10.1007/s10664-023-10389-6" />
+	</analytic>
+	<monogr>
+		<title level="j">Empirical Software Engineering</title>
+		<imprint>
+			<biblScope unit="volume">29</biblScope>
+			<biblScope unit="issue">1</biblScope>
+			<date type="published" when="2023-11">Nov 2023</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">F. Tambon, A. Nikanjam, L. An, F. Khomh, and G. Antoniol, &quot;Silent bugs in deep learning frameworks: an empirical study of keras and tensorflow,&quot; Empirical Software Engineering, vol. 29, no. 1, p. 10, Nov 2023. [Online]. Available: https://doi.org/10.1007/s10664-023-10389-6</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b9">
+	<analytic>
+		<title level="a" type="main">Audee: automated testing for deep learning frameworks</title>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Xie</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">X</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><surname>Shen</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3324884.3416571</idno>
+		<ptr target="https://doi.org/10.1145/3324884.3416571" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 35th IEEE/ACM International Conference on Automated Software Engineering, ser. ASE &apos;20</title>
+		<meeting>the 35th IEEE/ACM International Conference on Automated Software Engineering, ser. ASE &apos;20<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2021">2021</date>
+			<biblScope unit="page" from="486" to="498" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">Q. Guo, X. Xie, Y. Li, X. Zhang, Y. Liu, X. Li, and C. Shen, &quot;Audee: automated testing for deep learning frameworks,&quot; in Proceedings of the 35th IEEE/ACM International Conference on Automated Software Engineering, ser. ASE &apos;20. New York, NY, USA: Association for Computing Machinery, 2021, p. 486-498. [Online]. Available: https://doi.org/10.1145/3324884.3416571</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b10">
+	<monogr>
+		<title level="m" type="main">Comet: Coverage-guided model generation for deep learning library testing</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Cao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Y</forename><surname>Tian</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T</forename><forename type="middle">O</forename><surname>Li</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Wen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S.-C</forename><surname>Cheung</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">M. Li, J. Cao, Y. Tian, T. O. Li, M. Wen, and S.-C. Cheung, &quot;Comet: Coverage-guided model generation for deep learning library testing,&quot; 2023.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b11">
+	<monogr>
+		<title level="m" type="main">On fast computation of gradients for candecomp/parafac algorithms</title>
+		<author>
+			<persName><forename type="first">A</forename><forename type="middle">H</forename><surname>Phan</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">P</forename><surname>Tichavský</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Cichocki</surname></persName>
+		</author>
+		<ptr target="https://arxiv.org/abs/1204.1586" />
+		<imprint>
+			<date type="published" when="2012">2012</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">A. H. Phan, P. Tichavský, and A. Cichocki, &quot;On fast computation of gradients for candecomp/parafac algorithms,&quot; 2012. [Online]. Available: https://arxiv.org/abs/1204.1586</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b12">
+	<analytic>
+		<title level="a" type="main">Dynamic kernel fusion for bulk non-contiguous data transfer on gpu clusters</title>
+		<author>
+			<persName><forename type="first">C.-H</forename><surname>Chu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Khorassani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Q</forename><surname>Zhou</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Subramoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Panda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2020 IEEE International Conference on Cluster Computing (CLUSTER)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2020">2020</date>
+			<biblScope unit="page" from="130" to="141" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">C.-H. Chu, K. S. Khorassani, Q. Zhou, H. Subramoni, and D. K. Panda, &quot;Dynamic kernel fusion for bulk non-contiguous data transfer on gpu clusters,&quot; in 2020 IEEE International Conference on Cluster Computing (CLUSTER). IEEE, 2020, pp. 130-141.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b13">
+	<analytic>
+		<title level="a" type="main">Network assisted non-contiguous transfers for gpu-aware mpi libraries</title>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">K</forename><surname>Suresh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><forename type="middle">S</forename><surname>Khorassani</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">C</forename><forename type="middle">C</forename><surname>Chen</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Ramesh</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Abduljabbar</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">A</forename><surname>Shafi</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Subramoni</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Panda</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">2022 IEEE Symposium on High-Performance Interconnects (HOTI)</title>
+		<imprint>
+			<publisher>IEEE</publisher>
+			<date type="published" when="2022">2022</date>
+			<biblScope unit="page" from="13" to="20" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">K. K. Suresh, K. S. Khorassani, C. C. Chen, B. Ramesh, M. Abdul- jabbar, A. Shafi, H. Subramoni, and D. K. Panda, &quot;Network assisted non-contiguous transfers for gpu-aware mpi libraries,&quot; in 2022 IEEE Symposium on High-Performance Interconnects (HOTI). IEEE, 2022, pp. 13-20.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b14">
+	<analytic>
+		<title level="a" type="main">Learning non-parametric invariances from data with permanent random connectomes</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">K</forename><surname>Pal</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Savvides</surname></persName>
+		</author>
+		<idno>abs/1911.05266</idno>
+		<ptr target="http://arxiv.org/abs/1911.05266" />
+	</analytic>
+	<monogr>
+		<title level="j">CoRR</title>
+		<imprint>
+			<date type="published" when="2019">2019</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">D. K. Pal and M. Savvides, &quot;Learning non-parametric invariances from data with permanent random connectomes,&quot; CoRR, vol. abs/1911.05266, 2019. [Online]. Available: http://arxiv.org/abs/1911.05266</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b15">
+	<analytic>
+		<title level="a" type="main">Gpuaware non-contiguous data movement in open mpi</title>
+		<author>
+			<persName><forename type="first">W</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">G</forename><surname>Bosilca</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Vandevaart</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Jeaugey</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Dongarra</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 25th ACM International Symposium on High-Performance Parallel and Distributed Computing</title>
+		<meeting>the 25th ACM International Symposium on High-Performance Parallel and Distributed Computing</meeting>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+			<biblScope unit="page" from="231" to="242" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">W. Wu, G. Bosilca, R. Vandevaart, S. Jeaugey, and J. Dongarra, &quot;Gpu- aware non-contiguous data movement in open mpi,&quot; in Proceedings of the 25th ACM International Symposium on High-Performance Parallel and Distributed Computing, 2016, pp. 231-242.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b16">
+	<analytic>
+		<title level="a" type="main">A programming model for gpu load balancing</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Osama</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><forename type="middle">D</forename><surname>Porumbescu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><forename type="middle">D</forename><surname>Owens</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming</title>
+		<meeting>the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming</meeting>
+		<imprint>
+			<date type="published" when="2023">2023</date>
+			<biblScope unit="page" from="79" to="91" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">M. Osama, S. D. Porumbescu, and J. D. Owens, &quot;A programming model for gpu load balancing,&quot; in Proceedings of the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming, 2023, pp. 79-91.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b17">
+	<monogr>
+		<title level="m" type="main">Efficient gpu computation using task graph parallelism</title>
+		<author>
+			<persName><forename type="first">D.-L</forename><surname>Lin</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">T.-W</forename><surname>Huang</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2021">2021</date>
+			<publisher>Springer</publisher>
+			<biblScope unit="page" from="435" to="450" />
+			<pubPlace>Cham</pubPlace>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">D.-L. Lin and T.-W. Huang, &quot;Efficient gpu computation using task graph parallelism.&quot; Springer, Cham, 2021, pp. 435-450.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b18">
+	<monogr>
+		<title level="m" type="main">High-performance tensor contraction without transposition</title>
+		<author>
+			<persName><forename type="first">D</forename><forename type="middle">A</forename><surname>Matthews</surname></persName>
+		</author>
+		<imprint>
+			<date type="published" when="2016">2016</date>
+		</imprint>
+	</monogr>
+	<note type="raw_reference">D. A. Matthews, &quot;High-performance tensor contraction without trans- position,&quot; 2016.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b19">
+	<analytic>
+		<title level="a" type="main">Gmlake: Efficient and transparent gpu memory defragmentation for large-scale dnn training with virtual memory stitching</title>
+		<author>
+			<persName><forename type="first">C</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">R</forename><surname>Zhang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Xu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Leng</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Liu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">Z</forename><surname>Huang</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">M</forename><surname>Guo</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Wu</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">S</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">J</forename><surname>Zhao</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">K</forename><surname>Zhang</surname></persName>
+		</author>
+		<idno type="DOI">10.1145/3620665.3640423</idno>
+		<ptr target="https://doi.org/10.1145/3620665.3640423" />
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems</title>
+		<meeting>the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems<address><addrLine>New York, NY, USA</addrLine></address></meeting>
+		<imprint>
+			<publisher>Association for Computing Machinery</publisher>
+			<date type="published" when="2024">2024</date>
+			<biblScope unit="volume">2</biblScope>
+			<biblScope unit="page" from="450" to="466" />
+		</imprint>
+	</monogr>
+	<note>ser. ASPLOS &apos;24</note>
+	<note type="raw_reference">C. Guo, R. Zhang, J. Xu, J. Leng, Z. Liu, Z. Huang, M. Guo, H. Wu, S. Zhao, J. Zhao, and K. Zhang, &quot;Gmlake: Efficient and transparent gpu memory defragmentation for large-scale dnn training with virtual memory stitching,&quot; in Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2, ser. ASPLOS &apos;24. New York, NY, USA: Association for Computing Machinery, 2024, p. 450-466. [Online]. Available: https://doi.org/10.1145/3620665.3640423</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b20">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/67513" />
+		<title level="m">linalg.householder product is incorrect when given non-contiguous inputs 67513</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;linalg.householder product is incorrect when given non-contiguous inputs 67513,&quot; https://github.com/pytorch/pytorch/issues/67513.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b21">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/99638" />
+		<title level="m">Incorrect gradient for masked select when inputs are non-contiguous</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Incorrect gradient for masked select when inputs are non-contiguous ,&quot; https://github.com/pytorch/pytorch/issues/99638.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b22">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/45721" />
+		<title level="m">kthvalue incorrect with strided GPU tensor</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;kthvalue incorrect with strided GPU tensor ,&quot; https://github.com/ pytorch/pytorch/issues/45721.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b23">
+	<monogr>
+		<title level="m" type="main">Custom Autograd Functions Don&apos;t Work If Forward Pass Outputs a List of Tensors</title>
+		<ptr target="https://github.com/pytorch/pytorch/issues/87713" />
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Custom Autograd Functions Don&apos;t Work If Forward Pass Outputs a List of Tensors ,&quot; https://github.com/pytorch/pytorch/issues/87713.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b24">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/84082" />
+		<title level="m">Investigate from padded implementations correctness</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Investigate from padded implementations correctness,&quot; https://github.com/pytorch/pytorch/issues/84082.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b25">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/84082" />
+		<title level="m">Investigate from padded implementations correctness</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Investigate from padded implementations correctness,&quot; https://github.com/pytorch/pytorch/issues/84082.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b26">
+	<monogr>
+		<ptr target="//github.com/pytorch/pytorch/issues/94303" />
+		<title level="m">Calling nested tensor.transpose(-1, -2) causes autograd error</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Calling nested tensor.transpose(-1, -2) causes autograd error,&quot; ://github.com/pytorch/pytorch/issues/94303.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b27">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/130734" />
+		<title level="m">Calling saved tensors hooks. exit inside unpack hook can lead to segfault</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Calling saved tensors hooks. exit inside unpack hook can lead to segfault,&quot; https://github.com/pytorch/pytorch/issues/130734.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b28">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/58354" />
+		<title level="m">Segmentation fault when a Tensor backward hook removes itself</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Segmentation fault when a Tensor backward hook removes itself,&quot; https://github.com/pytorch/pytorch/issues/58354.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b29">
+	<monogr>
+		<idno>8.0 53894</idno>
+		<ptr target="https://github.com/pytorch/pytorch/issues/53894" />
+		<title level="m">Segmentation fault in dataloader after upgrading to pytorch v1</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Segmentation fault in dataloader after upgrading to pytorch v1.8.0 53894,&quot; https://github.com/pytorch/pytorch/issues/53894.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b30">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/64813" />
+		<title level="m">SSegfault on setting gradient value to instance of user-defined class 64813</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;SSegfault on setting gradient value to instance of user-defined class 64813,&quot; https://github.com/pytorch/pytorch/issues/64813.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b31">
+	<monogr>
+		<title level="m" type="main">CUDA error: an illegal memory access was encountered when using output padding</title>
+		<idno>ConvTranspose3d 32866</idno>
+		<ptr target="https://github.com/pytorch/pytorch/issues/32866" />
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;CUDA error: an illegal memory access was encountered when us- ing output padding in nn.ConvTranspose3d 32866,&quot; https://github.com/ pytorch/pytorch/issues/32866.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b32">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/84018" />
+		<title level="m">Illegal Memory Access was encountered in AvgPool2d CUDA kernel 84018</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Illegal Memory Access was encountered in AvgPool2d CUDA kernel 84018,&quot; https://github.com/pytorch/pytorch/issues/84018.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b33">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/108345" />
+		<title level="m">Cross Entropy doesn&apos;t work with the specific batch, but works with each sample from this batch 108345</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Cross Entropy doesn&apos;t work with the specific batch, but works with each sample from this batch 108345,&quot; https://github.com/pytorch/pytorch/ issues/108345.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b34">
+	<monogr>
+		<title level="m" type="main">Incorrect and inconsistent outputs from CrossEntropy-Loss(reduction=&quot;none&quot;) with torch</title>
+		<idno>16 dtype 111484</idno>
+		<ptr target="https://github.com/pytorch/pytorch/issues/111484" />
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Incorrect and inconsistent outputs from CrossEntropy- Loss(reduction=&quot;none&quot;) with torch.float16 dtype 111484,&quot; https://github.com/pytorch/pytorch/issues/111484.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b35">
+	<monogr>
+		<ptr target="hhttps://github.com/pytorch/pytorch/issues/82060" />
+		<title level="m">Wrong output of single-channel channels last convolution with channels first input 82060</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Wrong output of single-channel channels last convolution with channels first input 82060,&quot; hhttps://github.com/pytorch/pytorch/issues/82060.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b36">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/99519" />
+		<title level="m">PT2.Channels last for weight for ConvTranpose gives Random output 99519</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;[PT2.Channels last for weight for ConvTranpose gives Random output 99519,&quot; https://github.com/pytorch/pytorch/issues/99519.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b37">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/107199" />
+		<title level="m">CUDA native batch norm backward returns non-channels last grad for channels last input 107199</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;CUDA native batch norm backward returns non-channels last grad for channels last input 107199,&quot; https://github.com/pytorch/pytorch/issues/ 107199.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b38">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/38385" />
+		<title level="m">Segment Fault after model inference all images using C++ API</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Segment Fault after model inference all images using C++ API,&quot; https: //github.com/pytorch/pytorch/issues/38385.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b39">
+	<monogr>
+		<ptr target="https://pytorch.org/docs/master/data.html" />
+		<title level="m">TORCH.UTILS</title>
+		<imprint/>
+	</monogr>
+	<note>DATA</note>
+	<note type="raw_reference">&quot;TORCH.UTILS.DATA,&quot; https://pytorch.org/docs/master/data.html.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b40">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/115330" />
+		<title level="m">NotImplementedError: Cannot access storage of SparseCsrTensorImpl 115330</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;NotImplementedError: Cannot access storage of SparseCsrTensorImpl 115330,&quot; https://github.com/pytorch/pytorch/issues/115330.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b41">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/102167" />
+		<title level="m">Calling pin memory() fails for nested tensor 102167</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Calling pin memory() fails for nested tensor 102167,&quot; https:// github.com/pytorch/pytorch/issues/102167.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b42">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/94303" />
+		<title level="m">contiguous non-contiguous tensors</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;contiguous non-contiguous tensors,&quot; https://github.com/pytorch/pytorch/issues/94303.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b43">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/99638" />
+		<title level="m">Incorrect gradient for masked select when inputs are non-contiguous 99638</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Incorrect gradient for masked select when inputs are non-contiguous 99638,&quot; https://github.com/pytorch/pytorch/issues/99638.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b44">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/pull/88108" />
+		<title level="m">call contiguous on BMM inputs for NT on CUDA 88108</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;call contiguous on BMM inputs for NT on CUDA 88108,&quot; https:// github.com/pytorch/pytorch/pull/88108.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b45">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/112577" />
+		<title level="m">Breaking change 2.Passing non-contiguous inputs to SDPA on CUDA device with the mem-efficient attention backend returns garbage 112577</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;[Breaking change 2.Passing non-contiguous inputs to SDPA on CUDA device with the mem-efficient attention backend returns garbage 112577,&quot; https://github.com/pytorch/pytorch/issues/112577.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b46">
+	<monogr>
+		<title level="m" type="main">Incorrect and inconsistent outputs from CrossEntropy-Loss(reduction=&quot;none&quot;) with torch</title>
+		<idno>16 dtype 111484</idno>
+		<ptr target="https://github.com/pytorch/pytorch/issues/111484" />
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Incorrect and inconsistent outputs from CrossEntropy- Loss(reduction=&quot;none&quot;) with torch.float16 dtype 111484,&quot; https://github.com/pytorch/pytorch/issues/111484.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b47">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/pull/112096" />
+		<title level="m">CUDA] -bit indexing fixes for cross-entropy kernels</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;CUDA] -bit indexing fixes for cross-entropy kernels,&quot; https:// github.com/pytorch/pytorch/pull/112096.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b48">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/102493" />
+		<title level="m">sparse.mm produces incorrect derivatives 102493</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;sparse.mm produces incorrect derivatives 102493,&quot; https://github.com/ pytorch/pytorch/issues/102493.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b49">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/pull/106127" />
+		<title level="m">sparse.mm.backward: fix for non-contiguous grad values on CPU 106127</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;sparse.mm.backward: fix for non-contiguous grad values on CPU 106127,&quot; https://github.com/pytorch/pytorch/pull/106127.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b50">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/pull/86496" />
+		<title level="m">Add a contiguous checks to get buffer 86496</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">Add a contiguous checks to get buffer 86496,&quot; https: //github.com/pytorch/pytorch/pull/86496.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b51">
+	<monogr>
+		<title level="m" type="main">Custom Autograd Functions Don&apos;t Work If Forward Pass Outputs a List of Tensors 87713</title>
+		<ptr target="https://github.com/pytorch/pytorch/issues/87713" />
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Custom Autograd Functions Don&apos;t Work If Forward Pass Outputs a List of Tensors 87713,&quot; https://github.com/pytorch/pytorch/issues/87713.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b52">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/52062" />
+		<title level="m">torch.flip not implemented for non-contiguous boolean tensors 52062</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;torch.flip not implemented for non-contiguous boolean tensors 52062,&quot; https://github.com/pytorch/pytorch/issues/52062.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b53">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/pull/106127" />
+		<title level="m">sparse.mm.backward: fix for non-contiguous grad values on CPU</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;sparse.mm.backward: fix for non-contiguous grad values on CPU,&quot; https://github.com/pytorch/pytorch/pull/106127.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b54">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/112577" />
+		<title level="m">Breaking change 2.Passing non-contiguous inputs to SDPA on CUDA device with the mem-efficient attention backend returns garbage</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;[Breaking change 2.Passing non-contiguous inputs to SDPA on CUDA device with the mem-efficient attention backend returns garbage,&quot; https://github.com/pytorch/pytorch/issues/112577.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b55">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/pull/86496" />
+		<title level="m">Pull Request #86496: Fix for contiguous tensor handling in PyTorch</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Pull Request #86496: Fix for contiguous tensor handling in PyTorch,&quot; https://github.com/pytorch/pytorch/pull/86496.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b56">
+	<monogr>
+		<ptr target="https://discuss.pytorch.org/t/contigious-vs-non-contigious-tensor/30107/2" />
+		<title level="m">Contigious vs non-contigious tensor</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Contigious vs non-contigious tensor,&quot; https://discuss.pytorch.org/t/ contigious-vs-non-contigious-tensor/30107/2.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b57">
+	<monogr>
+		<ptr target="https://discuss.pytorch.org/t/performance-of-contiguous-vs-non-contiguous-tensors/107288" />
+		<title level="m">Performance of contiguous vs. non-contiguous tensors</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Performance of contiguous vs. non-contiguous tensors,&quot; https://discuss.pytorch.org/t/performance-of-contiguous-vs-non- contiguous-tensors/107288.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b58">
+	<monogr>
+		<ptr target="https://discuss.pytorch.org/t/different-between-permute-transpose-view-which-should-i-use/32916" />
+		<title level="m">Different between permute, transpose, view? Which should I use?</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Different between permute, transpose, view? Which should I use?&quot; https://discuss.pytorch.org/t/different-between-permute-transpose-view- which-should-i-use/32916.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b59">
+	<monogr>
+		<ptr target="https://stackoverflow.com/questions/54095351/in-pytorch-what-makes-a-tensor-have-non-contiguous-memory" />
+		<title level="m">what makes a tensor have non-contiguous memory?</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;what makes a tensor have non-contiguous memory?&quot; https://stackoverflow.com/questions/54095351/in-pytorch-what-makes- a-tensor-have-non-contiguous-memory.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b60">
+	<monogr>
+		<ptr target="https://stackoverflow.com/questions/48915810/what-does-contiguous-do-in-pytorch" />
+		<title level="m">What does .contiguous</title>
+		<imprint/>
+	</monogr>
+	<note>PyTorch?</note>
+	<note type="raw_reference">&quot;What does .contiguous() do in PyTorch?&quot; https://stackoverflow.com/ questions/48915810/what-does-contiguous-do-in-pytorch.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b61">
+	<monogr>
+		<ptr target="https://stackoverflow.com/questions/49643225/whats-the-difference-between-reshape-and-view-in-pytorch/49644300#49644300" />
+		<title level="m">What&apos;s the difference between &apos;reshape()&apos; and &apos;view</title>
+		<imprint/>
+	</monogr>
+	<note>PyTorch?</note>
+	<note type="raw_reference">&quot;What&apos;s the difference between &apos;reshape()&apos; and &apos;view()&apos; in PyTorch?&quot; https://stackoverflow.com/questions/49643225/whats-the-difference- between-reshape-and-view-in-pytorch/49644300#49644300.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b62">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/111484" />
+		<title level="m">Incorrect and inconsistent outputs from CrossEntropy-Loss(reduction=&quot;none&quot;) with torch.float16 dtype</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Incorrect and inconsistent outputs from CrossEntropy- Loss(reduction=&quot;none&quot;) with torch.float16 dtype,&quot; https: //github.com/pytorch/pytorch/issues/111484.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b63">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/108345" />
+		<title level="m">Cross Entropy doesn&apos;t work with the specific batch, but works with each sample from this batch</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Cross Entropy doesn&apos;t work with the specific batch, but works with each sample from this batch,&quot; https://github.com/pytorch/pytorch/issues/ 108345.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b64">
+	<monogr>
+		<ptr target="https://github.com/pytorch/pytorch/issues/111457" />
+		<title level="m">BF16 Matmul not get same result on cuda and cpu</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;BF16 Matmul not get same result on cuda and cpu,&quot; https://github.com/ pytorch/pytorch/issues/111457.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b65">
+	<monogr>
+		<ptr target="https://forums.developer.nvidia.com/t/openacc-custreamsynchronize-crash-when-using-pointers-as-parameters/196944" />
+		<title level="m">OpenACC: cuStreamSynchronize crash when using pointers as parameters</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;OpenACC: cuStreamSynchronize crash when using pointers as parameters,&quot; https://forums.developer.nvidia.com/t/openacc- custreamsynchronize-crash-when-using-pointers-as-parameters/ 196944.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b66">
+	<analytic>
+		<title level="a" type="main">Cudadma: optimizing gpu memory bandwidth via warp specialization</title>
+		<author>
+			<persName><forename type="first">M</forename><surname>Bauer</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">H</forename><surname>Cook</surname></persName>
+		</author>
+		<author>
+			<persName><forename type="first">B</forename><surname>Khailany</surname></persName>
+		</author>
+	</analytic>
+	<monogr>
+		<title level="m">Proceedings of 2011 international conference for high performance computing, networking, storage and analysis</title>
+		<meeting>2011 international conference for high performance computing, networking, storage and analysis</meeting>
+		<imprint>
+			<date type="published" when="2011">2011</date>
+			<biblScope unit="page" from="1" to="11" />
+		</imprint>
+	</monogr>
+	<note type="raw_reference">M. Bauer, H. Cook, and B. Khailany, &quot;Cudadma: optimizing gpu memory bandwidth via warp specialization,&quot; in Proceedings of 2011 international conference for high performance computing, networking, storage and analysis, 2011, pp. 1-11.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b67">
+	<monogr>
+		<ptr target="https://forums.developer.nvidia.com/t/efficiency-of-copying-a-strided-array/135518" />
+		<title level="m">efficiency of copying a strided array</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;efficiency of copying a strided array,&quot; https:// forums.developer.nvidia.com/t/efficiency-of-copying-a-strided-array/ 135518.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b68">
+	<monogr>
+		<ptr target="https://engineering.purdue.edu/∼smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod14DataXfer/Mod14DataXfer.pdf" />
+		<title level="m">Efficient Host-Device Data Transfer</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Efficient Host-Device Data Transfer,&quot; https://engineering.purdue.edu/ ∼ smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod14DataXfer/ Mod14DataXfer.pdf.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b69">
+	<monogr>
+		<ptr target="https://forums.developer.nvidia.com/t/how-to-transfer-massive-data-efficiently/37621" />
+		<title level="m">How to transfer massive data efficiently?</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;How to transfer massive data efficiently?&quot; https:// forums.developer.nvidia.com/t/how-to-transfer-massive-data- efficiently/37621.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b70">
+	<monogr>
+		<ptr target="https://forums.developer.nvidia.com/t/why-is-the-transfer-throughput-low-when-transferring-small-size-data-from-host-to-device-or-device-to-host/153962" />
+		<title level="m">Why is the transfer throughput low when transferring small size data from Host to Device (or Device to Host)?</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Why is the transfer throughput low when transferring small size data from Host to Device (or Device to Host)?&quot; https://forums.developer.nvidia.com/t/why-is-the-transfer-throughput- low-when-transferring-small-size-data-from-host-to-device-or-device- to-host/153962.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b71">
+	<monogr>
+		<ptr target="https://forums.developer.nvidia.com/t/2-same-quadro-p1000-cards-but-only-one-can-install-ubuntu/64612" />
+		<title level="m">2 same Quadro P1000 cards, but only one can install Ubuntu</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;2 same Quadro P1000 cards, but only one can install Ubuntu.&quot; https://forums.developer.nvidia.com/t/2-same-quadro-p1000-cards-but- only-one-can-install-ubuntu/64612.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b72">
+	<monogr>
+		<ptr target="https://forums.developer.nvidia.com/t/memory-read-error-when-using-csrmv-with-transpose-operation/136019/8" />
+		<title level="m">Memory read error when using csrmv with transpose operation</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;Memory read error when using csrmv with transpose oper- ation,&quot; https://forums.developer.nvidia.com/t/memory-read-error-when- using-csrmv-with-transpose-operation/136019/8.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b73">
+	<monogr>
+		<ptr target="https://docs.nvidia.com/cuda/cuda-c-programming-guide/index.html" />
+		<title level="m">CUDA C++ Programming Guide</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot;CUDA C++ Programming Guide,&quot; https://docs.nvidia.com/cuda/cuda- c-programming-guide/index.html.</note>
+</biblStruct>
+
+<biblStruct status="extracted" xml:id="b74">
+	<monogr>
+		<ptr target="https://docs.nvidia.com/cuda/cuda-runtime-api/groupCUDARTMEMORY.html" />
+		<title level="m">Memory Management</title>
+		<imprint/>
+	</monogr>
+	<note type="raw_reference">&quot; Memory Management,&quot; https://docs.nvidia.com/cuda/cuda-runtime- api/groupCUDARTMEMORY.html.</note>
+</biblStruct>
+
+				</listBibl>
+			</div>
+		</back>
+	</text>
+</TEI>

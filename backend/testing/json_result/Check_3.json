@@ -1,65 +1,677 @@
 [
     {
+        "index": 1,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Probability Distributions Using PyTorch",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_2",
+        "raw": "\"PyTorch,\" https://github.com/pytorch/pytorch."
+    },
+    {
+        "index": 2,
+        "authors": "S Ho, V Majdinasab, M Islam, D Costa, E Shihab, F Khomh, S Nadi, M Raza",
+        "year": "2023",
+        "title": "An empirical study on bugs inside pytorch: A replication study",
+        "journal": "2023 IEEE International Conference on Software Maintenance and Evolution (ICSME)",
+        "doi": "",
+        "raw": "S. C. Yin Ho, V. Majdinasab, M. Islam, D. E. Costa, E. Shihab, F. Khomh, S. Nadi, and M. Raza, \"An empirical study on bugs inside pytorch: A replication study,\" in 2023 IEEE International Conference on Software Maintenance and Evolution (ICSME), 2023, pp. 220-231."
+    },
+    {
+        "index": 3,
+        "authors": "Junjie Chen, Yihua Liang, Qingchao Shen, Jiajun Jiang, Shuochuan Li",
+        "year": "2023-09-29",
+        "title": "Toward Understanding Deep Learning Framework Bugs",
+        "journal": "ACM Transactions on Software Engineering and Methodology",
+        "doi": "10.1145/3587155",
+        "raw": "J. Chen, Y. Liang, Q. Shen, J. Jiang, and S. Li, \"Toward understanding deep learning framework bugs,\" 2023."
+    },
+    {
+        "index": 4,
+        "authors": "Tarek Makkouk, Dong Kim, Tse-Hsun Peter Chen",
+        "year": "2022-10",
+        "title": "An Empirical Study on Performance Bugs in Deep Learning Frameworks",
+        "journal": "2022 IEEE International Conference on Software Maintenance and Evolution (ICSME)",
+        "doi": "10.1109/icsme55016.2022.00012",
+        "raw": "T. Makkouk, D. J. Kim, and T.-H. P. Chen, \"An empirical study on per- formance bugs in deep learning frameworks,\" in 2022 IEEE International Conference on Software Maintenance and Evolution (ICSME), 2022, pp. 35-46."
+    },
+    {
+        "index": 5,
+        "authors": "L Jia, H Zhong, X Wang, L Huang, X Lu",
+        "year": "2021",
+        "title": "The symptoms, causes, and repairs of bugs inside a deep learning library",
+        "journal": "Journal of Systems and Software",
+        "doi": "",
+        "raw": "L. Jia, H. Zhong, X. Wang, L. Huang, and X. Lu, \"The symptoms, causes, and repairs of bugs inside a deep learning library,\" Journal of Systems and Software, vol. 177, p. 110935, 2021. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0164121221000327"
+    },
+    {
+        "index": 6,
+        "authors": "Yilin Yang, Tianxing He, Zhilong Xia, Yang Feng",
+        "year": "2022-11",
+        "title": "A comprehensive empirical study on bug characteristics of deep learning frameworks",
+        "journal": "Information and Software Technology",
+        "doi": "10.1016/j.infsof.2022.107004",
+        "raw": "Y. Yang, T. He, Z. Xia, and Y. Feng, \"A comprehensive empirical study on bug characteristics of deep learning frameworks,\" Information and Software Technology, vol. 151, p. 107004, 2022. [Online]. Available: https://www.sciencedirect.com/science/article/pii/S0950584922001306"
+    },
+    {
+        "index": 7,
+        "authors": "Mohammad Morovati, Amin Nikanjam, Florian Tambon, Foutse Khomh, Zhen Jiang",
+        "year": "2023-12-05",
+        "title": "Bug characterization in machine learning-based systems",
+        "journal": "Empirical Software Engineering",
+        "doi": "10.1007/s10664-023-10400-0",
+        "raw": "M. M. Morovati, A. Nikanjam, F. Tambon, F. Khomh, and Z. M. J. Jiang, \"Bug characterization in machine learning-based systems,\" Empirical Software Engineering, vol. 29, no. 1, p. 14, Dec 2023. [Online]. Available: https://doi.org/10.1007/s10664-023-10400-0"
+    },
+    {
+        "index": 8,
+        "authors": "Xiaoting Du, Yulei Sui, Zhihao Liu, Jun Ai",
+        "year": "2023-07-01",
+        "title": "An Empirical Study of Fault Triggers in Deep Learning Frameworks",
+        "journal": "IEEE Transactions on Dependable and Secure Computing",
+        "doi": "10.1109/tdsc.2022.3152239",
+        "raw": "X. Du, Y. Sui, Z. Liu, and J. Ai, \"An empirical study of fault triggers in deep learning frameworks,\" IEEE Transactions on Dependable and Secure Computing, vol. 20, no. 4, pp. 2696-2712, 2023."
+    },
+    {
+        "index": 9,
+        "authors": "Florian Tambon, Amin Nikanjam, Le An, Foutse Khomh, Giuliano Antoniol",
+        "year": "2023-11-29",
+        "title": "Silent bugs in deep learning frameworks: an empirical study of Keras and TensorFlow",
+        "journal": "Empirical Software Engineering",
+        "doi": "10.1007/s10664-023-10389-6",
+        "raw": "F. Tambon, A. Nikanjam, L. An, F. Khomh, and G. Antoniol, \"Silent bugs in deep learning frameworks: an empirical study of keras and tensorflow,\" Empirical Software Engineering, vol. 29, no. 1, p. 10, Nov 2023. [Online]. Available: https://doi.org/10.1007/s10664-023-10389-6"
+    },
+    {
+        "index": 10,
+        "authors": "Qianyu Guo, Xiaofei Xie, Yi Li, Xiaoyu Zhang, Yang Liu, Xiaohong Li, Chao Shen",
+        "year": "2021",
+        "title": "Audee",
+        "journal": "Proceedings of the 35th IEEE/ACM International Conference on Automated Software Engineering",
+        "doi": "10.1145/3324884.3416571",
+        "raw": "Q. Guo, X. Xie, Y. Li, X. Zhang, Y. Liu, X. Li, and C. Shen, \"Audee: automated testing for deep learning frameworks,\" in Proceedings of the 35th IEEE/ACM International Conference on Automated Software Engineering, ser. ASE '20. New York, NY, USA: Association for Computing Machinery, 2021, p. 486-498. [Online]. Available: https://doi.org/10.1145/3324884.3416571"
+    },
+    {
+        "index": 11,
+        "authors": "Meiziniu Li, Jialun Cao, Yongqiang Tian, Tsz Li, Ming Wen, Shing-Chi Cheung",
+        "year": "2023-07-21",
+        "title": "COMET: Coverage-guided Model Generation For Deep Learning Library Testing",
+        "journal": "ACM Transactions on Software Engineering and Methodology",
+        "doi": "10.1145/3583566",
+        "raw": "M. Li, J. Cao, Y. Tian, T. O. Li, M. Wen, and S.-C. Cheung, \"Comet: Coverage-guided model generation for deep learning library testing,\" 2023."
+    },
+    {
+        "index": 12,
+        "authors": "Anh-Huy Phan, Petr Tichavský, Andrzej Cichocki",
+        "year": "2012",
+        "title": "Fast Alternating LS Algorithms for High Order CANDECOMP/PARAFAC Tensor Factorizations",
+        "journal": "IEEE Transactions on Signal Processing",
+        "doi": "10.1109/tsp.2013.2269903",
+        "raw": "A. H. Phan, P. Tichavský, and A. Cichocki, \"On fast computation of gradients for candecomp/parafac algorithms,\" 2012. [Online]. Available: https://arxiv.org/abs/1204.1586"
+    },
+    {
+        "index": 13,
+        "authors": "Ching-Hsiang Chu, Kawthar Khorassani, Qinghua Zhou, Hari Subramoni, Dhabaleswar Panda",
+        "year": "2020-09",
+        "title": "Dynamic Kernel Fusion for Bulk Non-contiguous Data Transfer on GPU Clusters",
+        "journal": "2020 IEEE International Conference on Cluster Computing (CLUSTER)",
+        "doi": "10.1109/cluster49012.2020.00023",
+        "raw": "C.-H. Chu, K. S. Khorassani, Q. Zhou, H. Subramoni, and D. K. Panda, \"Dynamic kernel fusion for bulk non-contiguous data transfer on gpu clusters,\" in 2020 IEEE International Conference on Cluster Computing (CLUSTER). IEEE, 2020, pp. 130-141."
+    },
+    {
+        "index": 14,
+        "authors": "K Suresh, K Khorassani, C Chen, B Ramesh, M Abduljabbar, A Shafi, H Subramoni, D Panda",
+        "year": "2022",
+        "title": "Network assisted non-contiguous transfers for gpu-aware mpi libraries",
+        "journal": "2022 IEEE Symposium on High-Performance Interconnects (HOTI)",
+        "doi": "",
+        "raw": "K. K. Suresh, K. S. Khorassani, C. C. Chen, B. Ramesh, M. Abdul- jabbar, A. Shafi, H. Subramoni, and D. K. Panda, \"Network assisted non-contiguous transfers for gpu-aware mpi libraries,\" in 2022 IEEE Symposium on High-Performance Interconnects (HOTI). IEEE, 2022, pp. 13-20."
+    },
+    {
+        "index": 15,
+        "authors": "Dipan Pal, Akshay Chawla, Marios Savvides",
+        "year": "2019",
+        "title": "Learning Non-Parametric Invariances from Data with Permanent Random Connectomes",
+        "journal": "Proceedings of the British Machine Vision Conference 2020",
+        "doi": "10.5244/c.34.181",
+        "raw": "D. K. Pal and M. Savvides, \"Learning non-parametric invariances from data with permanent random connectomes,\" CoRR, vol. abs/1911.05266, 2019. [Online]. Available: http://arxiv.org/abs/1911.05266"
+    },
+    {
+        "index": 16,
+        "authors": "Wei Wu, George Bosilca, Rolf Vandevaart, Sylvain Jeaugey, Jack Dongarra",
+        "year": "2016-05-31",
+        "title": "GPU-Aware Non-contiguous Data Movement In Open MPI",
+        "journal": "Proceedings of the 25th ACM International Symposium on High-Performance Parallel and Distributed Computing",
+        "doi": "10.1145/2907294.2907317",
+        "raw": "W. Wu, G. Bosilca, R. Vandevaart, S. Jeaugey, and J. Dongarra, \"Gpu- aware non-contiguous data movement in open mpi,\" in Proceedings of the 25th ACM International Symposium on High-Performance Parallel and Distributed Computing, 2016, pp. 231-242."
+    },
+    {
+        "index": 17,
+        "authors": "Muhammad Osama, Serban Porumbescu, John Owens",
+        "year": "2023-02-21",
+        "title": "A Programming Model for GPU Load Balancing",
+        "journal": "Proceedings of the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming",
+        "doi": "10.1145/3572848.3577434",
+        "raw": "M. Osama, S. D. Porumbescu, and J. D. Owens, \"A programming model for gpu load balancing,\" in Proceedings of the 28th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming, 2023, pp. 79-91."
+    },
+    {
+        "index": 18,
+        "authors": "Dian-Lun Lin, Tsung-Wei Huang",
+        "year": "2021",
+        "title": "Efficient GPU Computation Using Task Graph Parallelism",
+        "journal": "Lecture Notes in Computer Science",
+        "doi": "10.1007/978-3-030-85665-6_27",
+        "raw": "D.-L. Lin and T.-W. Huang, \"Efficient gpu computation using task graph parallelism.\" Springer, Cham, 2021, pp. 435-450."
+    },
+    {
+        "index": 19,
+        "authors": "Devin Matthews",
+        "year": "2016",
+        "title": "High-Performance Tensor Contraction without Transposition",
+        "journal": "SIAM Journal on Scientific Computing",
+        "doi": "10.1137/16m108968x",
+        "raw": "D. A. Matthews, \"High-performance tensor contraction without trans- position,\" 2016."
+    },
+    {
+        "index": 20,
+        "authors": "Cong Guo, Rui Zhang, Jiale Xu, Jingwen Leng, Zihan Liu, Ziyu Huang, Minyi Guo, Hao Wu, Shouren Zhao, Junping Zhao, Ke Zhang",
+        "year": "2024-04-27",
+        "title": "GMLake: Efficient and Transparent GPU Memory Defragmentation for Large-scale DNN Training with Virtual Memory Stitching",
+        "journal": "Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2",
+        "doi": "10.1145/3620665.3640423",
+        "raw": "C. Guo, R. Zhang, J. Xu, J. Leng, Z. Liu, Z. Huang, M. Guo, H. Wu, S. Zhao, J. Zhao, and K. Zhang, \"Gmlake: Efficient and transparent gpu memory defragmentation for large-scale dnn training with virtual memory stitching,\" in Proceedings of the 29th ACM International Conference on Architectural Support for Programming Languages and Operating Systems, Volume 2, ser. ASPLOS '24. New York, NY, USA: Association for Computing Machinery, 2024, p. 450-466. [Online]. Available: https://doi.org/10.1145/3620665.3640423"
+    },
+    {
+        "index": 21,
+        "authors": "Nikolaos Virtsionis Gkalinikis, Christoforos Nalmpantis, Dimitris Vrakas",
+        "year": "2022-04-04",
+        "title": "Torch-NILM: An Effective Deep Learning Toolkit for Non-Intrusive Load Monitoring in Pytorch",
+        "journal": "Energies",
+        "doi": "10.3390/en15072647",
+        "raw": "\"linalg.householder product is incorrect when given non-contiguous inputs 67513,\" https://github.com/pytorch/pytorch/issues/67513."
+    },
+    {
+        "index": 22,
+        "authors": "Michael Horrell",
+        "year": "2025-07-07",
+        "title": "GBNet: Gradient Boosting packages integrated into PyTorch",
+        "journal": "Journal of Open Source Software",
+        "doi": "10.21105/joss.08047",
+        "raw": "\"Incorrect gradient for masked select when inputs are non-contiguous ,\" https://github.com/pytorch/pytorch/issues/99638."
+    },
+    {
+        "index": 23,
+        "authors": "Raghav Jha, Abhishek Samlodia",
+        "year": "2023",
+        "title": "Gpu-Acceleration of Tensor Renormalization with Pytorch Using Cuda",
+        "journal": "kthvalue incorrect with strided GPU tensor",
+        "doi": "10.2139/ssrn.4493748",
+        "raw": "\"kthvalue incorrect with strided GPU tensor ,\" https://github.com/ pytorch/pytorch/issues/45721."
+    },
+    {
+        "index": 24,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Introduction to PyTorch, Tensors, and Tensor Operations",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_1",
+        "raw": "\"Custom Autograd Functions Don't Work If Forward Pass Outputs a List of Tensors ,\" https://github.com/pytorch/pytorch/issues/87713."
+    },
+    {
+        "index": 25,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Probability Distributions Using PyTorch",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_2",
+        "raw": "\"Investigate from padded implementations correctness,\" https://github.com/pytorch/pytorch/issues/84082."
+    },
+    {
+        "index": 26,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Probability Distributions Using PyTorch",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_2",
+        "raw": "\"Investigate from padded implementations correctness,\" https://github.com/pytorch/pytorch/issues/84082."
+    },
+    {
+        "index": 27,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Introduction to PyTorch, Tensors, and Tensor Operations",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_1",
+        "raw": "\"Calling nested tensor.transpose(-1, -2) causes autograd error,\" ://github.com/pytorch/pytorch/issues/94303."
+    },
+    {
+        "index": 28,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Introduction to PyTorch, Tensors, and Tensor Operations",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_1",
+        "raw": "\"Calling saved tensors hooks. exit inside unpack hook can lead to segfault,\" https://github.com/pytorch/pytorch/issues/130734."
+    },
+    {
+        "index": 29,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Introduction to PyTorch, Tensors, and Tensor Operations",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_1",
+        "raw": "\"Segmentation fault when a Tensor backward hook removes itself,\" https://github.com/pytorch/pytorch/issues/58354."
+    },
+    {
+        "index": 30,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Probability Distributions Using PyTorch",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_2",
+        "raw": "\"Segmentation fault in dataloader after upgrading to pytorch v1.8.0 53894,\" https://github.com/pytorch/pytorch/issues/53894."
+    },
+    {
+        "index": 31,
         "authors": "",
-        "year": "",
-        "title": "A Study of Data-Path Bugs in PyTorch with a Focus on Memory Management",
-        "doi": "",
-        "raw": "A Study of Data-Path Bugs in PyTorch with a Focus on Memory Management",
-        "is_web": false,
-        "index": 1
+        "year": "null",
+        "title": "Supplemental Information 21: The optimizer class of PyTorch. AMCFCN uses Cosine Annealing for learning rate scheduling",
+        "journal": "SSegfault on setting gradient value to instance of user-defined class 64813",
+        "doi": "10.7717/peerj-cs.1906/supp-21",
+        "raw": "\"SSegfault on setting gradient value to instance of user-defined class 64813,\" https://github.com/pytorch/pytorch/issues/64813."
     },
     {
-        "authors": "Rubayet",
-        "year": "",
-        "title": "Rahman Rongon Washington State University Vancouver, Washington r.rongon@",
-        "doi": "",
-        "raw": "Rubayet Rahman Rongon Washington State University Vancouver, Washington r.rongon@wsu.edu",
-        "is_web": false,
-        "index": 2
+        "index": 32,
+        "authors": "Jake Choi, Heon Yeom, Yoonhee Kim",
+        "year": "2021-09",
+        "title": "Implementing CUDA Unified Memory in the PyTorch Framework",
+        "journal": "2021 IEEE International Conference on Autonomic Computing and Self-Organizing Systems Companion (ACSOS-C)",
+        "doi": "10.1109/acsos-c52956.2021.00029",
+        "raw": "\"CUDA error: an illegal memory access was encountered when us- ing output padding in nn.ConvTranspose3d 32866,\" https://github.com/ pytorch/pytorch/issues/32866."
     },
     {
-        "authors": "Chen",
-        "year": "",
-        "title": "Cao",
-        "doi": "",
-        "raw": "Chen Cao",
-        "is_web": false,
-        "index": 3
+        "index": 33,
+        "authors": "Raghav Jha, Abhishek Samlodia",
+        "year": "2023",
+        "title": "Gpu-Acceleration of Tensor Renormalization with Pytorch Using Cuda",
+        "journal": "Illegal Memory Access was encountered in AvgPool2d CUDA kernel 84018",
+        "doi": "10.2139/ssrn.4493748",
+        "raw": "\"Illegal Memory Access was encountered in AvgPool2d CUDA kernel 84018,\" https://github.com/pytorch/pytorch/issues/84018."
     },
     {
-        "authors": "Pennsylvania",
-        "year": "",
-        "title": "State University Behrend",
-        "doi": "",
-        "raw": "Pennsylvania State University Behrend",
-        "is_web": false,
-        "index": 4
+        "index": 34,
+        "authors": "George Stoica, Mihaela Breabăn",
+        "year": "2025-05",
+        "title": "bs-scheduler: A Batch Size Scheduler library compatible with PyTorch DataLoaders",
+        "journal": "SoftwareX",
+        "doi": "10.1016/j.softx.2025.102162",
+        "raw": "\"Cross Entropy doesn't work with the specific batch, but works with each sample from this batch 108345,\" https://github.com/pytorch/pytorch/ issues/108345."
     },
     {
-        "authors": "Erie",
-        "year": "",
-        "title": "Pennsylvania ccao@",
-        "doi": "",
-        "raw": "Erie, Pennsylvania ccao@psu.edu",
-        "is_web": false,
-        "index": 5
+        "index": 35,
+        "authors": "Dimitry Tegunov",
+        "year": "2026-03-10",
+        "title": "torch-projectors: A High-Performance Differentiable Projection Library for PyTorch",
+        "journal": "torch-projectors: A High-Performance Differentiable Projection Library for PyTorch",
+        "doi": "10.64898/2026.03.10.710885",
+        "raw": "\"Incorrect and inconsistent outputs from CrossEntropy- Loss(reduction=\"none\") with torch.float16 dtype 111484,\" https://github.com/pytorch/pytorch/issues/111484."
     },
     {
-        "authors": "Xuechen",
-        "year": "",
-        "title": "Zhang Washington State University Vancouver, Washington xuechen.zhang@",
-        "doi": "",
-        "raw": "Xuechen Zhang Washington State University Vancouver, Washington xuechen.zhang@wsu.edu",
-        "is_web": false,
-        "index": 6
+        "index": 36,
+        "authors": "Saman Abeysekera, Yun Ye",
+        "year": "2008-07",
+        "title": "Zero-based equalizers for single-input single-output and single-input multiple-output channels",
+        "journal": "Signal Processing",
+        "doi": "10.1016/j.sigpro.2008.01.024",
+        "raw": "\"Wrong output of single-channel channels last convolution with channels first input 82060,\" hhttps://github.com/pytorch/pytorch/issues/82060."
     },
     {
-        "authors": "Abstract—This paper presents a comprehensive and quanti- tative study of bugs related to Data Path in PyTorch with a focus on tensor management in memory. The bugs were reported from",
-        "year": "2017",
-        "title": "to",
-        "doi": "",
-        "raw": "Abstract—This paper presents a comprehensive and quanti- tative study of bugs related to Data Path in PyTorch with a focus on tensor management in memory. The bugs were reported from 2017 to 2024. Analyzing 3,089 closed issues, we identified 11 distinct bug types affecting the data storage, allocation, and loading, including memory bugs, indexing errors, and tensor contiguity violations. Our analysis reveals that data-path bugs have more occurrences than bugs related to computation in PyTorch in recent years. Among the memory bugs, non-contiguity bugs account for 30.2% of the total number of bugs and they have the most significant impact, leading to both crashes and silent correctness failures. One of the common solutions to addressing non-contiguity bugs is transforming from non- contiguous data to contiguous data in memory before machine- learning computation. To assess the impact of memory layout transformation, we conducted experiments involving tensor aug- mentation and non-contiguous tensor conversion. Our findings demonstrate that maintaining tensor contiguity throughout the augmentation process can improve performance by up to 73.9%, while the time required for non-contiguous tensor conversion varies significantly based on the number and order of dimensions. Our research provides valuable insights for developers and researchers working with PyTorch, helping them to identify and address potential bugs in data paths and tensor memory management.",
-        "is_web": false,
-        "index": 7
+        "index": 37,
+        "authors": "Rubayet Rongon, Chen Cao, Xuechen Zhang",
+        "year": "2024-12-15",
+        "title": "A Study of Data-Path Bugs in PyTorch with a Focus on Memory Issues",
+        "journal": "2024 IEEE International Conference on Big Data (BigData)",
+        "doi": "10.1109/bigdata62323.2024.10825791",
+        "raw": "\"[PT2.Channels last for weight for ConvTranpose gives Random output 99519,\" https://github.com/pytorch/pytorch/issues/99519."
+    },
+    {
+        "index": 38,
+        "authors": "",
+        "year": "2000",
+        "title": "A last word",
+        "journal": "Ion Channels and Disease",
+        "doi": "10.1016/b978-012065310-2/50026-6",
+        "raw": "\"CUDA native batch norm backward returns non-channels last grad for channels last input 107199,\" https://github.com/pytorch/pytorch/issues/ 107199."
+    },
+    {
+        "index": 39,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Probability Distributions Using PyTorch",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_2",
+        "raw": "\"Segment Fault after model inference all images using C++ API,\" https: //github.com/pytorch/pytorch/issues/38385."
+    },
+    {
+        "index": 40,
+        "authors": "",
+        "year": "null",
+        "title": "Supplemental Information 1: ABSA-PyTorch-master",
+        "journal": "TORCH.UTILS",
+        "doi": "10.7717/peerj-cs.1578/supp-1",
+        "raw": "\"TORCH.UTILS.DATA,\" https://pytorch.org/docs/master/data.html."
+    },
+    {
+        "index": 41,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Probability Distributions Using PyTorch",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_2",
+        "raw": "\"NotImplementedError: Cannot access storage of SparseCsrTensorImpl 115330,\" https://github.com/pytorch/pytorch/issues/115330."
+    },
+    {
+        "index": 42,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Introduction to PyTorch, Tensors, and Tensor Operations",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_1",
+        "raw": "\"Calling pin memory() fails for nested tensor 102167,\" https:// github.com/pytorch/pytorch/issues/102167."
+    },
+    {
+        "index": 43,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Introduction to PyTorch, Tensors, and Tensor Operations",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_1",
+        "raw": "\"contiguous non-contiguous tensors,\" https://github.com/pytorch/pytorch/issues/94303."
+    },
+    {
+        "index": 44,
+        "authors": "Michael Horrell",
+        "year": "2025-07-07",
+        "title": "GBNet: Gradient Boosting packages integrated into PyTorch",
+        "journal": "Journal of Open Source Software",
+        "doi": "10.21105/joss.08047",
+        "raw": "\"Incorrect gradient for masked select when inputs are non-contiguous 99638,\" https://github.com/pytorch/pytorch/issues/99638."
+    },
+    {
+        "index": 45,
+        "authors": "Raghav Jha, Abhishek Samlodia",
+        "year": "2023",
+        "title": "Gpu-Acceleration of Tensor Renormalization with Pytorch Using Cuda",
+        "journal": "call contiguous on BMM inputs for NT on CUDA 88108",
+        "doi": "10.2139/ssrn.4493748",
+        "raw": "\"call contiguous on BMM inputs for NT on CUDA 88108,\" https:// github.com/pytorch/pytorch/pull/88108."
+    },
+    {
+        "index": 46,
+        "authors": "S Mozafari, J Clark, W Gross, B Meyer",
+        "year": "2023-07",
+        "title": "Efficient 1D Grouped Convolution for PyTorch a Case Study: Fast On-Device Fine-Tuning for SqueezeBERT",
+        "journal": "2023 IEEE 34th International Conference on Application-specific Systems, Architectures and Processors (ASAP)",
+        "doi": "10.1109/asap57973.2023.00024",
+        "raw": "\"[Breaking change 2.Passing non-contiguous inputs to SDPA on CUDA device with the mem-efficient attention backend returns garbage 112577,\" https://github.com/pytorch/pytorch/issues/112577."
+    },
+    {
+        "index": 47,
+        "authors": "Dimitry Tegunov",
+        "year": "2026-03-10",
+        "title": "torch-projectors: A High-Performance Differentiable Projection Library for PyTorch",
+        "journal": "torch-projectors: A High-Performance Differentiable Projection Library for PyTorch",
+        "doi": "10.64898/2026.03.10.710885",
+        "raw": "\"Incorrect and inconsistent outputs from CrossEntropy- Loss(reduction=\"none\") with torch.float16 dtype 111484,\" https://github.com/pytorch/pytorch/issues/111484."
+    },
+    {
+        "index": 48,
+        "authors": "Dilyan Grigorov",
+        "year": "2026",
+        "title": "Advanced Training and CUDA Kernels",
+        "journal": "Building Large Language Models from Scratch",
+        "doi": "10.1007/979-8-8688-2297-1_11",
+        "raw": "\"CUDA] -bit indexing fixes for cross-entropy kernels,\" https:// github.com/pytorch/pytorch/pull/112096."
+    },
+    {
+        "index": 49,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Probability Distributions Using PyTorch",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_2",
+        "raw": "\"sparse.mm produces incorrect derivatives 102493,\" https://github.com/ pytorch/pytorch/issues/102493."
+    },
+    {
+        "index": 50,
+        "authors": "Smeet Chheda, Anthony Curtis, Eva Siegmann, Barbara Chapman",
+        "year": "2023-02-27",
+        "title": "Performance Study on CPU-based Machine Learning with PyTorch",
+        "journal": "Proceedings of the HPC Asia 2023 Workshops",
+        "doi": "10.1145/3581576.3581615",
+        "raw": "\"sparse.mm.backward: fix for non-contiguous grad values on CPU 106127,\" https://github.com/pytorch/pytorch/pull/106127."
+    },
+    {
+        "index": 51,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Probability Distributions Using PyTorch",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_2",
+        "raw": "Add a contiguous checks to get buffer 86496,\" https: //github.com/pytorch/pytorch/pull/86496."
+    },
+    {
+        "index": 52,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Introduction to PyTorch, Tensors, and Tensor Operations",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_1",
+        "raw": "\"Custom Autograd Functions Don't Work If Forward Pass Outputs a List of Tensors 87713,\" https://github.com/pytorch/pytorch/issues/87713."
+    },
+    {
+        "index": 53,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Introduction to PyTorch, Tensors, and Tensor Operations",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_1",
+        "raw": "\"torch.flip not implemented for non-contiguous boolean tensors 52062,\" https://github.com/pytorch/pytorch/issues/52062."
+    },
+    {
+        "index": 54,
+        "authors": "Smeet Chheda, Anthony Curtis, Eva Siegmann, Barbara Chapman",
+        "year": "2023-02-27",
+        "title": "Performance Study on CPU-based Machine Learning with PyTorch",
+        "journal": "Proceedings of the HPC Asia 2023 Workshops",
+        "doi": "10.1145/3581576.3581615",
+        "raw": "\"sparse.mm.backward: fix for non-contiguous grad values on CPU,\" https://github.com/pytorch/pytorch/pull/106127."
+    },
+    {
+        "index": 55,
+        "authors": "S Mozafari, J Clark, W Gross, B Meyer",
+        "year": "2023-07",
+        "title": "Efficient 1D Grouped Convolution for PyTorch a Case Study: Fast On-Device Fine-Tuning for SqueezeBERT",
+        "journal": "2023 IEEE 34th International Conference on Application-specific Systems, Architectures and Processors (ASAP)",
+        "doi": "10.1109/asap57973.2023.00024",
+        "raw": "\"[Breaking change 2.Passing non-contiguous inputs to SDPA on CUDA device with the mem-efficient attention backend returns garbage,\" https://github.com/pytorch/pytorch/issues/112577."
+    },
+    {
+        "index": 56,
+        "authors": "Pradeepta Mishra",
+        "year": "2019",
+        "title": "Introduction to PyTorch, Tensors, and Tensor Operations",
+        "journal": "PyTorch Recipes",
+        "doi": "10.1007/978-1-4842-4258-2_1",
+        "raw": "\"Pull Request #86496: Fix for contiguous tensor handling in PyTorch,\" https://github.com/pytorch/pytorch/pull/86496."
+    },
+    {
+        "index": 57,
+        "authors": "Y Popov",
+        "year": "2019",
+        "title": "Contigious hyperquadrics of coequipped hyperbands sHm",
+        "journal": "Differential Geometry of Manifolds of Figures",
+        "doi": "10.5922/0321-4796-2019-50-14",
+        "raw": "\"Contigious vs non-contigious tensor,\" https://discuss.pytorch.org/t/ contigious-vs-non-contigious-tensor/30107/2."
+    },
+    {
+        "index": 58,
+        "authors": "",
+        "year": "2020-02-07",
+        "title": "Non-Contiguous Disease",
+        "journal": "Performance of contiguous vs. non-contiguous tensors",
+        "doi": "10.32388/l8mvwt",
+        "raw": "\"Performance of contiguous vs. non-contiguous tensors,\" https://discuss.pytorch.org/t/performance-of-contiguous-vs-non- contiguous-tensors/107288."
+    },
+    {
+        "index": 59,
+        "authors": "",
+        "year": "2023",
+        "title": "Which sources should you use?",
+        "journal": "Different between permute, transpose, view? Which should I use?",
+        "doi": "10.5040/9781350887640",
+        "raw": "\"Different between permute, transpose, view? Which should I use?\" https://discuss.pytorch.org/t/different-between-permute-transpose-view- which-should-i-use/32916."
+    },
+    {
+        "index": 60,
+        "authors": "",
+        "year": "2022-03-29",
+        "title": "Memory and What Makes a Family",
+        "journal": "Khabaar",
+        "doi": "10.2307/j.ctv27jsgf0.12",
+        "raw": "\"what makes a tensor have non-contiguous memory?\" https://stackoverflow.com/questions/54095351/in-pytorch-what-makes- a-tensor-have-non-contiguous-memory."
+    },
+    {
+        "index": 61,
+        "authors": "Francis Jiggins",
+        "year": "2016-10-19",
+        "title": "Open questions: how does Wolbachia do what it does?",
+        "journal": "BMC Biology",
+        "doi": "10.1186/s12915-016-0312-z",
+        "raw": "\"What does .contiguous() do in PyTorch?\" https://stackoverflow.com/ questions/48915810/what-does-contiguous-do-in-pytorch."
+    },
+    {
+        "index": 62,
+        "authors": "Archana Narayanan",
+        "year": "2024-12-15",
+        "title": "A Comparative Analysis of Lab View and PyTorch for Machine Learning: The gap between Experimentation and Production",
+        "journal": "International Journal of Scientific Research and Engineering Trends",
+        "doi": "10.61137/ijsret.vol.10.issue6.402",
+        "raw": "\"What's the difference between 'reshape()' and 'view()' in PyTorch?\" https://stackoverflow.com/questions/49643225/whats-the-difference- between-reshape-and-view-in-pytorch/49644300#49644300."
+    },
+    {
+        "index": 63,
+        "authors": "Dimitry Tegunov",
+        "year": "2026-03-10",
+        "title": "torch-projectors: A High-Performance Differentiable Projection Library for PyTorch",
+        "journal": "Incorrect and inconsistent outputs from CrossEntropy-Loss(reduction=\"none\") with torch.float16 dtype",
+        "doi": "10.64898/2026.03.10.710885",
+        "raw": "\"Incorrect and inconsistent outputs from CrossEntropy- Loss(reduction=\"none\") with torch.float16 dtype,\" https: //github.com/pytorch/pytorch/issues/111484."
+    },
+    {
+        "index": 64,
+        "authors": "George Stoica, Mihaela Breabăn",
+        "year": "2025-05",
+        "title": "bs-scheduler: A Batch Size Scheduler library compatible with PyTorch DataLoaders",
+        "journal": "SoftwareX",
+        "doi": "10.1016/j.softx.2025.102162",
+        "raw": "\"Cross Entropy doesn't work with the specific batch, but works with each sample from this batch,\" https://github.com/pytorch/pytorch/issues/ 108345."
+    },
+    {
+        "index": 65,
+        "authors": "Raghav Jha, Abhishek Samlodia",
+        "year": "2023",
+        "title": "Gpu-Acceleration of Tensor Renormalization with Pytorch Using Cuda",
+        "journal": "BF16 Matmul not get same result on cuda and cpu",
+        "doi": "10.2139/ssrn.4493748",
+        "raw": "\"BF16 Matmul not get same result on cuda and cpu,\" https://github.com/ pytorch/pytorch/issues/111457."
+    },
+    {
+        "index": 66,
+        "authors": "Andrew Tolmach",
+        "year": "1994-07",
+        "title": "Tag-free garbage collection using explicit type parameters",
+        "journal": "ACM SIGPLAN Lisp Pointers",
+        "doi": "10.1145/182590.182411",
+        "raw": "\"OpenACC: cuStreamSynchronize crash when using pointers as parameters,\" https://forums.developer.nvidia.com/t/openacc- custreamsynchronize-crash-when-using-pointers-as-parameters/ 196944."
+    },
+    {
+        "index": 67,
+        "authors": "Michael Bauer, Henry Cook, Brucek Khailany",
+        "year": "2011-11-12",
+        "title": "CudaDMA",
+        "journal": "Proceedings of 2011 International Conference for High Performance Computing, Networking, Storage and Analysis",
+        "doi": "10.1145/2063384.2063400",
+        "raw": "M. Bauer, H. Cook, and B. Khailany, \"Cudadma: optimizing gpu memory bandwidth via warp specialization,\" in Proceedings of 2011 international conference for high performance computing, networking, storage and analysis, 2011, pp. 1-11."
+    },
+    {
+        "index": 68,
+        "authors": "",
+        "year": "2022-10-25",
+        "title": "Biomimetic Buildings: Copying Nature for Energy Efficiency",
+        "journal": "efficiency of copying a strided array",
+        "doi": "10.3390/books978-3-0365-5402-0",
+        "raw": "\"efficiency of copying a strided array,\" https:// forums.developer.nvidia.com/t/efficiency-of-copying-a-strided-array/ 135518."
+    },
+    {
+        "index": 69,
+        "authors": "Sydney Purdue",
+        "year": "null",
+        "title": "Stitching Meaning: Practices of Data Textile Creators_supp1-3634255.pdf",
+        "journal": "Efficient Host-Device Data Transfer",
+        "doi": "10.1109/tvcg.2025.3634255/mm1",
+        "raw": "\"Efficient Host-Device Data Transfer,\" https://engineering.purdue.edu/ ∼ smidkiff/ece563/NVidiaGPUTeachingToolkit/Mod14DataXfer/ Mod14DataXfer.pdf."
+    },
+    {
+        "index": 70,
+        "authors": "Nicola Capuano",
+        "year": "2021",
+        "title": "Transfer learning techniques for cross-domain analysis of posts in massive educational forums",
+        "journal": "Intelligent Systems and Learning Data Analytics in Online Education",
+        "doi": "10.1016/b978-0-12-823410-5.00014-0",
+        "raw": "\"How to transfer massive data efficiently?\" https:// forums.developer.nvidia.com/t/how-to-transfer-massive-data- efficiently/37621."
+    },
+    {
+        "index": 71,
+        "authors": "",
+        "year": "null",
+        "title": "Table 5: Details of the Host to Device memory transfer for the P100 cards.",
+        "journal": "Why is the transfer throughput low when transferring small size data from Host to Device (or Device to Host)?",
+        "doi": "10.7717/peerjcs.138/table-5",
+        "raw": "\"Why is the transfer throughput low when transferring small size data from Host to Device (or Device to Host)?\" https://forums.developer.nvidia.com/t/why-is-the-transfer-throughput- low-when-transferring-small-size-data-from-host-to-device-or-device- to-host/153962."
+    },
+    {
+        "index": 72,
+        "authors": "Richard Apodaca",
+        "year": "2011-10-31",
+        "title": "Install PyMOL on Ubuntu Linux",
+        "journal": "2 same Quadro P1000 cards, but only one can install Ubuntu",
+        "doi": "10.59350/9fhyk-7ap98",
+        "raw": "\"2 same Quadro P1000 cards, but only one can install Ubuntu.\" https://forums.developer.nvidia.com/t/2-same-quadro-p1000-cards-but- only-one-can-install-ubuntu/64612."
+    },
+    {
+        "index": 73,
+        "authors": "Feng Wei, Xiaole Cui, Sunrui Zhang",
+        "year": "2025-05-25",
+        "title": "In-Memory Logic Synthesis Methods based on Read Decoupled 8T and Transpose 11T SRAMs",
+        "journal": "2025 IEEE International Symposium on Circuits and Systems (ISCAS)",
+        "doi": "10.1109/iscas56072.2025.11043683",
+        "raw": "\"Memory read error when using csrmv with transpose oper- ation,\" https://forums.developer.nvidia.com/t/memory-read-error-when- using-csrmv-with-transpose-operation/136019/8."
+    },
+    {
+        "index": 74,
+        "authors": "",
+        "year": "2022-05-31",
+        "title": "CUDA Documentation and Libraries",
+        "journal": "CUDA C++ Programming Guide",
+        "doi": "10.1017/9781108855273.018",
+        "raw": "\"CUDA C++ Programming Guide,\" https://docs.nvidia.com/cuda/cuda- c-programming-guide/index.html."
+    },
+    {
+        "index": 75,
+        "authors": "",
+        "year": "null",
+        "title": "Table 2: Memory of CUDA-capable GPU (NVIDIA, 2020a).",
+        "journal": "Memory Management",
+        "doi": "10.7717/peerjcs.404/table-2",
+        "raw": "\" Memory Management,\" https://docs.nvidia.com/cuda/cuda-runtime- api/groupCUDARTMEMORY.html."
     }
 ]

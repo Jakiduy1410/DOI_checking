@@ -1,20 +1,317 @@
 [
     {
-        "authors": "",
-        "year": "",
-        "title": "Bit-Flip Error Resilience in LLMs:",
+        "index": 1,
+        "authors": "Pieter Abbeel, Ajay Jain, Tianjun Zhang",
+        "year": "2024",
+        "title": "Towards robust and scalable large language models",
+        "journal": "Towards robust and scalable large language models",
         "doi": "",
-        "raw": "Bit-Flip Error Resilience in LLMs:",
-        "is_web": false,
-        "index": 1
+        "raw": "Pieter Abbeel Ajay Jain, Tianjun Zhang. 2024. Towards robust and scalable large language models. EECS, University of California, Berkeley."
     },
     {
-        "authors": "",
-        "year": "",
-        "title": "A Comprehensive Analysis and Defense Framework",
+        "index": 2,
+        "authors": "Jakub Breier, Xiaolu Hou, Dirmanto Jap, Lei Ma, Shivam Bhasin, Yang Liu",
+        "year": "2018-10-15",
+        "title": "Practical Fault Attack on Deep Neural Networks",
+        "journal": "Proceedings of the 2018 ACM SIGSAC Conference on Computer and Communications Security",
+        "doi": "10.1145/3243734.3278519",
+        "raw": "Jakub Breier, Xiaolu Hou, Dirmanto Jap, Lei Ma, Shivam Bhasin, and Yang Liu. 2018. Practical fault attack on deep neural networks. In Proceed- ings of the 2018 ACM SIGSAC Conference on Com- puter and Communications Security, CCS '18, page 2204-2206, New York, NY, USA. Association for Computing Machinery."
+    },
+    {
+        "index": 3,
+        "authors": "Erh-Chung Chen, Pin-Yu Chen, I Chung, Che-Rung Lee",
+        "year": "2024",
+        "title": "Data-driven lipschitz continuity: A costeffective approach to improve adversarial robustness",
+        "journal": "Data-driven lipschitz continuity: A costeffective approach to improve adversarial robustness",
         "doi": "",
-        "raw": "A Comprehensive Analysis and Defense Framework",
-        "is_web": false,
-        "index": 2
+        "raw": "Erh-Chung Chen, Pin-Yu Chen, I Chung, Che-Rung Lee, et al. 2024. Data-driven lipschitz continuity: A cost- effective approach to improve adversarial robustness. arXiv preprint arXiv:2406.19622."
+    },
+    {
+        "index": 4,
+        "authors": "Peter Clark, Oren Etzioni, Daniel Khashabi, Tushar Khot, Bhavana Mishra, Kyle Richardson, Ashish Sabharwal, Carissa Schoenick, Oyvind Tafjord, Niket Tandon, Sumithra Bhakthavatsalam, Dirk Groeneveld, Michal Guerquin, Michael Schmitz",
+        "year": "2018",
+        "title": "From <i>F</i> to <i>A</i> on the New York Regents Science Exams — An Overview of the Aristo Project",
+        "journal": "AI Magazine",
+        "doi": "10.1609/aimag.v41i4.5304",
+        "raw": "Peter Clark, Isaac Cowhey, Oren Etzioni, Tushar Khot, Ashish Sabharwal, Carissa Schoenick, and Oyvind Tafjord. 2018. Think you have solved question an- swering? try arc, the ai2 reasoning challenge. arXiv preprint arXiv:1803.05457."
+    },
+    {
+        "index": 5,
+        "authors": "Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano",
+        "year": "2021",
+        "title": "Training verifiers to solve math word problems",
+        "journal": "Training verifiers to solve math word problems",
+        "doi": "",
+        "raw": "Karl Cobbe, Vineet Kosaraju, Mohammad Bavarian, Mark Chen, Heewoo Jun, Lukasz Kaiser, Matthias Plappert, Jerry Tworek, Jacob Hilton, Reiichiro Nakano, et al. 2021. Training verifiers to solve math word problems. arXiv preprint arXiv:2110.14168."
+    },
+    {
+        "index": 6,
+        "authors": "Jacob Devlin",
+        "year": "2018",
+        "title": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+        "journal": "Bert: Pre-training of deep bidirectional transformers for language understanding",
+        "doi": "",
+        "raw": "Jacob Devlin. 2018. Bert: Pre-training of deep bidi- rectional transformers for language understanding. arXiv preprint arXiv:1810.04805."
+    },
+    {
+        "index": 7,
+        "authors": "Bill Dolan, Chris Brockett",
+        "year": "2005",
+        "title": "Automatically constructing a corpus of sentential paraphrases",
+        "journal": "Third international workshop on paraphrasing",
+        "doi": "",
+        "raw": "Bill Dolan and Chris Brockett. 2005. Automati- cally constructing a corpus of sentential paraphrases. In Third international workshop on paraphrasing (IWP2005)."
+    },
+    {
+        "index": 8,
+        "authors": "Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad Al-Dahle, Aiesha Letman, Akhil Mathur, Alan Schelten, Amy Yang, Angela Fan",
+        "year": "2024",
+        "title": "Table 9: Comparative performance of different lightweight YOLO models (Fan et al., 2024).",
+        "journal": "The llama 3 herd of models",
+        "doi": "10.7717/peerj-cs.3357/table-9",
+        "raw": "Abhimanyu Dubey, Abhinav Jauhri, Abhinav Pandey, Abhishek Kadian, Ahmad Al-Dahle, Aiesha Letman, Akhil Mathur, Alan Schelten, Amy Yang, Angela Fan, et al. 2024. The llama 3 herd of models. arXiv preprint arXiv:2407.21783."
+    },
+    {
+        "index": 9,
+        "authors": "Pietro Frigo, Emanuele Vannacc, Hasan Hassan, Victor Der Veen, Onur Mutlu, Cristiano Giuffrida, Herbert Bos, Kaveh Razavi",
+        "year": "2020-05",
+        "title": "TRRespass: Exploiting the Many Sides of Target Row Refresh",
+        "journal": "2020 IEEE Symposium on Security and Privacy (SP)",
+        "doi": "10.1109/sp40000.2020.00090",
+        "raw": "Pietro Frigo, Emanuele Vannacc, Hasan Hassan, Vic- tor Van Der Veen, Onur Mutlu, Cristiano Giuffrida, 10422 Herbert Bos, and Kaveh Razavi. 2020. Trrespass: Exploiting the many sides of target row refresh. In 2020 IEEE Symposium on Security and Privacy (SP), pages 747-762. IEEE."
+    },
+    {
+        "index": 10,
+        "authors": "Xinyang Geng, Hao Liu",
+        "year": "2023",
+        "title": "Openllama: An open reproduction of llama",
+        "journal": "Openllama: An open reproduction of llama",
+        "doi": "",
+        "raw": "Xinyang Geng and Hao Liu. 2023. Openllama: An open reproduction of llama. URL: https://github. com/openlm-research/open_llama."
+    },
+    {
+        "index": 11,
+        "authors": "Richard Hamming",
+        "year": "1950-04",
+        "title": "Error Detecting and Error Correcting Codes",
+        "journal": "Bell System Technical Journal",
+        "doi": "10.1002/j.1538-7305.1950.tb00463.x",
+        "raw": "Richard W Hamming. 1950. Error detecting and error correcting codes. The Bell system technical journal, 29(2):147-160."
+    },
+    {
+        "index": 12,
+        "authors": "Zhezhi He, Adnan Rakin, Jingtao Li, Chaitali Chakrabarti, Deliang Fan",
+        "year": "2020-06",
+        "title": "Defending and Harnessing the Bit-Flip Based Adversarial Weight Attack",
+        "journal": "2020 IEEE/CVF Conference on Computer Vision and Pattern Recognition (CVPR)",
+        "doi": "10.1109/cvpr42600.2020.01410",
+        "raw": "Zhezhi He, Adnan Siraj Rakin, Jingtao Li, Chaitali Chakrabarti, and Deliang Fan. 2020. Defending and harnessing the bit-flip based adversarial weight at- tack. In Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition, pages 14095-14103."
+    },
+    {
+        "index": 13,
+        "authors": "Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, Jacob Steinhardt",
+        "year": "2020",
+        "title": "Measuring massive multitask language understanding",
+        "journal": "Measuring massive multitask language understanding",
+        "doi": "",
+        "raw": "Dan Hendrycks, Collin Burns, Steven Basart, Andy Zou, Mantas Mazeika, Dawn Song, and Jacob Steinhardt. 2020. Measuring massive multitask language under- standing. arXiv preprint arXiv:2009.03300."
+    },
+    {
+        "index": 14,
+        "authors": "J Edward, Yelong Hu, Phillip Shen, Zeyuan Wallis, Yuanzhi Allen-Zhu, Shean Li, Lu Wang, Weizhu Wang, Chen",
+        "year": "2021",
+        "title": "Lora: Low-rank adaptation of large language models",
+        "journal": "Lora: Low-rank adaptation of large language models",
+        "doi": "",
+        "raw": "Edward J Hu, Yelong Shen, Phillip Wallis, Zeyuan Allen-Zhu, Yuanzhi Li, Shean Wang, Lu Wang, and Weizhu Chen. 2021. Lora: Low-rank adap- tation of large language models. arXiv preprint arXiv:2106.09685."
+    },
+    {
+        "index": 15,
+        "authors": "Patrick Jattke, Max Wipfli, Flavien Solt, Michele Marazzi, Matej Bölcskei, Kaveh Razavi",
+        "year": "2024",
+        "title": "Zenhammer: Rowhammer attacks on amd zen-based platforms",
+        "journal": "33rd USENIX Security Symposium (USENIX Security 2024)",
+        "doi": "",
+        "raw": "Patrick Jattke, Max Wipfli, Flavien Solt, Michele Marazzi, Matej Bölcskei, and Kaveh Razavi. 2024. Zenhammer: Rowhammer attacks on amd zen-based platforms. In 33rd USENIX Security Symposium (USENIX Security 2024)."
+    },
+    {
+        "index": 16,
+        "authors": "Xun Jiao, Fred Lin, D Harish, Joel Dixit, Abhinav Coburn, Han Pandey, Jianyu Wang, Venkat Huang, Wang Ramesh, Daniel Xu, Moore",
+        "year": "2024",
+        "title": "Pvf (parameter vulnerability factor): A quantitative metric measuring ai vulnerability and resilience against parameter corruptions",
+        "journal": "Pvf (parameter vulnerability factor): A quantitative metric measuring ai vulnerability and resilience against parameter corruptions",
+        "doi": "",
+        "raw": "Xun Jiao, Fred Lin, Harish D Dixit, Joel Coburn, Ab- hinav Pandey, Han Wang, Jianyu Huang, Venkat Ramesh, Wang Xu, Daniel Moore, et al. 2024. Pvf (parameter vulnerability factor): A quantita- tive metric measuring ai vulnerability and resilience against parameter corruptions. arXiv preprint arXiv:2405.01741."
+    },
+    {
+        "index": 17,
+        "authors": "Yoongu Kim, Ross Daly, Jeremie Kim, Chris Fallin, Ji Lee, Donghyuk Lee, Chris Wilkerson, Konrad Lai, Onur Mutlu",
+        "year": "2014-06-14",
+        "title": "Flipping bits in memory without accessing them",
+        "journal": "ACM SIGARCH Computer Architecture News",
+        "doi": "10.1145/2678373.2665726",
+        "raw": "Yoongu Kim, Ross Daly, Jeremie Kim, Chris Fallin, Ji Hye Lee, Donghyuk Lee, Chris Wilkerson, Konrad Lai, and Onur Mutlu. 2014. Flipping bits in memory without accessing them: An experimental study of dram disturbance errors. ACM SIGARCH Computer Architecture News, 42(3):361-372."
+    },
+    {
+        "index": 18,
+        "authors": "Andrew Kwong, Daniel Genkin, Daniel Gruss, Yuval Yarom",
+        "year": "2020-05",
+        "title": "RAMBleed: Reading Bits in Memory Without Accessing Them",
+        "journal": "2020 IEEE Symposium on Security and Privacy (SP)",
+        "doi": "10.1109/sp40000.2020.00020",
+        "raw": "Andrew Kwong, Daniel Genkin, Daniel Gruss, and Yu- val Yarom. 2020. Rambleed: Reading bits in memory without accessing them. In 41st IEEE Symposium on Security and Privacy (S&P)."
+    },
+    {
+        "index": 19,
+        "authors": "Salah Lhoussaine, Georgios Tziantzioulis, Michael Sullivan, Vilas Sridharan, Nathan Debardeleben, Christian Engelmann, Simranjit Singh",
+        "year": "2024",
+        "title": "A first look at bfloat16 soft-error resilience in large language models",
+        "journal": "A first look at bfloat16 soft-error resilience in large language models",
+        "doi": "",
+        "raw": "Salah Lhoussaine, Georgios Tziantzioulis, Michael B. Sullivan, Vilas Sridharan, Nathan DeBardeleben, Christian Engelmann, and Simranjit Singh. 2024. A first look at bfloat16 soft-error resilience in large lan- guage models. Preprint, arXiv:2412.07192."
+    },
+    {
+        "index": 20,
+        "authors": "Jingtao Li, Adnan Rakin, Yan Xiong, Liangliang Chang, Zhezhi He, Deliang Fan, Chaitali Chakrabarti",
+        "year": "2020-07",
+        "title": "Defending Bit-Flip Attack through DNN Weight Reconstruction",
+        "journal": "2020 57th ACM/IEEE Design Automation Conference (DAC)",
+        "doi": "10.1109/dac18072.2020.9218665",
+        "raw": "Jingtao Li, Adnan Siraj Rakin, Yan Xiong, Lian- gliang Chang, Zhezhi He, Deliang Fan, and Chaitali Chakrabarti. 2020. Defending bit-flip attack through dnn weight reconstruction. In 2020 57th ACM/IEEE Design Automation Conference (DAC), pages 1-6. IEEE."
+    },
+    {
+        "index": 21,
+        "authors": "Liang Liu, Yanan Guo, Yueqiang Cheng, Youtao Zhang, Jun Yang",
+        "year": "2022",
+        "title": "Generating Robust DNN With Resistance to Bit-Flip Based Adversarial Weight Attack",
+        "journal": "IEEE Transactions on Computers",
+        "doi": "10.1109/tc.2022.3211411",
+        "raw": "Liang Liu, Yanan Guo, Yueqiang Cheng, Youtao Zhang, and Jun Yang. 2022. Generating robust dnn with resistance to bit-flip based adversarial weight attack. IEEE Transactions on Computers, 72(2):401-413."
+    },
+    {
+        "index": 22,
+        "authors": "Qi Liu, Jieming Yin, Wujie Wen, Chengmo Yang, Shi Sha",
+        "year": "2023",
+        "title": "{NeuroPots}: Realtime proactive defense against {Bit-Flip} attacks in neural networks",
+        "journal": "32nd USENIX Security Symposium (USENIX Security 23)",
+        "doi": "",
+        "raw": "Qi Liu, Jieming Yin, Wujie Wen, Chengmo Yang, and Shi Sha. 2023. {NeuroPots}: Realtime proactive de- fense against {Bit-Flip} attacks in neural networks. In 32nd USENIX Security Symposium (USENIX Se- curity 23), pages 6347-6364."
+    },
+    {
+        "index": 23,
+        "authors": "Ziyao Liu, Jinyuan Jia, Jiachen Wang, Wenbo Guo, Zhaofeng He, Xinyang Zhang",
+        "year": "2024",
+        "title": "Bit-sponge: A bit-level attack and defense for large language models",
+        "journal": "Bit-sponge: A bit-level attack and defense for large language models",
+        "doi": "",
+        "raw": "Ziyao Liu, Jinyuan Jia, Jiachen T. Wang, Wenbo Guo, Zhaofeng He, and Xinyang Zhang. 2024. Bit-sponge: A bit-level attack and defense for large language mod- els. Preprint, arXiv:2411.13757."
+    },
+    {
+        "index": 24,
+        "authors": "Stephen Merity, Caiming Xiong, James Bradbury, Richard Socher",
+        "year": "2016",
+        "title": "Pointer sentinel mixture models",
+        "journal": "Pointer sentinel mixture models",
+        "doi": "",
+        "raw": "Stephen Merity, Caiming Xiong, James Bradbury, and Richard Socher. 2016. Pointer sentinel mixture mod- els. arXiv preprint arXiv:1609.07843."
+    },
+    {
+        "index": 25,
+        "authors": "Christopher Shubhendu S Mukherjee, Joel Weaver, Steven Emer, Todd Reinhardt, Austin",
+        "year": "2003",
+        "title": "A systematic methodology to compute the architectural vulnerability factors for a high-performance microprocessor",
+        "journal": "Proceedings. 36th Annual IEEE/ACM International Symposium on Microarchitecture",
+        "doi": "",
+        "raw": "Shubhendu S Mukherjee, Christopher Weaver, Joel Emer, Steven K Reinhardt, and Todd Austin. 2003. A systematic methodology to compute the architectural vulnerability factors for a high-performance micro- processor. In Proceedings. 36th Annual IEEE/ACM International Symposium on Microarchitecture, 2003. MICRO-36., pages 29-40. IEEE."
+    },
+    {
+        "index": 26,
+        "authors": "Alec Radford",
+        "year": "2018",
+        "title": "Improving language understanding by generative pre-training",
+        "journal": "Improving language understanding by generative pre-training",
+        "doi": "",
+        "raw": "Alec Radford. 2018. Improving language understanding by generative pre-training."
+    },
+    {
+        "index": 27,
+        "authors": "Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever",
+        "year": "2019",
+        "title": "Language models are unsupervised multitask learners",
+        "journal": "OpenAI blog",
+        "doi": "",
+        "raw": "Alec Radford, Jeffrey Wu, Rewon Child, David Luan, Dario Amodei, Ilya Sutskever, et al. 2019. Language models are unsupervised multitask learners. OpenAI blog, 1(8):9."
+    },
+    {
+        "index": 28,
+        "authors": "Pranav Rajpurkar, Jian Zhang, Konstantin Lopyrev, Percy Liang",
+        "year": "2016",
+        "title": "SQuAD: 100,000+ Questions for Machine Comprehension of Text",
+        "journal": "Proceedings of the 2016 Conference on Empirical Methods in Natural Language Processing",
+        "doi": "10.18653/v1/d16-1264",
+        "raw": "P Rajpurkar. 2016. Squad: 100,000+ questions for machine comprehension of text. arXiv preprint arXiv:1606.05250."
+    },
+    {
+        "index": 29,
+        "authors": "Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher Manning, Andrew Ng, Christopher Potts",
+        "year": "2013",
+        "title": "Recursive Deep Models for Semantic Compositionality Over a Sentiment Treebank",
+        "journal": "Proceedings of the 2013 Conference on Empirical Methods in Natural Language Processing",
+        "doi": "10.18653/v1/d13-1170",
+        "raw": "Richard Socher, Alex Perelygin, Jean Wu, Jason Chuang, Christopher D Manning, Andrew Y Ng, and Christopher Potts. 2013. Recursive deep models for semantic compositionality over a sentiment treebank. In Proceedings of the 2013 conference on empiri- cal methods in natural language processing, pages 1631-1642."
+    },
+    {
+        "index": 30,
+        "authors": "Gemma Team, Morgane Riviere, Shreya Pathak, Pier, Giuseppe Sessa, Cassidy Hardin, Surya Bhupatiraju, Léonard Hussenot, Thomas Mesnard, Bobak Shahriari, Alexandre Ramé",
+        "year": "2024",
+        "title": "Gemma 2: Improving open language models at a practical size",
+        "journal": "Gemma 2: Improving open language models at a practical size",
+        "doi": "",
+        "raw": "Gemma Team, Morgane Riviere, Shreya Pathak, Pier Giuseppe Sessa, Cassidy Hardin, Surya Bhupati- raju, Léonard Hussenot, Thomas Mesnard, Bobak Shahriari, Alexandre Ramé, et al. 2024. Gemma 2: Improving open language models at a practical size. arXiv preprint arXiv:2408.00118."
+    },
+    {
+        "index": 31,
+        "authors": "Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar",
+        "year": "2023",
+        "title": "Llama: Open and efficient foundation language models",
+        "journal": "Llama: Open and efficient foundation language models",
+        "doi": "",
+        "raw": "Hugo Touvron, Thibaut Lavril, Gautier Izacard, Xavier Martinet, Marie-Anne Lachaux, Timothée Lacroix, Baptiste Rozière, Naman Goyal, Eric Hambro, Faisal Azhar, et al. 2023. Llama: Open and effi- cient foundation language models. arXiv preprint arXiv:2302.13971."
+    },
+    {
+        "index": 32,
+        "authors": "Aladin Virmaux, Kevin Scaman",
+        "year": "2018",
+        "title": "Lipschitz regularity of deep neural networks: analysis and efficient estimation",
+        "journal": "Advances in Neural Information Processing Systems",
+        "doi": "",
+        "raw": "Aladin Virmaux and Kevin Scaman. 2018. Lipschitz regularity of deep neural networks: analysis and ef- ficient estimation. Advances in Neural Information Processing Systems, 31."
+    },
+    {
+        "index": 33,
+        "authors": "Warstadt",
+        "year": "2019",
+        "title": "Neural network acceptability judgments",
+        "journal": "Neural network acceptability judgments",
+        "doi": "",
+        "raw": "A Warstadt. 2019. Neural network acceptability judg- ments. arXiv preprint arXiv:1805.12471."
+    },
+    {
+        "index": 34,
+        "authors": "Adina Williams, Nikita Nangia, Samuel Bowman",
+        "year": "2017",
+        "title": "A Broad-Coverage Challenge Corpus for Sentence Understanding through Inference",
+        "journal": "Proceedings of the 2018 Conference of the North American Chapter of the Association for Computational Linguistics: Human Language Technologies, Volume 1 (Long Papers)",
+        "doi": "10.18653/v1/n18-1101",
+        "raw": "Adina Williams, Nikita Nangia, and Samuel R Bow- man. 2017. A broad-coverage challenge corpus for sentence understanding through inference. arXiv preprint arXiv:1704.05426."
+    },
+    {
+        "index": 35,
+        "authors": "Yuan Xiao, Yinqian Zhang, Radu Teodorescu",
+        "year": "2016",
+        "title": "SPEECHMINER: A Framework for Investigating and Measuring Speculative Execution Vulnerabilities",
+        "journal": "Proceedings 2020 Network and Distributed System Security Symposium",
+        "doi": "10.14722/ndss.2020.23105",
+        "raw": "Yuan Xiao, Xiaokuan Zhang, Yinqian Zhang, and Radu Teodorescu. 2016. One bit flips, one cloud flops:{Cross-VM} row hammer attacks and privi- lege escalation. In 25th USENIX security symposium (USENIX Security 16), pages 19-35."
     }
 ]

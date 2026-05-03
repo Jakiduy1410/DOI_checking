@@ -1,20 +1,479 @@
 [
     {
-        "authors": "",
-        "year": "",
-        "title": "![](data:image/jpeg;base64...)Journal of Statistical Software",
-        "doi": "",
-        "raw": "![](data:image/jpeg;base64...)Journal of Statistical Software",
-        "is_web": false,
-        "index": 1
+        "index": 1,
+        "authors": "Genevera Allen",
+        "year": "2013-12",
+        "title": "Multi-way functional principal components analysis",
+        "journal": "2013 5th IEEE International Workshop on Computational Advances in Multi-Sensor Adaptive Processing (CAMSAP)",
+        "doi": "10.1109/camsap.2013.6714047",
+        "raw": "Allen GI (2013). \"Multi-Way Functional Principal Components Analysis.\" In IEEE 5th International Workshop on Computational Advances in Multi-Sensor Adaptive Processing, pp. 220-223."
     },
     {
-        "authors": "April",
+        "index": 2,
+        "authors": "Deborah Armstrong",
+        "year": "2006-02",
+        "title": "The quarks of object-oriented development",
+        "journal": "Communications of the ACM",
+        "doi": "10.1145/1113034.1113040",
+        "raw": "Armstrong DJ (2006). \"The Quarks of Object-Oriented Development.\" Communications of the ACM, 49(2), 123-128. doi:10.1145/1113034.1113040."
+    },
+    {
+        "index": 3,
+        "authors": "Baptiste Auguie",
+        "year": "2017",
+        "title": "gridExtra: Miscellaneous Functions for \"Grid\" Graphics",
+        "journal": "R package version 2",
+        "doi": "10.32614/cran.package.gridextra",
+        "raw": "Auguie B (2017). gridExtra: Miscellaneous Functions for grid Graphics. R package ver- sion 2.3, URL https://CRAN.R-project.org/package=gridExtra."
+    },
+    {
+        "index": 4,
+        "authors": "James Baglama, Lothar Reichel",
+        "year": "2005-01",
+        "title": "Augmented Implicitly Restarted Lanczos Bidiagonalization Methods",
+        "journal": "SIAM Journal on Scientific Computing",
+        "doi": "10.1137/04060593x",
+        "raw": "Baglama J, Reichel L (2005). \"Augmented Implicitly Restarted Lanczos Bidiagonalization Methods.\" SIAM Journal on Scientific Computing, 27(1), 19-42. doi:10.1137/04060593x."
+    },
+    {
+        "index": 5,
+        "authors": "Jim Baglama, Lothar Reichel, B Lewis",
+        "year": "2019",
+        "title": "irlba: Fast Truncated Singular Value Decomposition and Principal Components Analysis for Large Dense and Sparse Matrices",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.irlba",
+        "raw": "Baglama J, Reichel L, Lewis BW (2019). irlba: Fast Truncated SVD, PCA and Symmetric Eigendecomposition for Large Dense and Sparse Matrices. R package version 2.3.3, URL https://CRAN.R-project.org/package=irlba."
+    },
+    {
+        "index": 6,
+        "authors": "Douglas Bates, Martin Maechler, Mikael Jagan",
+        "year": "2019",
+        "title": "Matrix: Sparse and Dense Matrix Classes and Methods",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.matrix",
+        "raw": "Bates D, Maechler M (2019). Matrix: Sparse and Dense Matrix Classes and Methods. R pack- age version 1.2-18, URL https://CRAN.R-project.org/package=Matrix."
+    },
+    {
+        "index": 7,
+        "authors": "Grady Booch, Robert Maksimchuk, Michael Engle, Bobbi Young, Jim Connallen, Kelli Houston",
+        "year": "2007",
+        "title": "Object-oriented analysis and design with applications, third edition",
+        "journal": "ACM SIGSOFT Software Engineering Notes",
+        "doi": "10.1145/1402521.1413138",
+        "raw": "Booch G, Maksimchuk RA, Engle MW, Young BJ, Conallen J, Houston KA (2007). Object- Oriented Analysis and Design with Applications. 3rd edition. Addison-Wesley, Upper Saddle River."
+    },
+    {
+        "index": 8,
+        "authors": "C Bouveyron",
+        "year": "2015",
+        "title": "funFEM: Clustering in the Discriminative Functional Subspace",
+        "journal": "R package version 1",
+        "doi": "10.32614/cran.package.funfem",
+        "raw": "Bouveyron C (2015). funFEM: Clustering in the Discriminative Functional Subspace. R pack- age version 1.1, URL https://CRAN.R-project.org/package=funFEM."
+    },
+    {
+        "index": 9,
+        "authors": "Sarah Brockhaus, David Ruegamer, Almond Stoecker",
+        "year": "2018",
+        "title": "FDboost: Boosting Functional Regression Models",
+        "journal": "R package version 0",
+        "doi": "10.32614/cran.package.fdboost",
+        "raw": "Brockhaus S, Ruegamer D (2018). FDboost: Boosting Functional Regression Models. R pack- age version 0.3-2, URL https://CRAN.R-project.org/package=FDboost."
+    },
+    {
+        "index": 10,
+        "authors": "Jona Cederbaum, Alexander Volkmann, Almond Stöcker",
+        "year": "2019",
+        "title": "sparseFLMM: Functional Linear Mixed Models for Irregularly or Sparsely Sampled Data",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.sparseflmm",
+        "raw": "Cederbaum J (2019). sparseFLMM: Functional Linear Mixed Models for Irregularly or Sparsely Sampled Data. R package version 0.3.0, URL https://CRAN.R-project.org/ package=sparseFLMM."
+    },
+    {
+        "index": 11,
+        "authors": "John Chambers",
+        "year": "2008",
+        "title": "Software for Data Analysis",
+        "journal": "Software for Data Analysis",
+        "doi": "10.1007/978-0-387-75936-4",
+        "raw": "Chambers JM (2008). Software for Data Analysis: Programming with R. Springer-Verlag, New York. doi:10.1007/978-0-387-75936-4."
+    },
+    {
+        "index": 12,
+        "authors": "Y Chen, C Carroll, X Dai, J Fan, P Hadjipantelis, K Han, H Ji, H Müller, J Wang",
         "year": "2020",
-        "title": "Volume 93, Issue 5",
-        "doi": "doi:10.18637/jss.v093.i05",
-        "raw": "April 2020, Volume 93, Issue 5. doi: 10.18637/jss.v093.i05",
-        "is_web": false,
-        "index": 2
+        "title": "fdapace: Functional Data Analysis and Empirical Dynamics",
+        "journal": "R package version",
+        "doi": "",
+        "raw": "Chen Y, Carroll C, Dai X, Fan J, Hadjipantelis PZ, Han K, Ji H, Müller HG, Wang JL (2020). fdapace: Functional Data Analysis and Empirical Dynamics. R package version 0.5.2, URL https://CRAN.R-project.org/package=fdapace."
+    },
+    {
+        "index": 13,
+        "authors": "Chong-Zhi Di, Ciprian Crainiceanu, Brian Caffo, Naresh Punjabi",
+        "year": "2009-03-01",
+        "title": "Multilevel functional principal component analysis",
+        "journal": "The Annals of Applied Statistics",
+        "doi": "10.1214/08-aoas206",
+        "raw": "Di CZ, Crainiceanu CM, Caffo BS, Punjabi NM (2009). \"Multilevel Functional Principal Component Analysis.\" The Annals of Applied Statistics, 3(1), 458-488. doi:10.1214/ 08-aoas206."
+    },
+    {
+        "index": 14,
+        "authors": "Manuel Febrero-Bande, Manuel Fuente",
+        "year": "2012",
+        "title": "Statistical Computing in Functional Data Analysis: The<i>R</i>Package<b>fda.usc</b>",
+        "journal": "Journal of Statistical Software",
+        "doi": "10.18637/jss.v051.i04",
+        "raw": "Febrero-Bande M, Oviedo de la Fuente M (2012). \"Statistical Computing in Functional Data Analysis: The R Package fda.usc.\" Journal of Statistical Software, 51(4), 1-28. doi: 10.18637/jss.v051.i04."
+    },
+    {
+        "index": 15,
+        "authors": "M Frigo, S Johnson",
+        "year": "2005-02",
+        "title": "The Design and Implementation of FFTW3",
+        "journal": "Proceedings of the IEEE",
+        "doi": "10.1109/jproc.2004.840301",
+        "raw": "Frigo M, Johnson SG (2005). \"The Design and Implementation of FFTW3.\" Proceedings of the IEEE, 93(2), 216-231. doi:10.1109/jproc.2004.840301."
+    },
+    {
+        "index": 16,
+        "authors": "J Goldsmith, S Greven, C Crainiceanu",
+        "year": "2013",
+        "title": "Corrected Confidence Bands for Functional Data Using Principal Components",
+        "journal": "Biometrics",
+        "doi": "10.1111/j.1541-0420.2012.01808.x",
+        "raw": "Goldsmith J, Greven S, Crainiceanu C (2013). \"Corrected Confidence Bands for Func- tional Data Using Principal Components.\" Biometrics, 69(1), 41-51. doi:10.1111/j. 1541-0420.2012.01808.x."
+    },
+    {
+        "index": 17,
+        "authors": "Jeff Goldsmith, Fabian Scheipl, Lei Huang, Julia Wrobel, Chongzhi Di, Jonathan Gellar, Jaroslaw Harezlak, Mathew Mclean, Bruce Swihart, Luo Xiao, Ciprian Crainiceanu, Philip Reiss, Erjia Cui",
+        "year": "2019",
+        "title": "refund: Regression with Functional Data",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.refund",
+        "raw": "Goldsmith J, Scheipl F, Huang L, Wrobel J, Di C, Gellar J, Harezlak J, McLean MW, Swihart B, Xiao L, Crainiceanu C, Reiss PT (2019). refund: Regression with Functional Data. R package version 0.1-21, URL https://CRAN.R-project.org/package=refund."
+    },
+    {
+        "index": 18,
+        "authors": "B Gregorutti",
+        "year": "2016",
+        "title": "RFgroove: Importance Measure and Selection for Groups of Variables with Random Forests",
+        "journal": "R package version",
+        "doi": "",
+        "raw": "Gregorutti B (2016). RFgroove: Importance Measure and Selection for Groups of Vari- ables with Random Forests. R package version 1.1, URL https://CRAN.R-project.org/ package=RFgroove."
+    },
+    {
+        "index": 19,
+        "authors": "Clara Happ, Sonja Greven",
+        "year": "2018-02-08",
+        "title": "Multivariate Functional Principal Component Analysis for Data Observed on Different (Dimensional) Domains",
+        "journal": "Journal of the American Statistical Association",
+        "doi": "10.1080/01621459.2016.1273115",
+        "raw": "Happ C, Greven S (2018). \"Multivariate Functional Principal Component Analysis for Data Observed on Different (Dimensional) Domains.\" Journal of the American Statistical Asso- ciation, 113(522), 649-659. doi:10.1080/01621459.2016.1273115."
+    },
+    {
+        "index": 20,
+        "authors": "Clara Happ-Kurz",
+        "year": "2020",
+        "title": "funData: An S4 Class for Functional Data",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.fundata",
+        "raw": "Happ-Kurz C (2020a). funData: An S4 Class for Functional Data. R package version 1.3-5, URL https://CRAN.R-project.org/package=funData."
+    },
+    {
+        "index": 21,
+        "authors": "Clara Happ-Kurz",
+        "year": "2020",
+        "title": "MFPCA: Multivariate Functional Principal Component Analysis for Data Observed on Different Dimensional Domains",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.mfpca",
+        "raw": "Happ-Kurz C (2020b). MFPCA: Multivariate Functional Principal Component Analysis for Data Observed on Different Dimensional Domains. R package version 1.3-5, URL https: //CRAN.R-project.org/package=MFPCA."
+    },
+    {
+        "index": 22,
+        "authors": "Jianhua Huang, Haipeng Shen, Andreas Buja",
+        "year": "2009-12",
+        "title": "The Analysis of Two-Way Functional Data Using Two-Way Regularized Singular Value Decompositions",
+        "journal": "Journal of the American Statistical Association",
+        "doi": "10.1198/jasa.2009.tm08024",
+        "raw": "Huang JZ, Shen H, Buja A (2009). \"The Analysis of Two-Way Functional Data Using Two- Way Regularized Singular Value Decompositions.\" Journal of the American Statistical Association, 104(488), 1609-1620. doi:10.1198/jasa.2009.tm08024."
+    },
+    {
+        "index": 23,
+        "authors": "L Huo, P Reiss, Y Zhao",
+        "year": "2014",
+        "title": "refund.wave: Wavelet-Domain Regression with Functional Data",
+        "journal": "R package version",
+        "doi": "",
+        "raw": "Huo L, Reiss P, Zhao Y (2014). refund.wave: Wavelet-Domain Regression with Functional Data. R package version 0.1, URL https://CRAN.R-project.org/package=refund.wave."
+    },
+    {
+        "index": 24,
+        "authors": "Rob Hyndman, Han Shang",
+        "year": "2020",
+        "title": "ftsa: Functional Time Series Analysis",
+        "journal": "ftsa: Functional Time Series Analysis",
+        "doi": "10.32614/cran.package.ftsa",
+        "raw": "Hyndman RJ (2020). CRAN Task View: Time Series Analysis. Version 2020-04-14, URL https://CRAN.R-project.org/view=TimeSeries."
+    },
+    {
+        "index": 25,
+        "authors": "E Lila, L Sangalli, J Ramsay, L Formaggia",
+        "year": "2020",
+        "title": "fdaPDE: Functional Data Analysis and Partial Differential Equations; Statistical Analysis of Functional and Spatial Data, Based on Regression with Partial Differential Regularizations",
+        "journal": "R package version",
+        "doi": "",
+        "raw": "Lila E, Sangalli LM, Ramsay J, Formaggia L (2020). fdaPDE: Functional Data Analysis and Partial Differential Equations; Statistical Analysis of Functional and Spatial Data, Based on Regression with Partial Differential Regularizations. R package version 1.0-6, URL https://CRAN.R-project.org/package=fdaPDE."
+    },
+    {
+        "index": 26,
+        "authors": "H Lu",
+        "year": "2012",
+        "title": "Uncorrelated Multilinear Principal Component Analysis (UMPCA)",
+        "journal": "MATLAB Central File Exchange",
+        "doi": "",
+        "raw": "Lu H (2012). Uncorrelated Multilinear Principal Component Analysis (UMPCA). MATLAB Central File Exchange. Version 1.0, URL https://de.mathworks.com/matlabcentral/ fileexchange/35432."
+    },
+    {
+        "index": 27,
+        "authors": "H Lu, K Plataniotis, A Venetsanopoulos",
+        "year": "2009",
+        "title": "Uncorrelated Multilinear Principal Component Analysis for Unsupervised Multilinear Subspace Learning",
+        "journal": "IEEE Transactions on Neural Networks",
+        "doi": "10.1109/tnn.2009.2031144",
+        "raw": "Lu H, Plataniotis KN, Venetsanopoulos AN (2009). \"Uncorrelated Multilinear Principal Component Analysis for Unsupervised Multilinear Subspace Learning.\" IEEE Transactions on Neural Networks, 20(11), 1820-1836. doi:10.1109/tnn.2009.2031144."
+    },
+    {
+        "index": 28,
+        "authors": "B Meyer",
+        "year": "1988",
+        "title": "Object Oriented Software Construction",
+        "journal": "Object Oriented Software Construction",
+        "doi": "",
+        "raw": "Meyer B (1988). Object Oriented Software Construction. Prentice Hall, New York."
+    },
+    {
+        "index": 29,
+        "authors": "J Peng, D Paul",
+        "year": "2011",
+        "title": "fpca: Restricted MLE for Functional Principal Components Analysis",
+        "journal": "R package version",
+        "doi": "",
+        "raw": "Peng J, Paul D (2011). fpca: Restricted MLE for Functional Principal Components Analysis. R package version 0.2-1, URL https://CRAN.R-project.org/package=fpca."
+    },
+    {
+        "index": 30,
+        "authors": "J Ramsay, B Silverman",
+        "year": "2005",
+        "title": "Functional Data Analysis",
+        "journal": "Functional Data Analysis",
+        "doi": "10.1007/b98888",
+        "raw": "Ramsay JO, Silverman BW (2005). Functional Data Analysis. 2nd edition. Springer-Verlag, New York. doi:10.1007/b98888."
+    },
+    {
+        "index": 31,
+        "authors": "James Ramsay, H Wickham, S Graves, G Hooker",
+        "year": "2020",
+        "title": "fda: Functional Data Analysis",
+        "journal": "R package version 2",
+        "doi": "10.32614/cran.package.fda",
+        "raw": "Ramsay JO, Wickham H, Graves S, Hooker G (2020). fda: Functional Data Analysis. R pack- age version 2.4.8.1, URL https://CRAN.R-project.org/package=fda."
+    },
+    {
+        "index": 32,
+        "authors": "Team Core",
+        "year": "2019",
+        "title": "R: A Language and Environment for Statistical Computing",
+        "journal": "R Foundation for Statistical Computing",
+        "doi": "10.32614/r.manuals",
+        "raw": "R Core Team (2019). R: A Language and Environment for Statistical Computing. R Founda- tion for Statistical Computing, Vienna, Austria. URL https://www."
+    },
+    {
+        "index": 33,
+        "authors": "",
+        "year": "1973-07-01",
+        "title": "Annual report on research project",
+        "journal": "R-project",
+        "doi": "10.2172/4375734",
+        "raw": "R-project.org/."
+    },
+    {
+        "index": 34,
+        "authors": "Fabian Scheipl, Jeff Goldsmith, Julia Wrobel",
+        "year": "2018",
+        "title": "tidyfun: Tidy Functional Data Wrangling and Visualization",
+        "journal": "R package version 0",
+        "doi": "10.32614/cran.package.tidyfun",
+        "raw": "Scheipl F, Goldsmith J (2018). tidyfun: Tools for Tidy Functional Data. R package ver- sion 0.0.7, URL https://github.com/fabian-s/tidyfun."
+    },
+    {
+        "index": 35,
+        "authors": "Fabian Scheipl, Sonja Greven",
+        "year": "2016-01-01",
+        "title": "Identifiability in penalized function-on-function regression models",
+        "journal": "Electronic Journal of Statistics",
+        "doi": "10.1214/16-ejs1123",
+        "raw": "Scheipl F, Greven S (2016). \"Identifiability in Penalized Function-on-Function Regression Models.\" Electronic Journal of Statistics, 10(1), 495-526. doi:10.1214/16-ejs1123."
+    },
+    {
+        "index": 36,
+        "authors": "Amandine Schmutz, Julien Jacques, Charles Bouveyron, Laurence Chèze, Pauline Martin",
+        "year": "2019",
+        "title": "Clustering multivariate functional data in group-specific functional subspaces",
+        "journal": "Computational Statistics",
+        "doi": "10.1007/s00180-020-00958-4",
+        "raw": "Schmutz A, Jacques J, Bouveyron C (2019). funHDDC: Univariate and Multivariate Model- Based Clustering in Group-Specific Functional Subspaces. R package version 2.3.0, URL https://CRAN.R-project.org/package=funHDDC."
+    },
+    {
+        "index": 37,
+        "authors": "Han Shang, Rob Hyndman",
+        "year": "2019",
+        "title": "rainbow: Bagplots, Boxplots and Rainbow Plots for Functional Data",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.rainbow",
+        "raw": "Shang HL, Hyndman RJ (2019). rainbow: Rainbow Plots, Bagplots and Boxplots for Functional Data. R package version 3.6, URL https://CRAN.R-project.org/package= rainbow."
+    },
+    {
+        "index": 38,
+        "authors": "M Soueidatt",
+        "year": "2014",
+        "title": "Funclustering: A Package for Functional Data Clustering",
+        "journal": "R package version",
+        "doi": "",
+        "raw": "Soueidatt M (2014). Funclustering: A Package for Functional Data Clustering. R package version 1.0.1, URL https://CRAN.R-project.org/package=Funclustering."
+    },
+    {
+        "index": 39,
+        "authors": "Nicholas Tarabelloni, Ana Arribas-Gil, Francesca Ieva, Anna Paganoni, Juan Romo",
+        "year": "2018",
+        "title": "roahd: Robust Analysis of High Dimensional Data",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.roahd",
+        "raw": "Tarabelloni N, Arribas-Gil A, Ieva F, Paganoni AM, Romo J (2018). roahd: Robust Analysis of High Dimensional Data. R package version 1.4.1, URL https://CRAN.R-project.org/ package=roahd."
+    },
+    {
+        "index": 40,
+        "authors": "J Tucker",
+        "year": "2019",
+        "title": "fdasrvf: Elastic Functional Data Analysis",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.fdasrvf",
+        "raw": "Tucker JD (2019). fdasrvf: Elastic Functional Data Analysis. R package version 1.9.2, URL https://CRAN.R-project.org/package=fdasrvf."
+    },
+    {
+        "index": 41,
+        "authors": "Haonan Wang, J Marron",
+        "year": "2007-10-01",
+        "title": "Object oriented data analysis: Sets of trees",
+        "journal": "The Annals of Statistics",
+        "doi": "10.1214/009053607000000217",
+        "raw": "Wang H, Marron JS (2007). \"Object Oriented Data Analysis: Sets of Trees.\" The Annals of Statistics, 35(5), 1849-1873. doi:10.1214/009053607000000217."
+    },
+    {
+        "index": 42,
+        "authors": "Jane-Ling Wang, Jeng-Min Chiou, Hans-Georg Müller",
+        "year": "2016-06-01",
+        "title": "Functional Data Analysis",
+        "journal": "Annual Review of Statistics and Its Application",
+        "doi": "10.1146/annurev-statistics-041715-033624",
+        "raw": "Wang JL, Chiou JM, Müller HG (2016). \"Functional Data Analysis.\" An- nual Review of Statistics and Its Application, 3(1), 257-295. doi:10.1146/ annurev-statistics-041715-033624."
+    },
+    {
+        "index": 43,
+        "authors": "Hadley Wickham",
+        "year": "2009",
+        "title": "ggplot2",
+        "journal": "ggplot2",
+        "doi": "10.1007/978-0-387-98141-3",
+        "raw": "Wickham H (2009). ggplot2: Elegant Graphics for Data Analysis. Springer-Verlag, New York."
+    },
+    {
+        "index": 44,
+        "authors": "Hadley Wickham",
+        "year": "2011",
+        "title": "testthat: Get Started with Testing",
+        "journal": "The R Journal",
+        "doi": "10.32614/rj-2011-002",
+        "raw": "Wickham H (2011). \"testthat: Get Started with Testing.\" The R Journal, 3(1), 5-10. doi: 10.32614/rj-2011-002."
+    },
+    {
+        "index": 45,
+        "authors": "Hadley Wickham, Winston Chang, Lionel Henry, Thomas Pedersen, Kohske Takahashi, Claus Wilke, Kara Woo, Hiroaki Yutani, Dewey Dunnington, Teun Van Den Brand",
+        "year": "2019",
+        "title": "ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.ggplot2",
+        "raw": "Wickham H, Chang W, Henry L, Pedersen TL, Takahashi K, Wilke C, Woo K, Yutani H (2019). ggplot2: Create Elegant Data Visualisations Using the Grammar of Graphics. R package version 3.2.1, URL https://CRAN.R-project.org/package=ggplot2."
+    },
+    {
+        "index": 46,
+        "authors": "Simon Wood",
+        "year": "2011",
+        "title": "Fast Stable Restricted Maximum Likelihood and Marginal Likelihood Estimation of Semiparametric Generalized Linear Models",
+        "journal": "Journal of the Royal Statistical Society Series B: Statistical Methodology",
+        "doi": "10.1111/j.1467-9868.2010.00749.x",
+        "raw": "Wood SN (2011). \"Fast Stable Restricted Maximum Likelihood and Marginal Likelihood Estimation of Semiparametric Generalized Linear Models.\" Journal of the Royal Statistical Society B, 73(1), 3-36. doi:10.1111/j.1467-9868.2010.00749.x."
+    },
+    {
+        "index": 47,
+        "authors": "Simon Wood",
+        "year": "2019",
+        "title": "mgcv: Mixed GAM Computation Vehicle with Automatic Smoothness Estimation",
+        "journal": "mgcv: Mixed GAM Computation Vehicle with GCV/AIC/REML Smoothness Estimation",
+        "doi": "10.32614/cran.package.mgcv",
+        "raw": "Wood SN (2019). mgcv: Mixed GAM Computation Vehicle with GCV/AIC/REML Smooth- ness Estimation. R package version 1.8-31, URL https://CRAN.R-project.org/package= mgcv."
+    },
+    {
+        "index": 48,
+        "authors": "Fang Yao, Hans-Georg Müller, Jane-Ling Wang",
+        "year": "2005-06",
+        "title": "Functional Data Analysis for Sparse Longitudinal Data",
+        "journal": "Journal of the American Statistical Association",
+        "doi": "10.1198/016214504000001745",
+        "raw": "Yao F, Müller HG, Wang JL (2005). \"Functional Data Analysis for Sparse Longitudinal Data.\" Journal of the American Statistical Association, 100(470), 577-590. doi:10.1198/ 016214504000001745."
+    },
+    {
+        "index": 49,
+        "authors": "Christina Yassouridis, Dominik Ernst, Friedrich Leisch",
+        "year": "2018",
+        "title": "Generalization, Combination and Extension of Functional Clustering Algorithms: The <i>R</i> Package <b>funcy</b>",
+        "journal": "Journal of Statistical Software",
+        "doi": "10.18637/jss.v085.i09",
+        "raw": "Yassouridis C (2018). funcy: Functional Clustering Algorithms. R package version 1.0.0, URL https://CRAN.R-project.org/package=funcy."
+    },
+    {
+        "index": 50,
+        "authors": "Christina Yassouridis, Dominik Ernst, Friedrich Leisch",
+        "year": "2018",
+        "title": "Generalization, Combination and Extension of Functional Clustering Algorithms: The <i>R</i> Package <b>funcy</b>",
+        "journal": "Journal of Statistical Software",
+        "doi": "10.18637/jss.v085.i09",
+        "raw": "Yassouridis C, Ernst D, Leisch F (2018). \"Generalization, Combination and Extension of Functional Clustering Algorithms: The R Package funcy.\" Journal of Statistical Software, 85(9), 1-25. doi:10.18637/jss.v085.i09."
+    },
+    {
+        "index": 51,
+        "authors": "Achim Zeileis, Gabor Grothendieck",
+        "year": "2005",
+        "title": "<b>zoo</b> : <i>S3</i> Infrastructure for Regular and Irregular Time Series",
+        "journal": "Journal of Statistical Software",
+        "doi": "10.18637/jss.v014.i06",
+        "raw": "Zeileis A, Grothendieck G (2005). \"zoo: S3 Infrastructure for Regular and Irregular Time Series.\" Journal of Statistical Software, 14(6), 1-27. doi:10.18637/jss.v014.i06."
+    },
+    {
+        "index": 52,
+        "authors": "Achim Zeileis, Gabor Grothendieck, Jeffrey Ryan",
+        "year": "2020",
+        "title": "zoo: S3 Infrastructure for Regular and Irregular Time Series (Z's Ordered Observations)",
+        "journal": "R package version",
+        "doi": "10.32614/cran.package.zoo",
+        "raw": "Zeileis A, Grothendieck G, Ryan JA (2020). zoo: S3 Infrastructure for Regular and Irregular Time Series (Z's Ordered Observations). R package version 1.8-7, URL https://CRAN."
+    },
+    {
+        "index": 53,
+        "authors": "",
+        "year": "2017-09-28",
+        "title": "DCT2D/DCT3D: This option calculates a representation of functional data on two-or threedimensional domains in a tensor cosine basis. For speeding up the calculations, the implementation is based on the fftw3 C-library (Frigo and Johnson 2005, developer version). If the fftw3-dev library is not available during the installation of the MFPCA package",
+        "journal": "DCT2D/DCT3D: This option calculates a representation of functional data on two-or threedimensional domains in a tensor cosine basis. For speeding up the calculations, the implementation is based on the fftw3 C-library (Frigo and Johnson 2005, developer version). If the fftw3-dev library is not available during the installation of the MFPCA package",
+        "doi": "10.18637/jss.v093.i05Accepted:2018-12-03",
+        "raw": "R-project.org/package=zoo. DCT2D/DCT3D: This option calculates a representation of functional data on two-or three- dimensional domains in a tensor cosine basis. For speeding up the calculations, the imple- mentation is based on the fftw3 C-library (Frigo and Johnson 2005, developer version). If the fftw3-dev library is not available during the installation of the MFPCA package, the DCT2D and DCT3D options are disabled and throw an error. After installing fftw3-dev on the sys- tem, MFPCA has to be re-installed to activate DCT2D/DCT3D. The uniExpansions entry for a cosine representation of 2D/3D elements is: R> list(type = \"DCT2D\", qThresh, parallel) R> list(type = \"DCT3D\", qThresh, parallel) The discrete cosine transformation is a real-valued variant of the fast Fourier transform (FFT) and usually results in a huge number of non-zero coefficients that mostly model \"noise\" and can thus be set to zero without affecting the representation of the data. The user has to supply a threshold between 0 and 1 (qThresh) that defines the proportion of coefficients to be thresholded. Setting, e.g., qThresh = 0.9 will set 90% of the coefficients to zero, leaving only the 10% of the coefficients with the highest absolute values. The coefficients are stored in a 'sparseMatrix' (package Matrix) object to reduce the memory load for the following computations. The calculations can be run in parallel for the different observations by setting the parameter parallel to TRUE (defaults to FALSE), if a parallel backend has been registered before. Affiliation: Clara Happ-Kurz Department of Statistics LMU Munich E-mail: clara.happ@stat.uni-muenchen.de Journal of Statistical Software http://www.jstatsoft.org/ published by the Foundation for Open Access Statistics http://www.foastat.org/ April 2020, Volume 93, Issue 5 Submitted: 2017-09-28 doi:10.18637/jss.v093.i05 Accepted: 2018-12-03"
     }
 ]

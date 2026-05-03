@@ -107,22 +107,26 @@ async function processFiles() {
   document.getElementById('progressWrap').classList.add('active');
   allResults = [];
   const total = files.length;
-  let done = 0;
-  for (let i = 0; i < files.length; i++) {
-    setStatus(i, 'processing', 'Đang xử lý...');
-    setProgress(done/total, `Đang xử lý file ${i+1}/${total}: ${files[i].name}`);
-    try {
-      const result = await processFile(files[i]);
-      allResults.push(result);
-      setStatus(i, result.status==='error' ? 'error' : 'done',
-        result.status==='error' ? 'Lỗi' : `${result.totalFound||0} refs`);
-    } catch(e) {
-      allResults.push({ filename: files[i].name, status:'error', error:e.message, dois:[], totalFound:0, validCount:0, invalidCount:0 });
-      setStatus(i, 'error', 'Lỗi');
-    }
-    done++;
-    setProgress(done/total, done<total ? `Đang xử lý file ${i+2}/${total}` : 'Hoàn thành!');
+  
+  setProgress(0.3, `Đang khởi tạo và gửi ${total} file...`);
+  
+  try {
+    const results = await processAllFiles(files);
+    allResults = results;
+    
+    // Cập nhật trạng thái từng file trong danh sách
+    results.forEach((res, idx) => {
+        setStatus(idx, res.status==='error' ? 'error' : 'done',
+            res.status==='error' ? 'Lỗi' : `${res.totalFound||0} refs`);
+    });
+    
+    setProgress(1, 'Hoàn thành!');
+  } catch(e) {
+    console.error(e);
+    showToast(`Lỗi: ${e.message}`, 'error');
+    setProgress(0, 'Gặp sự cố khi xử lý');
   }
+
   activeTab = 0;
   renderResults();
   updateStatsSummary();
@@ -143,13 +147,17 @@ function setProgress(pct, text) {
   document.getElementById('progressText').textContent = text;
 }
 
-async function processFile(file) {
+async function processAllFiles(filesToUpload) {
   const formData = new FormData();
-  formData.append('files', file);
+  filesToUpload.forEach(file => {
+    formData.append('files', file);
+  });
+  
   const resp = await fetch('/api/process', { method:'POST', body: formData });
   if (!resp.ok) throw new Error(`Server error: ${resp.status}`);
+  
   const data = await resp.json();
-  return data.results[0];
+  return data.results;
 }
 
 // ============ SUY RA DOI_STATUS ============

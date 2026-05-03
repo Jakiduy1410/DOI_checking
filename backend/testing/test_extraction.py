@@ -1,95 +1,97 @@
 import os
-import glob
-import re
-from markitdown import MarkItDown
+import json
+from bs4 import BeautifulSoup
 
-def extract_references(md_text):
-    """
-    Extracts the References section from a markdown string and truncates
-    any trailing tables, images, or appendices.
-    """
-    # 1. Locate the References section
-    # Matches: References, Bibliography, Works Cited (optionally with markdown headers or bold/italic)
-    ref_pattern = re.compile(r"(?im)^(?:#+\s*)?(?:\*\*|__)?(?:References|Bibliography|Works Cited)(?:\*\*|__)?[\s]*$")
-    
-    # Find all matches in case there are multiple (e.g., in a compilation). Wait, usually we look for the last one
-    # or just the standard one at the end. We'll find the last occurrence to be safe.
-    matches = list(ref_pattern.finditer(md_text))
-    
-    if not matches:
-        return "NO REFERENCES FOUND"
-    
-    # We take the text after the last match
-    last_match = matches[-1]
-    
-    # SỬA Ở ĐÂY: Thay last_match.end() thành last_match.start()
-    # Phải lấy từ start() để giữ lại cái chữ "References". Nếu cắt bằng end(), 
-    # file test.py tóm được md_text sẽ báo lỗi "Không tìm thấy mục References" ngay!
-    ref_section = md_text[last_match.end():] 
-    
-    # 2. Truncate trailing content
-    # We want to find the FIRST occurrence of any of these elements in the ref_section
-    truncation_patterns = [
-        r"(?im)^(?:#+\s*)?(?:\*\*|__)?(?:Appendices|Appendix)", # Appendices
-        r"!\[.*?\]\(.*?\)", # Markdown Image
-        r"\|.*?\|" # Row in a Markdown table
-    ]
-    
-    earliest_truncation_index = len(ref_section)
-    
-    for pattern in truncation_patterns:
-        match = re.search(pattern, ref_section)
-        if match:
-            # If we find a truncation marker earlier than our current cutoff, update it
-            if match.start() < earliest_truncation_index:
-                earliest_truncation_index = match.start()
+def extract_metadata():
+    input_dir = "backend/testing/tmp_result"
+    output_dir = "backend/testing/json_result"
+
+    if not os.path.exists(output_dir):
+        os.makedirs(output_dir)
+
+    for filename in os.listdir(input_dir):
+        if filename.endswith(".xml"):
+            xml_path = os.path.join(input_dir, filename)
+            print(f"Extracting from {filename}...")
+
+            with open(xml_path, 'r', encoding='utf-8') as f:
+                soup = BeautifulSoup(f, 'xml')
+
+            references = []
+            
+            # Grobid TEI XML uses biblStruct for citations
+            bibl_structs = soup.find_all('biblStruct')
+            
+            for i, bibl in enumerate(bibl_structs, 1):
+                ref_data = {
+                    "index": i,
+                    "authors": "",
+                    "year": "",
+                    "title": "",
+                    "journal": "",
+                    "doi": "",
+                    "raw": ""
+                }
                 
-    # Truncate the text
-    clean_refs = ref_section[:earliest_truncation_index].strip()
-    return clean_refs
-
-def process_all_docs(input_dir, tmp_dir, output_dir):
-    os.makedirs(tmp_dir, exist_ok=True)
-    os.makedirs(output_dir, exist_ok=True)
-    
-    # Process both docx and pdf files
-    doc_files = []
-    doc_files.extend(glob.glob(os.path.join(input_dir, "*.docx")))
-    
-    md_converter = MarkItDown()
-    
-    for doc_path in doc_files:
-        filename = os.path.basename(doc_path)
-        base_name, ext = os.path.splitext(filename)
-        md_filename = base_name + '.md'
-        tmp_md_path = os.path.join(tmp_dir, md_filename)
-        output_path = os.path.join(output_dir, base_name + '_refs.md')
-        
-        print(f"Processing: {filename}...")
-        try:
-            # Convert
-            result = md_converter.convert(doc_path)
-            raw_md = result.text_content
+                # Title
+                title_tag = bibl.find('title', level='a') or bibl.find('title')
+                if title_tag:
+                    ref_data['title'] = title_tag.get_text(strip=True)
+                
+                # Authors
+                authors = []
+                for author in bibl.find_all('author'):
+                    pers_name = author.find('persName')
+                    if pers_name:
+                        first_name = pers_name.find('forename', type='first')
+                        last_name = pers_name.find('surname')
+                        
+                        name_parts = []
+                        if first_name:
+                            name_parts.append(first_name.get_text(strip=True))
+                        if last_name:
+                            name_parts.append(last_name.get_text(strip=True))
+                        
+                        if name_parts:
+                            authors.append(" ".join(name_parts))
+                
+                if authors:
+                    ref_data['authors'] = ", ".join(authors)
+                
+                # Journal / Publication
+                monogr = bibl.find('monogr')
+                if monogr:
+                    pub_title = monogr.find('title')
+                    if pub_title:
+                        ref_data['journal'] = pub_title.get_text(strip=True)
+                    
+                    imprint = monogr.find('imprint')
+                    if imprint:
+                        date_tag = imprint.find('date')
+                        if date_tag and date_tag.has_attr('when'):
+                            ref_data['year'] = date_tag['when']
+                        elif date_tag:
+                            ref_data['year'] = date_tag.get_text(strip=True)
+                
+                # DOI
+                doi_tag = bibl.find('idno', type='DOI')
+                if doi_tag:
+                    ref_data['doi'] = doi_tag.get_text(strip=True)
+                
+                # Raw Citation (as requested)
+                raw_tag = bibl.find('note', type='raw_reference')
+                if raw_tag:
+                    ref_data['raw'] = raw_tag.get_text(strip=True)
+                
+                references.append(ref_data)
             
-            # Save raw MD to tmp_res
-            # with open(tmp_md_path, 'w', encoding='utf-8') as f:
-            #     f.write(raw_md)
-            # print(f"  -> Saved raw markdown to {tmp_md_path}")
+            output_filename = filename.replace(".xml", ".json")
+            output_path = os.path.join(output_dir, output_filename)
             
-            # Extract references section
-            extracted_refs = extract_references(raw_md)
+            with open(output_path, 'w', encoding='utf-8') as out_f:
+                json.dump(references, out_f, indent=4, ensure_ascii=False)
             
-            # Save to output folder
-            with open(output_path, 'w', encoding='utf-8') as f:
-                f.write(extracted_refs)
-            print(f"  -> Saved extracted references to {output_path}")
-            
-        except Exception as e:
-            print(f"  -> Error processing {filename}: {e}")
+            print(f"Extracted {len(references)} references to {output_path}")
 
 if __name__ == "__main__":
-    INPUT_DIR = os.path.join(os.path.dirname(__file__), "formatted_references")
-    TMP_DIR = os.path.join(os.path.dirname(__file__), "tmp_result")
-    OUTPUT_DIR = os.path.join(os.path.dirname(__file__), "tmp_result")
-    
-    process_all_docs(INPUT_DIR, TMP_DIR, OUTPUT_DIR)
+    extract_metadata()
