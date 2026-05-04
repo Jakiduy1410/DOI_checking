@@ -210,8 +210,8 @@ function renderResults() {
   sidebar.style.cssText = `
     width: 240px;
     flex-shrink: 0;
-    background: rgba(255,255,255,0.03);
-    border: 1px solid rgba(255,255,255,0.08);
+    background: #1a2f2f;
+    border: 1px solid #2dd4bf;
     border-radius: 12px;
     overflow: hidden;
     position: sticky;
@@ -219,7 +219,7 @@ function renderResults() {
   `;
 
   const sidebarHeader = document.createElement('div');
-  sidebarHeader.style.cssText = 'padding:0.75rem 1rem;font-size:0.7rem;color:var(--text-muted);text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid rgba(255,255,255,0.06)';
+  sidebarHeader.style.cssText = 'padding:0.75rem 1rem;font-size:0.7rem;color:#ffffff;font-weight:700;text-transform:uppercase;letter-spacing:.08em;border-bottom:1px solid rgba(255,255,255,0.15)';
   sidebarHeader.textContent = `${allResults.length} file`;
   sidebar.appendChild(sidebarHeader);
 
@@ -234,8 +234,8 @@ function renderResults() {
       <div style="display:flex;align-items:center;gap:0.6rem;padding:0.75rem 1rem;cursor:pointer;transition:background 0.15s;border-bottom:1px solid rgba(255,255,255,0.04)">
         <div class="file-ext ext-${ext}" style="font-size:0.55rem;padding:2px 5px;min-width:auto">${ext.toUpperCase()}</div>
         <div style="flex:1;min-width:0">
-          <div style="font-size:0.78rem;color:var(--text-primary);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${r.filename}</div>
-          <div style="font-size:0.68rem;color:var(--text-muted);margin-top:2px">
+          <div style="font-size:0.78rem;color:#ffffff;white-space:nowrap;overflow:hidden;text-overflow:ellipsis">${r.filename}</div>
+          <div style="font-size:0.68rem;color:rgba(255, 255, 255, 0.86);margin-top:2px">
             ${r.status==='error' ? '⚠ Lỗi' : `${r.totalFound||0} refs · ✅${counts.valid_doi+counts.found_doi} ❌${counts.invalid_doi}`}
           </div>
         </div>
