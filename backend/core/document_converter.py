@@ -3,6 +3,7 @@ import re
 import pymupdf
 import pymupdf4llm
 from markitdown import MarkItDown
+from docx2pdf import convert
 
 md_converter = MarkItDown()
 
@@ -42,3 +43,17 @@ def convert_to_md(file_path: str) -> str:
 
     else:
         raise ValueError(f"Định dạng {ext} không được hỗ trợ.")
+
+def convert_docx_to_pdf(docx_path: str, pdf_path: str) -> bool:
+    """
+    Chuyển đổi file .docx sang .pdf sử dụng docx2pdf.
+    Yêu cầu Microsoft Word phải được cài đặt trên Windows.
+    """
+    try:
+        # docx2pdf.convert(input, output)
+        # Nếu output là folder nó sẽ lưu vào đó, nếu là file nó sẽ lưu đúng tên đó
+        convert(docx_path, pdf_path)
+        return os.path.exists(pdf_path)
+    except Exception as e:
+        print(f"[!] Loi chuyen doi DOCX sang PDF: {e}")
+        return False

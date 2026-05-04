@@ -8,7 +8,7 @@ from core.pdf_preprocessing import get_references
 from core.docx_preprocessing import get_docx_references
 from core.masking import masking
 from core.doi_validator import process_validation
-from core.document_converter import convert_to_md
+from core.document_converter import convert_to_md, convert_docx_to_pdf
 from core.grobid_parser import process_pdf_with_grobid
 
 def pipeline(session_id: str = None):
@@ -66,15 +66,41 @@ def pipeline(session_id: str = None):
                         refs_data = [asdict(ref) for ref in refs_structured]
                         print(f"Da trich xuat thanh cong {len(refs_data)} references bang Fallback.")
             elif doc_file.suffix.lower() == '.docx':
-                md_content = convert_to_md(str(doc_file))
-                refs_str, fmt = get_docx_references(md_content, source_name=doc_file.name)
-                if not refs_str:
-                    print("Khong tim thay reference nao trong file nay.")
-                    refs_data = []
-                else:
-                    refs_structured = masking(refs_str, fmt)
-                    refs_data = [asdict(ref) for ref in refs_structured]
-                    print(f"Da trich xuat thanh cong {len(refs_data)} references.")
+                # --- LUỒNG CHÍNH: Chuyển sang PDF để dùng Grobid ---
+                temp_pdf_path = doc_file.with_suffix('.pdf')
+                grobid_success = False
+                
+                try:
+                    print(f"-> Dang thu nghiem chuyen doi {doc_file.name} sang PDF de dung Grobid...")
+                    if convert_docx_to_pdf(str(doc_file), str(temp_pdf_path)):
+                        print(f"-> Chuyen doi thanh cong. Dang gui cho Grobid...")
+                        refs_data = process_pdf_with_grobid(str(temp_pdf_path))
+                        if refs_data:
+                            print(f"Da trich xuat thanh cong {len(refs_data)} references tu DOCX (qua Grobid).")
+                            grobid_success = True
+                        else:
+                            print("Grobid khong tim thay references trong file DOCX da chuyen doi.")
+                    else:
+                        print("Khong the chuyen doi DOCX sang PDF.")
+                except Exception as g_ex:
+                    print(f"[CANH BAO] Luong Grobid cho DOCX gap loi: {g_ex}")
+                finally:
+                    # Xóa file PDF tạm nếu có
+                    if temp_pdf_path.exists():
+                        temp_pdf_path.unlink()
+
+                # --- LUỒNG DỰ PHÒNG (Code cũ): Nếu Grobid thất bại hoặc không có dữ liệu ---
+                if not grobid_success:
+                    print(f"-> Chuyen sang luong du phong (MarkItDown) cho {doc_file.name}...")
+                    md_content = convert_to_md(str(doc_file))
+                    refs_str, fmt = get_docx_references(md_content, source_name=doc_file.name)
+                    if not refs_str:
+                        print("Khong tim thay reference nao trong file nay (Fallback).")
+                        refs_data = []
+                    else:
+                        refs_structured = masking(refs_str, fmt)
+                        refs_data = [asdict(ref) for ref in refs_structured]
+                        print(f"Da trich xuat thanh cong {len(refs_data)} references bang Fallback.")
             elif doc_file.suffix.lower() == '.txt':
                 print(f"-> Dang xu ly file van ban: {doc_file.name}")
                 md_content = convert_to_md(str(doc_file))

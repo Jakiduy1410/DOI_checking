@@ -3,7 +3,6 @@ from core.pdf_preprocessing import clean_parts
 
 def detect_format(ref_data: str) -> str:
     """
-    Phiên bản nâng cấp miễn nhiễm với lỗi rớt trang DOCX (như số "949.")
     Dùng chung cho cả .docx và .txt
     """
     if re.search(r'^\s*(?:\*\*)?1\.(?:\*\*)?\s+', ref_data, re.MULTILINE):
