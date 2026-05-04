@@ -162,7 +162,7 @@ flowchart TD
     D -- "Thành công" --> G1["grobid_parser.py"]
     D -- "Thất bại" --> G2["pymupdf -> pdf_preprocessing.py"]
     
-    C -- "DOCX" --> E1{Chuyển PDF<br/>(docx2pdf)?}
+    C -- "DOCX" --> E1{"Chuyển PDF<br/>(docx2pdf)?"}
     E1 -- "Thành công" --> E2{Grobid Server}
     E2 -- "Thành công" --> G1
     E2 -- "Thất bại" --> E3["markitdown -> docx_preprocessing.py"]
@@ -181,7 +181,7 @@ flowchart TD
         S --> T["Trích xuất Năm"]
         T --> U["Trích xuất DOI"]
         U --> V["Trích xuất Tiêu đề & Tác giả"]
-        V --> W{Có phải Website?}
+        V --> W{"Có phải Website?"}
         W -- "Có" --> X["Gán is_web = True"]
         W -- "Không" --> Y["Gán is_web = False"]
         X --> Z["Khởi tạo JSON result"]
@@ -225,16 +225,16 @@ flowchart TD
     A["JSON reference đã phân tách"] --> B["Khởi tạo bộ đếm tổng hợp"]
     B --> C["Duyệt qua từng reference"]
 
-    C --> F{Có DOI không?}
+    C --> F{"Có DOI không?"}
     F -- "Có" --> G["Crossref API: /works/{doi}"]
     G -- "200 OK" --> H["Đánh dấu 'valid_doi'"]
     G -- "404" --> I["Đánh dấu 'invalid_doi'"]
     G -- "Timeout/Lỗi" --> I2["Đánh dấu 'unverified'"]
 
-    F -- "Không" --> D{Là web resource?}
+    F -- "Không" --> D{"Là web resource?"}
     D -- "Có" --> E["Đánh dấu 'web_resource'"]
 
-    D -- "Không" --> K{Có Tiêu đề / Raw text?}
+    D -- "Không" --> K{"Có Tiêu đề / Raw text?"}
     K -- "Không" --> L["Đánh dấu 'web_resource'"]
     K -- "Có Tiêu đề" --> M["Crossref API: query.title"]
     K -- "Chỉ có raw" --> M2["Crossref API: query.bibliographic"]
@@ -252,7 +252,7 @@ flowchart TD
     O --> Q
     P --> Q
 
-    Q --> R{Còn reference không?}
+    Q --> R{"Còn reference không?"}
     R -- "Còn" --> C
     R -- "Hết" --> S["Xuất kết quả ra file JSON"]
 ```
