@@ -51,7 +51,7 @@ async def process_upload(files: list[UploadFile] = File(...)):
                 results.append({
                     "filename": file.filename,
                     "status": "error",
-                    "error": "doc file sẽ trả kết quả là ko đúng định dạng vui lòng đổi file thành docx hoặc pdf",
+                    "error": "Dinh dang .doc khong duoc ho tro. Vui long su dung .docx hoac .pdf.",
                     "dois": [],
                     "totalFound": 0
                 })

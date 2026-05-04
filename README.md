@@ -4,17 +4,33 @@
 
 Hệ thống đã được tích hợp Full-stack. Bạn chỉ cần chạy backend là toàn bộ ứng dụng (bao gồm giao diện web) sẽ sẵn sàng.
 
-1. **Chuẩn bị môi trường**:
-   ```bash
-   cd backend
-   # Cài đặt các thư viện cần thiết (FastAPI, uvicorn, pymupdf, pymupdf4llm, markitdown, requests, v.v.)
-   pip install -r requirements.txt
-   ```
-2. **Khởi chạy Server**:
-   ```bash
-   python main.py
-   ```
-3. **Truy cập**: Mở trình duyệt và truy cập `http://localhost:8000`
+### 1. Yêu cầu hệ thống (Prerequisites)
+- **Python**: Phiên bản 3.8 trở lên.
+- **Docker**: Để chạy máy chủ Grobid (xử lý PDF).
+
+### 2. Cài đặt Grobid (Docker)
+Grobid là "trái tim" của việc bóc tách PDF. Hãy cài đặt và chạy nó bằng Docker:
+```bash
+# 1. Tải image Grobid từ Docker Hub
+docker pull lfoppiano/grobid:0.9.0
+
+# 2. Chạy container Grobid (port 8070)
+docker run -t --rm -p 8070:8070 lfoppiano/grobid:0.9.0
+```
+*Hệ thống sẽ tự động kiểm tra trạng thái Grobid tại `http://localhost:8070` khi khởi chạy.*
+
+### 3. Cài đặt thư viện Python
+```bash
+cd backend
+# Cài đặt các thư viện cần thiết
+pip install -r requirements.txt
+```
+
+### 4. Khởi chạy Server
+```bash
+python main.py
+```
+*Truy cập: Mở trình duyệt và vào `http://localhost:8000`*
 
 ---
 
@@ -34,18 +50,19 @@ Hệ thống được chia thành hai luồng xử lý chính: **Trích xuất T
 
 Trước khi xử lý, mọi tài liệu đều được chuẩn hóa sang định dạng Markdown trung gian:
 
-| Định dạng | Thư viện sử dụng | Ghi chú |
-|-----------|-----------------|---------|
-| `.pdf`    | `pymupdf` + `pymupdf4llm` | Chuyển đổi layout PDF sang Markdown |
-| `.docx`   | `markitdown` | Chuyển đổi DOCX sang Markdown, xóa base64 ảnh nhúng |
-| `.txt`    | Built-in `open()` | Đọc trực tiếp với encoding UTF-8 |
-| `.doc`    | — | Không hỗ trợ, trả lỗi ngay |
+| Định dạng | Thư viện sử dụng          | Ghi chú                                                  |
+| ------------ | ----------------------------- | --------------------------------------------------------- |
+| `.pdf`     | `pymupdf` + `pymupdf4llm` | Chuyển đổi layout PDF sang Markdown                    |
+| `.docx`    | `markitdown`                | Chuyển đổi DOCX sang Markdown, xóa base64 ảnh nhúng |
+| `.txt`     | Built-in `open()`           | Đọc trực tiếp với encoding UTF-8                     |
+| `.doc`     | —                            | Không hỗ trợ, trả lỗi ngay                           |
 
 ### 2. Luồng Trích xuất Tài liệu tham khảo
 
 Giai đoạn này tập trung vào việc phân tích Markdown và trích xuất trích dẫn một cách thông minh, được chia thành **hai module riêng biệt** tùy theo loại tài liệu:
 
 #### 2a. PDF Processing (`grobid_parser.py` & `pdf_preprocessing.py`)
+
 - **Primary Engine (Grobid):** Sử dụng máy chủ Grobid để trích xuất metadata và tài liệu tham khảo trực tiếp từ PDF với độ chính xác cao.
 - **Fallback Mechanism:** Nếu Grobid gặp sự cố, hệ thống tự động chuyển sang luồng xử lý Markdown truyền thống:
   - **Tìm phần References:** Regex tìm heading `References` theo mọi biến thể.
@@ -53,7 +70,9 @@ Giai đoạn này tập trung vào việc phân tích Markdown và trích xuất
   - **Phân đoạn & Làm sạch:** Tách khối, sửa lỗi URL, loại bỏ rác văn bản.
 
 #### 2b. DOCX Preprocessing (`docx_preprocessing.py`)
+
 Phiên bản nâng cấp dành riêng cho DOCX, miễn nhiễm với lỗi "rớt trang" phổ biến trong văn bản Word:
+
 - **Fallback nội dung toàn bộ:** Nếu không tìm thấy heading `References`, hệ thống tự động fallback lấy toàn bộ nội dung thay vì trả về rỗng.
 - **Cắt phụ lục tự động:** Phát hiện và cắt bỏ các section sau danh sách tham khảo (Acknowledgements, Appendix, Figure/Table captions).
 - **Làm sạch Markdown:** Loại bỏ định dạng bold/italic, xử lý link Markdown `[text](url)` thành text thuần, hợp nhất dòng bị nối dấu gạch ngang cuối dòng (`-\n`).
@@ -63,20 +82,20 @@ Phiên bản nâng cấp dành riêng cho DOCX, miễn nhiễm với lỗi "rớ
   - Không tách dòng nếu dòng trước kết thúc bằng `,`, `and`, `&`, `-`, `–`, `et al.`.
 
 #### 2c. Vòng lặp Masking & Trích xuất dữ liệu (`masking.py`)
+
 Mỗi chuỗi trích dẫn sẽ đi qua pipeline Regex nâng cao để đổ dữ liệu vào mô hình `Reference`:
 
-| Bước | Mô tả |
-|------|-------|
-| **Tiền xử lý** | Sửa URL bị vỡ dấu `_._`, ký tự `~`, khoảng trắng trong `://`, loại bỏ ngày truy cập (PLOS) |
-| **Trích xuất Năm** | Ưu tiên dạng `(2024)`, fallback sang năm đứng độc lập |
-| **Trích xuất DOI** | Nhận diện `doi.org/...` và `doi:...`, chuẩn hóa khoảng trắng, tách `PMID/PMCID` |
-| **Trích xuất Tiêu đề & Tác giả** | 4 nhánh logic: tiêu đề trong ngoặc kép → tách theo `[YEAR]` → PLOS pattern → fallback ranh giới tên |
-| **Làm sạch Tiêu đề** | Cắt trước tên tạp chí/hội nghị (VENUE_PATTERN), xóa URL và domain trần dính vào cuối |
-| **Phân loại Web** | Kiểm tra URL trong trích dẫn với danh sách 40+ tên miền học thuật; gắn `is_web=True` nếu là trang web thông thường |
+| Bước                                        | Mô tả                                                                                                                             |
+| --------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
+| **Tiền xử lý**                       | Sửa URL bị vỡ dấu `_._`, ký tự `~`, khoảng trắng trong `://`, loại bỏ ngày truy cập (PLOS)                        |
+| **Trích xuất Năm**                   | Ưu tiên dạng `(2024)`, fallback sang năm đứng độc lập                                                                    |
+| **Trích xuất DOI**                    | Nhận diện `doi.org/...` và `doi:...`, chuẩn hóa khoảng trắng, tách `PMID/PMCID`                                       |
+| **Trích xuất Tiêu đề & Tác giả** | 4 nhánh logic: tiêu đề trong ngoặc kép → tách theo `[YEAR]` → PLOS pattern → fallback ranh giới tên                   |
+| **Làm sạch Tiêu đề**               | Cắt trước tên tạp chí/hội nghị (VENUE_PATTERN), xóa URL và domain trần dính vào cuối                                  |
+| **Phân loại Web**                     | Kiểm tra URL trong trích dẫn với danh sách 40+ tên miền học thuật; gắn `is_web=True` nếu là trang web thông thường |
 
 **Danh sách học thuật domains được nhận diện:** `doi.org`, `arxiv.org`, `biorxiv.org`, `nature.com`, `springer.com`, `sciencedirect.com`, `ieee.org`, `acm.org`, `pubmed.ncbi.nlm.nih.gov`, `plos.org`, `jstor.org`, `researchgate.net`, và 30+ domain khác.
 
-```mermaid
 flowchart TD
     A[Tài liệu PDF / DOCX / TXT] --> B[document_converter.py]
     B --> C{Loại file?}
@@ -91,7 +110,7 @@ flowchart TD
     E --> Q
     F --> Q
 
-    subgraph Quy trình Masking cấu trúc (masking.py)
+    subgraph masking_process [Quy trình Masking cấu trúc (masking.py)]
         Q[Phân tách Reference đơn lẻ] --> R[Tiền xử lý & Loại bỏ nhiễu]
         R --> S[Trích xuất Năm]
         S --> T[Trích xuất DOI]
@@ -103,7 +122,10 @@ flowchart TD
 
     W --> Y[Khởi tạo JSON result]
     X --> Y
-```
+
+
+
+
 
 ### 3. Luồng Xác thực & Làm giàu dữ liệu API (`doi_validator.py` & `tasks.py`)
 
@@ -111,21 +133,23 @@ flowchart TD
 
 #### Bộ điều hướng xác thực (Validation Router):
 
-| Trường hợp | Hành động | Trạng thái kết quả |
-|------------|-----------|-------------------|
-| Đã có DOI → Crossref trả 200 | Xác nhận hợp lệ | `valid_doi` |
-| Đã có DOI → Crossref trả 404 | Đánh dấu không hợp lệ | `invalid_doi` |
-| Đã có DOI → Timeout/lỗi mạng | Không xác định được | `unverified` |
-| Là web resource, không có DOI | Bỏ qua API, tiết kiệm quota | `web_resource` |
-| Không có tiêu đề lẫn tác giả | Bỏ qua, không tìm kiếm | `web_resource` |
-| Có tiêu đề → Search Crossref → **Khớp tiêu đề ≥ 85% & khớp năm** | Gán DOI tìm được | `found_doi` |
-| Có tiêu đề → Không khớp / Không tìm thấy | Không có DOI | `no_doi` |
-| Không có tiêu đề nhưng có raw text → Search theo bibliographic | Tìm kiếm fallback | `found_doi` / `no_doi` |
+| Trường hợp                                                                      | Hành động                   | Trạng thái kết quả     |
+| ---------------------------------------------------------------------------------- | ------------------------------ | -------------------------- |
+| Đã có DOI → Crossref trả 200                                                  | Xác nhận hợp lệ            | `valid_doi`              |
+| Đã có DOI → Crossref trả 404                                                  | Đánh dấu không hợp lệ    | `invalid_doi`            |
+| Đã có DOI → Timeout/lỗi mạng                                                 | Không xác định được     | `unverified`             |
+| Là web resource( không phải các trang học thuật ), không có DOI       | Bỏ qua API, tiết kiệm quota | `web_resource`           |
+| Không có tiêu đề lẫn tác giả                                               | Bỏ qua, không tìm kiếm     | `web_resource`           |
+| Có tiêu đề → Search Crossref →**Khớp tiêu đề ≥ 85% & khớp năm** | Gán DOI tìm được          | `found_doi`              |
+| Có tiêu đề → Không khớp / Không tìm thấy                                 | Không có DOI                 | `no_doi`                 |
+| Không có tiêu đề nhưng có raw text → Search theo bibliographic             | Tìm kiếm fallback            | `found_doi` / `no_doi` |
 
 > **Fuzzy Matching:** Khi tìm DOI qua tiêu đề, hệ thống dùng `difflib.SequenceMatcher` để so sánh tiêu đề trích xuất với kết quả Crossref. Chỉ chấp nhận kết quả có **độ tương đồng ≥ 85%**, tránh trả về DOI sai.
 
 #### Tổng hợp kết quả:
+
 Mỗi reference sau xác thực được bổ sung thêm `doi_status` và `index`. Kết quả cuối cùng bao gồm:
+
 - `job_id`, `filename`, `status`
 - `summary`: thống kê `total_refs`, `original_has_doi`, `valid_doi`, `found_doi`, `invalid_doi`, `unverified`, `no_doi`, `web_resource`
 - `references`: danh sách đầy đủ từng reference với metadata
@@ -187,17 +211,17 @@ Dự án sử dụng kiến trúc thống nhất, một server phục vụ cả 
 
 Frontend được xây dựng bằng HTML/CSS/JS thuần, phục vụ trực tiếp từ FastAPI:
 
-| Tính năng | Mô tả |
-|-----------|-------|
-| **Particle Canvas Background** | Hiệu ứng nền hạt tương tác, vẽ bằng Canvas API |
-| **Drag & Drop Upload** | Kéo thả file hoặc click để chọn, hỗ trợ multi-file |
-| **Bộ lọc định dạng** | Chỉ chấp nhận `.pdf`, `.docx`, `.doc`, `.txt`; hiển thị toast lỗi nếu sai định dạng |
-| **Danh sách file** | Hiển thị tên, kích thước, trạng thái từng file (Sẵn sàng / Đang xử lý / Hoàn thành / Lỗi) |
-| **Thanh tiến trình** | Progress bar + phần trăm cập nhật theo từng file đang xử lý |
-| **Thống kê tổng hợp** | 4 chỉ số: Files đã xử lý, DOI tìm thấy, DOI hợp lệ, DOI không hợp lệ — có hiệu ứng đếm số mượt |
-| **Thẻ kết quả DOI** | Mỗi DOI là một thẻ có thể mở/đóng, hiển thị: DOI string, Tiêu đề, Tác giả, Tạp chí, Năm, Link DOI |
-| **Xuất JSON** | Tải toàn bộ kết quả về máy dưới dạng file `.json` |
-| **Toast Notification** | Thông báo thành công/lỗi xuất hiện góc màn hình, tự động biến mất |
+| Tính năng                          | Mô tả                                                                                                              |
+| ------------------------------------ | -------------------------------------------------------------------------------------------------------------------- |
+| **Particle Canvas Background** | Hiệu ứng nền hạt tương tác, vẽ bằng Canvas API                                                              |
+| **Drag & Drop Upload**         | Kéo thả file hoặc click để chọn, hỗ trợ multi-file                                                           |
+| **Bộ lọc định dạng**      | Chỉ chấp nhận `.pdf`, `.docx`, `.doc`, `.txt`; hiển thị toast lỗi nếu sai định dạng                |
+| **Danh sách file**            | Hiển thị tên, kích thước, trạng thái từng file (Sẵn sàng / Đang xử lý / Hoàn thành / Lỗi)           |
+| **Thanh tiến trình**         | Progress bar + phần trăm cập nhật theo từng file đang xử lý                                                  |
+| **Thống kê tổng hợp**      | 4 chỉ số: Files đã xử lý, DOI tìm thấy, DOI hợp lệ, DOI không hợp lệ — có hiệu ứng đếm số mượt |
+| **Thẻ kết quả DOI**         | Mỗi DOI là một thẻ có thể mở/đóng, hiển thị: DOI string, Tiêu đề, Tác giả, Tạp chí, Năm, Link DOI |
+| **Xuất JSON**                 | Tải toàn bộ kết quả về máy dưới dạng file `.json`                                                        |
+| **Toast Notification**         | Thông báo thành công/lỗi xuất hiện góc màn hình, tự động biến mất                                     |
 
 ---
 
@@ -243,25 +267,27 @@ doi_checker/
 ## 📊 Trạng thái Dự án & Lộ trình (Roadmap)
 
 **Đã hoàn thành:**
-- [x] Tái cấu trúc pipeline cốt lõi, tách biệt `pdf_preprocessing.py` và `docx_preprocessing.py`.
-- [x] Hỗ trợ thêm định dạng **TXT** trong `document_converter.py`.
-- [x] Sử dụng **MarkItDown** để chuyển đổi DOCX sang Markdown chuẩn hóa.
-- [x] Tích hợp xác thực API Crossref và luồng suy luận DOI thông minh.
-- [x] **Fuzzy Matching:** Tìm DOI bằng so khớp tiêu đề với độ tương đồng ≥ 85% (`SequenceMatcher`).
-- [x] **Fallback tìm kiếm theo raw text** khi không có tiêu đề trích xuất được.
-- [x] **Line Healing (DOCX):** Tái hợp dòng thông minh, nhận diện ranh giới reference chính xác.
-- [x] Khắc phục các lỗi lớn về trích xuất tiêu đề (venue pattern, URL dính vào title).
-- [x] Xử lý các trường hợp thiếu năm và cách phân tách tác giả trên PLOS.
-- [x] Triển khai bộ lọc tài nguyên web thông minh (40+ academic domains).
-- [x] **Kết nối Full-stack:** Đồng bộ Frontend và FastAPI server (Unified Server).
-- [x] **Xử lý hàng loạt (Batch Processing):** Tối ưu hóa việc gọi pipeline khi upload nhiều file cùng lúc.
-- [x] **Session Isolation:** Cô lập dữ liệu theo từng lượt upload bằng UUID, tránh đè file.
-- [x] **Tích hợp Grobid:** Sử dụng máy chủ Grobid làm bộ máy trích xuất PDF chính.
-- [x] **Auto-Cleanup:** Tự động xóa file tạm và folder session sau khi xử lý thành công.
-- [x] **Frontend hoàn chỉnh:** Drag & Drop, progress bar, thẻ DOI có thể mở/đóng, xuất JSON, toast notification.
-- [x] **Health Check Endpoint:** `GET /api/test` kiểm tra trạng thái server.
+
+- [X] Tái cấu trúc pipeline cốt lõi, tách biệt `pdf_preprocessing.py` và `docx_preprocessing.py`.
+- [X] Hỗ trợ thêm định dạng **TXT** trong `document_converter.py`.
+- [X] Sử dụng **MarkItDown** để chuyển đổi DOCX sang Markdown chuẩn hóa.
+- [X] Tích hợp xác thực API Crossref và luồng suy luận DOI thông minh.
+- [X] **Fuzzy Matching:** Tìm DOI bằng so khớp tiêu đề với độ tương đồng ≥ 85% (`SequenceMatcher`).
+- [X] **Fallback tìm kiếm theo raw text** khi không có tiêu đề trích xuất được.
+- [X] **Line Healing (DOCX):** Tái hợp dòng thông minh, nhận diện ranh giới reference chính xác.
+- [X] Khắc phục các lỗi lớn về trích xuất tiêu đề (venue pattern, URL dính vào title).
+- [X] Xử lý các trường hợp thiếu năm và cách phân tách tác giả trên PLOS.
+- [X] Triển khai bộ lọc tài nguyên web thông minh (40+ academic domains).
+- [X] **Kết nối Full-stack:** Đồng bộ Frontend và FastAPI server (Unified Server).
+- [X] **Xử lý hàng loạt (Batch Processing):** Tối ưu hóa việc gọi pipeline khi upload nhiều file cùng lúc.
+- [X] **Session Isolation:** Cô lập dữ liệu theo từng lượt upload bằng UUID, tránh đè file.
+- [X] **Tích hợp Grobid:** Sử dụng máy chủ Grobid làm bộ máy trích xuất PDF chính.
+- [X] **Auto-Cleanup:** Tự động xóa file tạm và folder session sau khi xử lý thành công.
+- [X] **Frontend hoàn chỉnh:** Drag & Drop, progress bar, thẻ DOI có thể mở/đóng, xuất JSON, toast notification.
+- [X] **Health Check Endpoint:** `GET /api/test` kiểm tra trạng thái server.
 
 **Việc cần làm / Lộ trình sắp tới:**
+
 - [ ] **Dockerization:** Đóng gói ứng dụng vào Docker containers.
 - [ ] **Nâng cấp OCR:** Hỗ trợ tốt hơn cho PDF dạng ảnh quét bằng Tesseract / LayoutLM.
 - [ ] **Tích hợp Database:** Lưu lịch sử xử lý vào SQLite / MongoDB.

@@ -32,7 +32,7 @@ async def get_index():
         return FileResponse(index_file)
 
     return {
-        "error": "Vẫn chưa thấy index.html đâu Bibi ơi!",
+        "error": "Khong tim thay tep index.html.",
         "check_tai_day": str(index_file)
     }
 

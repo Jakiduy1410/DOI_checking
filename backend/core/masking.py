@@ -15,7 +15,7 @@ DOI_PATTERN = re.compile(r'(?:https?://(?:[a-zA-Z0-9-]+\.)?doi\.org/|doi:?\s*)(1
 
 ACADEMIC_DOMAINS = {'doi.org', 'arxiv.org', 'biorxiv.org', 'medrxiv.org', 'nature.com', 'springer.com', 'sciencedirect.com', 'wiley.com', 'ieee.org', 'acm.org', 'nih.gov', 'ncbi.nlm.nih.gov', 'pubmed.ncbi.nlm.nih.gov', 'plos.org', 'jstor.org', 'tandfonline.com', 'sagepub.com', 'cambridge.org', 'oxford.org', 'oup.com', 'elsevier.com', 'researchgate.net', 'semanticscholar.org', 'scopus.com', 'webofscience.com', 'ssrn.com', 'aclweb.org', 'frontiersin.org', 'mdpi.com', 'biomedcentral.com', 'hindawi.com', 'ams.org', 'aps.org', 'iop.org', 'rsc.org', 'pnas.org', 'science.org', 'cell.com', 'thelancet.com', 'bmj.com'}
 
-# [FIX-1] Nhận diện tên tạp chí/hội nghị/preprint để không lấy nhầm làm title
+# Nhận diện tên tạp chí/hội nghị/preprint để không lấy nhầm làm title
 VENUE_PATTERN = re.compile(
     r'(?:^|\.\s+)'                            # Bắt đầu chuỗi hoặc sau dấu chấm
     r'('
@@ -30,7 +30,7 @@ VENUE_PATTERN = re.compile(
     re.IGNORECASE
 )
 
-# [FIX-2] Xóa rác web/github dính vào cuối title
+# Xóa rác web/github dính vào cuối title
 WEB_JUNK_PATTERN = re.compile(
     r'\s*(?:https?://|www\.)\S*.*$'            # URL đầy đủ
     r'|\s*[\w.-]+\.(?:com|org|net|edu|gov|io|html)(?:/\S*)?.*$'  # domain trần (nytimes.com/...)
@@ -40,7 +40,7 @@ WEB_JUNK_PATTERN = re.compile(
 
 def preprocess_ref(text: str, fmt: str) -> str:
     if fmt == 'plos':
-        # [FIX] Tránh xóa nhầm DOI URL khi ở format PLOS
+        # Tránh xóa nhầm DOI URL khi ở format PLOS
         text = re.sub(r'Available:\s*https?://(?!(?:dx\.)?doi\.org/)\S+', '', text)
         text = re.sub('Accessed\\s*\\d*\\s*\\w+\\s+\\d{4}\\.?', '', text)
     text = re.sub('`(doi:[^`]+)`', lambda x: x.group(1).replace(' ', ''), text)
@@ -59,23 +59,23 @@ def extract_year(text: str) -> tuple[str, str]:
 def extract_doi(text: str) -> tuple[str, str]:
     m = DOI_PATTERN.search(text)
     if m:
-        full_match = m.group(0) # [Sửa ở đây]: Lưu lại toàn bộ chuỗi match để lát xóa sạch khỏi text
+        full_match = m.group(0) # Lưu lại toàn bộ chuỗi match để xóa sạch khỏi text
         raw_doi = m.group(1)    # Group(1) chỉ lấy phần mã 10.xxxx...
-        # [FIX] Xóa thêm dấu ngoặc dính ở cuối DOI
+        # Xóa thêm dấu ngoặc dính ở cuối DOI
         clean_doi = raw_doi.replace(' ', '').replace('\n', '').rstrip('.,)]')
         clean_doi = re.split('PMID:|PMCID:', clean_doi, flags=re.IGNORECASE)[0]
         return (clean_doi, text.replace(full_match, '', 1))
     return ('', text)
     
 def clean_title(title: str) -> str:
-    # [FIX-1] Cắt title trước khi gặp venue/journal/preprint
+    # Cắt title trước khi gặp venue/journal/preprint
     vm = VENUE_PATTERN.search(title)
     if vm:
         candidate = title[:vm.start()].rstrip(' .,;')
         if len(candidate) >= 10:
             title = candidate
 
-    # [FIX-2] Xóa URL, domain trần, mã issue number cuối chuỗi
+    # Xóa URL, domain trần, mã issue number cuối chuỗi
     title = WEB_JUNK_PATTERN.sub('', title).strip(' .,-')
     return title
 
@@ -86,7 +86,6 @@ def extract_title_authors(text: str, fmt: str) -> tuple[str, str]:
         raw_authors = text[:q.start()].replace('[YEAR]', '').strip(' .,-')
         quoted_title = clean_title(q.group(1).strip(' .,'))
 
-        # [FIX-3] Kiểm tra PLOS: nếu phần "authors" chứa từ dài không phải tên người
         # (ví dụ: "Lingenfelter K Science Meets Fiction") thì tách lại bằng pattern tên
         if fmt == 'plos' and raw_authors:
             non_name_words = [w for w in raw_authors.split()
@@ -118,7 +117,7 @@ def extract_title_authors(text: str, fmt: str) -> tuple[str, str]:
         it = re.search('_([^_]{5,120})_', after)
         if it:
             italic_text = it.group(1).strip('.')
-            # [FIX-1] Nếu italic là venue/preprint -> lấy text TRƯỚC nó làm title
+            # Nếu italic là venue/preprint -> lấy text TRƯỚC nó làm title
             is_venue = re.search(
                 r'(?:Proceedings|Journal|Conference|Symposium|Workshop|'
                 r'Transactions|Advances|arXiv\s+preprint|Preprint|'
@@ -154,7 +153,7 @@ def extract_title_authors(text: str, fmt: str) -> tuple[str, str]:
             return (m.group(1).strip(' ,'), clean_title(m.group(2).strip()))
         return ('', clean_title(text.strip(' .')))
 
-    # --- [FIX-3] Không có năm: tách ranh giới tác giả - tiêu đề ---
+    # Không có năm: tách ranh giới tác giả - tiêu đề
     # Pattern: "Lastname I, Lastname I" rồi chuyển sang câu bình thường
     am = re.match(
         r'^((?:[A-Z][a-z]+(?:\s+[A-Z]\.?){0,3}(?:\s*,\s*|\s+(?:and|&)\s+))*'
@@ -168,7 +167,7 @@ def extract_title_authors(text: str, fmt: str) -> tuple[str, str]:
         title = clean_title(am.group(2).strip(' .'))
         return (authors, title)
 
-    # --- [FIX-4] Fallback: lấy text trước URL/DOI làm title tạm ---
+    # Fallback: lấy text trước URL/DOI làm title tạm
     url_pos = re.search(r'https?://|doi[:\s]', text, re.IGNORECASE)
     if url_pos:
         fallback = text[:url_pos.start()].strip(' .,-')

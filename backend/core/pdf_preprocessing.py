@@ -11,7 +11,7 @@ def get_references(md_content: str, source_name: str = "Tài liệu") -> tuple[l
     ref_data = re.sub('PLOS ONE.*?(?=\\n|$)', '', ref_data)
     fmt = detect_format(ref_data)
     refs = split_refs(ref_data, fmt)
-    # [SỬA Ở ĐÂY]: Thêm .encode('ascii', 'ignore').decode() để tránh lỗi encoding khi in ra console Windows
+    # Thêm .encode('ascii', 'ignore').decode() để tránh lỗi encoding khi in ra console Windows
     print(f'[{source_name.encode("ascii", "ignore").decode()}] format={fmt}  refs={len(refs)}')
     return (refs, fmt)
     
@@ -24,7 +24,7 @@ def detect_format(ref_data: str) -> str:
         return 'plos'
     if len(re.findall(r'^\s*(?:-\s*|\*\*\s*)*\\?\[\d+\\?\]', ref_data, re.MULTILINE)) > 2:
         return 'ieee'
-    # [SỬA Ở ĐÂY]: Kiểm tra xem có bao nhiêu mẫu (Năm) đứng đầu dòng
+    # Kiểm tra xem có bao nhiêu mẫu (Năm) đứng đầu dòng
     author_year_count = len(re.findall(r'^\s*[A-Z].+?\(\d{4}\)', ref_data, re.MULTILINE))
     dash_newline_count = len(re.findall(r'^\s*-\s+[A-Z]', ref_data, re.MULTILINE))
     
@@ -48,7 +48,7 @@ def split_refs(ref_data: str, fmt: str) -> list[str]:
     elif fmt == 'apa_inline':
         parts = re.split('\\s+-\\s+(?=[A-Z][a-z])', ref_data)
     else:
-        # [SỬA Ở ĐÂY]: Nâng cấp regex để tách được các ref dính chùm sau URL hoặc dấu chấm
+        # Nâng cấp regex để tách được các ref dính chùm sau URL hoặc dấu chấm
         # Thêm việc nhận diện Tên tác giả sau DOI/URL ngay cả khi không xuống dòng
         parts = re.split(r'\n(?=[A-Z][a-z])|(?<=[.\d/X])\s*(?=[A-Z][a-z]+,\s+[A-Z]\.)|(?<=[.\d/X])\s*(?=[A-Z][a-z]+\s+[A-Z]\.)', ref_data)
     return clean_parts(parts)

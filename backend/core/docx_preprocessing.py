@@ -4,6 +4,7 @@ from core.pdf_preprocessing import clean_parts
 def detect_format(ref_data: str) -> str:
     """
     Phiên bản nâng cấp miễn nhiễm với lỗi rớt trang DOCX (như số "949.")
+    Dùng chung cho cả .docx và .txt
     """
     if re.search(r'^\s*(?:\*\*)?1\.(?:\*\*)?\s+', ref_data, re.MULTILINE):
         return 'plos'
@@ -89,7 +90,7 @@ def get_docx_references(md_content: str, source_name: str = "Tài liệu") -> tu
             elif fmt == 'dash_newline' and re.match(r'^\s*-\s+[A-Z]', stripped):
                 is_start = True
             elif fmt == 'author_year':
-                # [SỬA Ở ĐÂY]: Thêm Regex nhận diện dòng bắt đầu bằng URL/DOI để tự động nối vào ref trước
+                # Thêm Regex nhận diện dòng bắt đầu bằng URL/DOI để tự động nối vào ref trước
                 if re.match(r'^\s*(?:https?://|doi:|www\.)', stripped):
                     is_start = False
                 # Bổ sung regex nhận diện dòng có Tên tác giả + (Năm)
@@ -118,10 +119,10 @@ def get_docx_references(md_content: str, source_name: str = "Tài liệu") -> tu
         ref_data_joined = " ".join(healed_lines)
         healed_lines = re.split(r'\s+-\s+(?=[A-Z][a-z])', ref_data_joined)
             
-    # Tái sử dụng vũ khí dọn rác
+    # Tái sử dụng logic làm sạch dữ liệu
     clean_parts_list = clean_parts(healed_lines)
             
-    # [SỬA Ở ĐÂY]: Thêm .encode('ascii', 'ignore').decode() để tránh lỗi encoding khi in ra console Windows
+    # Thêm .encode('ascii', 'ignore').decode() để tránh lỗi encoding khi in ra console Windows
     print(f'[{source_name.encode("ascii", "ignore").decode()}] format={fmt}  refs={len(clean_parts_list)}')
     
     return (clean_parts_list, fmt)
