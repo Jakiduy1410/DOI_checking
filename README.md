@@ -8,6 +8,7 @@ Hệ thống đã được tích hợp Full-stack. Bạn chỉ cần chạy back
 
 - **Python**: Phiên bản 3.8 trở lên.
 - **Docker**: Để chạy máy chủ Grobid (xử lý PDF).
+- **Tesseract OCR**: Cần thiết nếu bạn muốn xử lý các file PDF dạng ảnh quét (Scan).
 
 ### 2. Cài đặt Grobid (Docker)
 
@@ -111,7 +112,8 @@ Trước khi xử lý, mọi tài liệu đều được chuẩn hóa sang đị
 
 | Định dạng | Thư viện sử dụng          | Ghi chú                                                  |
 | ------------ | ----------------------------- | --------------------------------------------------------- |
-| `.pdf`     | `pymupdf` + `pymupdf4llm` | Chuyển đổi layout PDF sang Markdown                    |
+| `.pdf` (Text) | `Grobid` (Chính) / `pymupdf4llm` (Phụ) | Trích xuất metadata và text trực tiếp từ lớp văn bản |
+| `.pdf` (Scan) | `pdf2image` + `pytesseract` | Chuyển đổi trang sang ảnh và dùng OCR để lấy nội dung |
 | `.docx`    | `docx2pdf` + Grobid (Chính) / `markitdown` (Dự phòng) | Ưu tiên chuyển PDF để xử lý qua Grobid; fallback sang Markdown nếu lỗi |
 | `.txt`     | Built-in `open()`           | Đọc trực tiếp với encoding UTF-8                     |
 | `.doc`     | —                            | Không hỗ trợ, trả lỗi ngay                           |
@@ -120,19 +122,23 @@ Trước khi xử lý, mọi tài liệu đều được chuẩn hóa sang đị
 
 Giai đoạn này tập trung vào việc phân tích Markdown và trích xuất trích dẫn một cách thông minh, được chia thành **hai module riêng biệt** tùy theo loại tài liệu:
 
-#### 2a. PDF Processing (`grobid_parser.py` & `pdf_preprocessing.py`)
+#### 2a. PDF Processing
 
-- **Primary Engine (Grobid):** Sử dụng máy chủ Grobid để trích xuất metadata và tài liệu tham khảo trực tiếp từ PDF với độ chính xác cao.
-- **Fallback Mechanism:** Nếu Grobid gặp sự cố, hệ thống tự động chuyển sang luồng xử lý Markdown truyền thống:
-  - **Tìm phần References:** Regex tìm heading `References` theo mọi biến thể.
-  - **Nhận diện định dạng:** Phân tích kiểu trích dẫn (`plos`, `ieee`, `author_year`, v.v.).
-  - **Phân đoạn & Làm sạch:** Tách khối, sửa lỗi URL, loại bỏ rác văn bản.
+Hệ thống tự động phân loại PDF để áp dụng luồng xử lý tối ưu:
+
+- **Luồng PDF Văn bản (Text-based PDF):**
+  - **Primary Engine (Grobid):** Gửi trực tiếp file tới máy chủ Grobid. Đây là luồng ưu tiên vì Grobid có khả năng nhận diện cấu trúc học thuật (tác giả, tiêu đề, journal) cực kỳ chính xác.
+  - **Fallback Mechanism:** Nếu Grobid lỗi hoặc không tìm thấy reference, hệ thống dùng `pymupdf4llm` để lấy text dạng Markdown và đẩy qua bộ lọc `pdf_preprocessing.py`.
+
+- **Luồng PDF Hình ảnh (Scanned/Image PDF):**
+  - **OCR Engine:** Sử dụng `pytesseract` kết hợp với `pdf2image`.
+  - **Quy trình:** Chuyển đổi từng trang PDF thành ảnh chất lượng cao -> Chạy OCR đa luồng (`ProcessPoolExecutor`) -> Tổng hợp thành Markdown -> Xử lý qua pipeline Masking truyền thống.
 
 #### 2b. DOCX Processing (Dual-Pipeline)
 
 Luồng xử lý DOCX được thiết kế theo mô hình "Ưu tiên độ chính xác, đảm bảo độ ổn định":
 
-- **Primary Pipeline (Grobid via PDF):** Sử dụng `docx2pdf` để chuyển đổi tài liệu sang PDF trung gian, sau đó gửi tới máy chủ **Grobid**. Cách này cho phép bóc tách metadata (tác giả, tiêu đề, journal) với độ chính xác cực cao từ các tệp Word phức tạp.
+- **Primary Pipeline (Grobid via PDF):** Sử dụng `docx2pdf` (Windows) hoặc `LibreOffice` (Linux) để chuyển đổi tài liệu sang PDF trung gian, sau đó gửi tới máy chủ **Grobid**. Cách này cho phép bóc tách metadata (tác giả, tiêu đề, journal) với độ chính xác cực cao từ các tệp Word phức tạp.
 - **Fallback Mechanism (MarkItDown + `docx_preprocessing.py`):** Nếu việc chuyển đổi sang PDF thất bại (ví dụ: hệ thống không cài Microsoft Word) hoặc Grobid gặp sự cố, hệ thống tự động kích hoạt luồng dự phòng:
   - **MarkItDown:** Chuyển đổi DOCX sang Markdown.
   - **Line Healing (Tái hợp dòng thông minh):** Thuật toán nhận biết ranh giới reference theo từng định dạng (`plos`, `ieee`, `author_year`), tự động nối các dòng bị ngắt vào đúng reference.
@@ -158,9 +164,14 @@ flowchart TD
     A["Tài liệu PDF / DOCX / TXT"] --> B["document_converter.py"]
     B --> C{Loại file?}
     
-    C -- "PDF" --> D{Grobid Server}
-    D -- "Thành công" --> G1["grobid_parser.py"]
-    D -- "Thất bại" --> G2["pymupdf -> pdf_preprocessing.py"]
+    C -- "PDF" --> D{Có lớp văn bản?}
+    
+    D -- "Có (Text PDF)" --> D1{Grobid Server}
+    D1 -- "Thành công" --> G1["grobid_parser.py"]
+    D1 -- "Thất bại" --> G2["pymupdf4llm -> pdf_preprocessing.py"]
+    
+    D -- "Không (Scan PDF)" --> D2["Tesseract OCR"]
+    D2 --> G2
     
     C -- "DOCX" --> E1{"Chuyển PDF<br/>(docx2pdf)?"}
     E1 -- "Thành công" --> E2{Grobid Server}
@@ -334,27 +345,24 @@ doi_checker/
 
 **Đã hoàn thành:**
 
-- [X] Tái cấu trúc pipeline cốt lõi, tách biệt `pdf_preprocessing.py` và `docx_preprocessing.py`.
-- [X] Hỗ trợ thêm định dạng **TXT** trong `document_converter.py`.
-- [X] Sử dụng **MarkItDown** để chuyển đổi DOCX sang Markdown chuẩn hóa.
-- [X] Tích hợp xác thực API Crossref và luồng suy luận DOI thông minh.
-- [X] **Fuzzy Matching:** Tìm DOI bằng so khớp tiêu đề với độ tương đồng ≥ 85% (`SequenceMatcher`).
-- [X] **Fallback tìm kiếm theo raw text** khi không có tiêu đề trích xuất được.
-- [X] **Line Healing (DOCX):** Tái hợp dòng thông minh, nhận diện ranh giới reference chính xác.
-- [X] Khắc phục các lỗi lớn về trích xuất tiêu đề (venue pattern, URL dính vào title).
-- [X] Xử lý các trường hợp thiếu năm và cách phân tách tác giả trên PLOS.
-- [X] Triển khai bộ lọc tài nguyên web thông minh (40+ academic domains).
-- [X] **Kết nối Full-stack:** Đồng bộ Frontend và FastAPI server (Unified Server).
-- [X] **Xử lý hàng loạt (Batch Processing):** Tối ưu hóa việc gọi pipeline khi upload nhiều file cùng lúc.
-- [X] **Session Isolation:** Cô lập dữ liệu theo từng lượt upload bằng UUID, tránh đè file.
-- [X] **Tích hợp Grobid:** Sử dụng máy chủ Grobid làm bộ máy trích xuất PDF chính.
-- [X] **Auto-Cleanup:** Tự động xóa file tạm và folder session sau khi xử lý thành công.
-- [X] **Frontend hoàn chỉnh:** Drag & Drop, progress bar, thẻ DOI có thể mở/đóng, xuất JSON, toast notification.
-- [X] **Health Check Endpoint:** `GET /api/test` kiểm tra trạng thái server.
+- [X] **Đa định dạng & Trích xuất thông minh:**
+  - Hỗ trợ toàn diện **PDF (Text/Scan)**, **DOCX**, **TXT**.
+  - Tích hợp **Grobid** (Xử lý PDF chuyên sâu) và **Tesseract OCR** (Xử lý PDF dạng ảnh).
+  - Sử dụng **MarkItDown** kết hợp thuật toán **Line Healing** (Tái hợp dòng thông minh) giúp xử lý triệt để lỗi ngắt dòng trên mọi định dạng.
+- [X] **Xác thực DOI & Thuật toán lõi:**
+  - Tích hợp **Crossref API** với cơ chế **Fuzzy Matching** (so khớp tiêu đề ≥ 85%).
+  - Luồng suy luận DOI thông minh: Tự động tìm kiếm theo tiêu đề hoặc Raw text nếu thiếu metadata.
+  - Bộ lọc tài nguyên web thông minh (nhận diện 40+ academic domains) để tối ưu hạn ngạch API.
+- [X] **Kiến trúc Hệ thống & Hiệu suất:**
+  - Mô hình **Unified Server** (FastAPI phục vụ cả API và Frontend tĩnh).
+  - **Session Isolation:** Cô lập dữ liệu người dùng bằng UUID và cơ chế **Auto-Cleanup** tự động dọn dẹp bộ nhớ tạm.
+  - **Batch Processing:** Tối ưu hóa xử lý hàng loạt nhiều file cùng lúc bằng đa luồng (Threading) và đa tiến trình (Multiprocessing).
+- [X] **Giao diện & Tiện ích:**
+  - Frontend SPA hoàn chỉnh: Kéo thả file, thanh tiến trình, hiển thị kết quả dạng thẻ (Accordion), xuất dữ liệu JSON.
+  - Hệ thống thông báo Toast và Endpoint kiểm tra trạng thái (**Health Check API**).
 
 **Việc cần làm / Lộ trình sắp tới:**
 
-- [ ] **Dockerization:** Đóng gói ứng dụng vào Docker containers.
-- [ ] **Nâng cấp OCR:** Hỗ trợ tốt hơn cho PDF dạng ảnh quét bằng Tesseract / LayoutLM.
+- [ ] **Dockerization:** Đóng gói toàn bộ ứng dụng (Backend, Grobid, Tesseract) vào Docker Compose.
 - [ ] **Tích hợp Database:** Lưu lịch sử xử lý vào SQLite / MongoDB.
 - [ ] **Cải thiện UI/UX:** Thêm thanh tiến trình xử lý thời gian thực (WebSocket / SSE).

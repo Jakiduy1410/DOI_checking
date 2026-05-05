@@ -89,7 +89,7 @@ def pipeline(session_id: str = None):
                     if temp_pdf_path.exists():
                         temp_pdf_path.unlink()
 
-                # --- LUỒNG DỰ PHÒNG (Code cũ): Nếu Grobid thất bại hoặc không có dữ liệu ---
+                # --- LUỒNG DỰ PHÒNG nếu Grobid thất bại hoặc không có dữ liệu ---
                 if not grobid_success:
                     print(f"-> Chuyen sang luong du phong (MarkItDown) cho {doc_file.name}...")
                     md_content = convert_to_md(str(doc_file))
